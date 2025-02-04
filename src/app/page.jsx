@@ -8,8 +8,9 @@ import SuccessStories from "@/components/Home/Success";
 import MeetOurExperts from "@/components/Home/MeetOurExperts";
 import BlogAndHealthTips from "@/components/Home/BlogAndHealthTips";
 import PartneredTeams from "@/components/Home/PartneredTeams";
-import FAQ from "@/components/Home/FAQ";
+
 import ContactUs from "@/components/Home/ContactUs";
+import FAQ from "@/components/Home/Faq";
 
 export default function Home() {
   return (
