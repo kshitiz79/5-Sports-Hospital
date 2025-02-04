@@ -1,0 +1,35 @@
+/* styles/fonts.css */
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Body font */
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Class for Heading 1 with Archivo Black */
+.font-archivo-black {
+  font-family: 'Archivo Black', sans-serif;
+}
+
+/* Class for Heading 2 with Montserrat Bold */
+.font-montserrat-bold {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900; /* Bold weight */
+}
+
+/* Class for Normal Text with Montserrat Regular */
+.font-montserrat-regular {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400; /* Regular weight */
+}
+
+/* Class for Light Text with Montserrat Light */
+.font-montserrat-light {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100; /* Light weight */
+}
