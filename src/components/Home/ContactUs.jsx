@@ -12,18 +12,35 @@ const ContactUs = () => {
     <section className={`py-20 relative transition-colors duration-500 ${darkMode ? 'bg-black text-white' : 'bg-gray-100 text-gray-900'}`}>
       <div className="container mx-auto px-6">
 
-        {/* Section Title */}
-        <motion.div
+
+  
+
+
+  <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className={`text-4xl font-bold ${darkMode ? 'text-green-400' : 'text-green-700'}`}>Get in Touch</h2>
-          <p className={`max-w-2xl mx-auto ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-            Have questions? Reach out to us! We're here to help you.
+          <div className="relative inline-block px-4 py-3">
+            {/* Brushstroke Background */}
+            <span className={`absolute inset-0 ${darkMode ? 'bg-green-600' : 'bg-green-700'} w-full h-full rounded-lg skew-y-1`}></span>
+            
+            {/* Text with Shadow */}
+            <h2 className="text-4xl md:text-6xl font-extrabold uppercase drop-shadow-lg relative">
+              <strong>Get in Touch</strong> 
+            </h2>
+          </div>
+
+          <p className={`max-w-2xl mx-auto mt-5 uppercase font-extrabold ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+          Have questions? Reach out to us! We're here to help you.
           </p>
         </motion.div>
+
+
+
+
+
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           

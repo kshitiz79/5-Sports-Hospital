@@ -1,9 +1,12 @@
-'use client'
+'use client';
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTheme } from '@/contex/ThemeContext'; // Import the Theme Hook
 
 const MeetOurExperts = () => {
+  const { darkMode } = useTheme(); // Retrieve the current theme mode
+
   const experts = [
     {
       image: '/images/doctor1.jpg', // Replace with actual image paths
@@ -32,20 +35,52 @@ const MeetOurExperts = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-black via-gray-900 to-gray-800 text-white relative">
+    <section
+      className={`py-20 transition-colors  relative duration-500 ${
+        darkMode
+          ? 'bg-gradient-to-b from-black via-gray-900 to-gray-800 text-white'
+          : 'bg-gray-100 text-gray-900'
+      }`}
+    >
       <div className="container mx-auto px-6">
         {/* Section Title */}
+       
+
+
+
+
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold text-green-400">Meet Our Experts</h2>
-          <p className="text-gray-300 max-w-2xl mx-auto">
-            Our highly skilled specialists are here to help you achieve peak performance and recovery.
+          <div className="relative inline-block px-4 py-3">
+            {/* Brushstroke Background */}
+            <span className={`absolute inset-0 w-full h-full rounded-lg skew-y-1 ${
+              darkMode ? 'bg-green-600' : 'bg-green-700'
+            }`}></span>
+            
+            {/* Text with Shadow */}
+            <h2 className="text-4xl md:text-6xl font-extrabold uppercase drop-shadow-lg relative">
+              <strong>  Meet Our Experts</strong>
+            </h2>
+          </div>
+
+          <p className={`w-full mx-auto mt-6 uppercase font-extrabold ${
+            darkMode ? 'text-gray-300' : 'text-gray-700'
+          }`}>
+             Our highly skilled specialists are here to help you achieve peak
+             performance and recovery.
           </p>
         </motion.div>
+
+
+
+
+
+
 
         {/* Experts Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -56,7 +91,11 @@ const MeetOurExperts = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="relative group bg-white/10 backdrop-blur-md border border-gray-700 rounded-2xl shadow-lg p-6 text-center hover:scale-105 transition-transform duration-300"
+              className={`relative group transition-transform duration-300 hover:scale-105 rounded-2xl shadow-lg p-6 text-center ${
+                darkMode
+                  ? 'bg-white/10 backdrop-blur-md border border-gray-700'
+                  : 'bg-white border border-gray-300'
+              }`}
             >
               {/* Profile Image */}
               <div className="relative">
@@ -69,13 +108,19 @@ const MeetOurExperts = () => {
               </div>
 
               {/* Expert Details */}
-              <h3 className="text-xl font-semibold text-green-300">{expert.name}</h3>
+              <h3
+                className={`text-xl font-semibold ${
+                  darkMode ? 'text-green-300' : 'text-green-700'
+                }`}
+              >
+                {expert.name}
+              </h3>
               <p className="text-gray-400 text-sm mb-4">{expert.specialties}</p>
 
               {/* Booking Button */}
               <a
                 href={expert.consultationLink}
-                className="bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-white font-bold py-2 px-6 rounded-full transition-all duration-300 shadow-md"
+                className="bg-gradient-to-r from-green-500 to-green-700 transition-all duration-300 text-white font-bold py-2 px-6 rounded-full shadow-md hover:shadow-lg"
               >
                 Book Consultation
               </a>

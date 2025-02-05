@@ -53,7 +53,7 @@ export default function Services() {
 
   return (
     <section ref={sectionRef} className={`relative min-h-[250vh] transition-colors duration-500 ${
-      darkMode ? 'bg-black text-white' : 'bg-gray-100 text-gray-900'
+      darkMode ? 'bg-gradient-to-b from-gray-800 to-black text-white' : 'bg-gray-100 text-gray-900'
     }`}>
       
       {/* Sticky Section */}
@@ -71,7 +71,7 @@ export default function Services() {
               <span className={`absolute inset-0 w-full h-full rounded-lg skew-y-1 ${
                 darkMode ? 'bg-green-600' : 'bg-green-700'
               }`}></span>
-              <h2 className="text-4xl md:text-5xl font-extrabold uppercase drop-shadow-lg relative">
+              <h2 className="text-4xl md:text-6xl font-extrabold uppercase drop-shadow-lg relative">
                 <strong>Our Specialized Services</strong>
               </h2>
             </div>

@@ -37,7 +37,7 @@ const PartneredTeams = () => {
   ];
 
   return (
-    <section className={`py-24 transition-colors duration-500 ${darkMode ? 'bg-black text-white' : 'bg-gray-100 text-gray-900'} relative clip-path-custom`}>
+    <section className={`py-24 transition-colors duration-500 ${darkMode ? 'bg-gradient-to-b from-black via-black   to-gray-800 text-white' : 'bg-gray-100 text-gray-900'} relative clip-path-custom`}>
 
       <div className="container mx-auto px-6">
         
@@ -53,7 +53,7 @@ const PartneredTeams = () => {
             <span className={`absolute inset-0 ${darkMode ? 'bg-green-600' : 'bg-green-700'} w-full h-full rounded-lg skew-y-1`}></span>
             
             {/* Text with Shadow */}
-            <h2 className="text-4xl md:text-5xl font-extrabold uppercase drop-shadow-lg relative">
+            <h2 className="text-4xl md:text-6xl font-extrabold uppercase drop-shadow-lg relative">
               <strong>Our Partnered Teams</strong> 
             </h2>
           </div>
@@ -95,7 +95,7 @@ const PartneredTeams = () => {
           className="mb-16"
         >
           <div className="flex justify-center">
-            <h3 className={`text-2xl font-semibold px-6 py-3 shadow-lg mb-6 text-center uppercase rounded-lg ${
+            <h3 className={`text-2xl font-semibold px-6 py-3 shadow-lg mb-6 text-center uppercase  ${
               darkMode ? 'bg-green-500 text-white' : 'bg-green-700 text-gray-900'
             }`}>
               What Our Partnered Athletes Say

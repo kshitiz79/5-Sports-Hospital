@@ -37,7 +37,7 @@ export default function WhyChooseUs() {
 
   return (
     <section className={`relative py-20 transition-colors duration-500 ${
-      darkMode ? 'bg-gradient-to-b from-black to-gray-900 text-white' : 'bg-gray-100 text-gray-900'
+      darkMode ? 'bg-gradient-to-b from-black to-gray-800 text-white' : 'bg-gray-100 text-gray-900'
     }`}>
       <div className=" mx-auto px-6">
         
@@ -55,7 +55,7 @@ export default function WhyChooseUs() {
             }`}></span>
             
             {/* Text with Shadow */}
-            <h2 className="text-4xl md:text-5xl font-extrabold uppercase drop-shadow-lg relative">
+            <h2 className="text-4xl md:text-6xl font-extrabold uppercase drop-shadow-lg relative">
               <strong>Why Choose Us?</strong>
             </h2>
           </div>
