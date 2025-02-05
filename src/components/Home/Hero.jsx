@@ -51,17 +51,17 @@ export default function Hero() {
 
           {/* Subheading */}
           <p
-  className={`text-lg md:text-2xl inline-block px-6 py-3 font-montserrat mt-6 max-w-3xl mx-auto relative text-center ${
-    darkMode ? 'text-gray-200' : 'text-gray-700'
+  className={`text-lg md:text-2xl inline-block px-1 py-1 font-montserrat mt-6 max-w-3xl mx-auto relative text-center ${
+    darkMode ? 'text-gray-200' : 'text-black'
   }`}
 >
   <span
-    className="absolute inset-0 bg-green-700 rounded-full w-full h-full"
+    className="absolute inset-0 bg-green-500  w-full h-full"
     style={{
       clipPath: 'ellipse(100% 60% at 50% 50%)',
     }}
   ></span>
-  <span className="relative font-extrabold">
+  <span className="relative text-[0.7rem]   md:text-lg font-extrabold leading-tight">
     India's first integrated sports medicine and rehab facility offering cutting-edge treatment and world-class rehabilitation.
   </span>
 </p>
