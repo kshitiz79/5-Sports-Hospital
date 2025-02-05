@@ -11,10 +11,12 @@ const Footer = () => {
 
   return (
     <footer
-      className={`transition-colors duration-500 py-10 ${
-        darkMode ? 'bg-black text-white' : 'bg-gray-100 text-gray-900'
-      }`}
-    >
+    className={`transition-colors duration-500 py-10 border-t ${
+      darkMode 
+        ? 'bg-gradient-to-b from-black via-black to-gray-800 text-white border-gray-700' 
+        : 'bg-gradient-to-b from-white via-gray-200 to-gray-300 text-gray-900 border-gray-300'
+    }`}
+  >
       <div className="container mx-auto px-6">
         {/* Logo & Branding */}
         <div className="flex flex-col md:flex-row items-center justify-between mb-6">
