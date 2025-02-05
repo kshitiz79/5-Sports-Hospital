@@ -1,5 +1,7 @@
 'use client';
 
+
+
 import AboutUs from "@/components/Home/AboutUs";
 import BlogAndHealthTips from "@/components/Home/BlogAndHealthTips";
 import ContactUs from "@/components/Home/ContactUs";
@@ -15,7 +17,7 @@ import WhyChooseUs from "@/components/Home/WhyChooseUs";
 
 export default function Home() {
   return (
-    <div>
+    <div >
       <Hero />
       <AboutUs />
       <Services />

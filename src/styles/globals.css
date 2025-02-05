@@ -4,8 +4,8 @@
 
 :root {
   /* Light Mode Colors */
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FFFFFF;
+  --foreground: #FFFFFF;
   
   /* Custom Colors */
   --dark-green: #006032;
@@ -13,7 +13,7 @@
   --logo-yellow: #f4c430;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     /* Dark Mode Colors */
     --background: #0a0a0a;

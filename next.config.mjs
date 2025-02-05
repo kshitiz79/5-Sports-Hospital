@@ -2,9 +2,10 @@ import path from 'path';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  webpack: (config) => {
-    config.resolve.alias['@'] = path.resolve('src');
-    return config;
+  output: "export",
+  images: {
+    // Disables the built-in image optimization for static export
+    unoptimized: true,
   },
 };
 

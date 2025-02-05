@@ -5,35 +5,35 @@ import { CheckCircle } from 'lucide-react';
 
 const features = [
   {
-    icon: <CheckCircle className="w-8 h-8 text-dark-green" />,
+    icon: <CheckCircle className="w-10 h-10 text-green-500" />,
     title: 'Trusted by Elite Athletes & Teams',
-    description: 'We are the preferred choice for top athletes and professional sports teams across the country.'
+    description: 'Preferred by top athletes and professional sports teams for our specialized care.'
   },
   {
-    icon: <CheckCircle className="w-8 h-8 text-dark-green" />,
-    title: 'Multidisciplinary Approach with 11 Specialties',
-    description: 'Our team of experts collaborates across 11 specialized fields to deliver comprehensive care.'
+    icon: <CheckCircle className="w-10 h-10 text-green-500" />,
+    title: '11 Specialized Medical Fields',
+    description: 'A multidisciplinary team offering cutting-edge treatments across multiple domains.'
   },
   {
-    icon: <CheckCircle className="w-8 h-8 text-dark-green" />,
-    title: 'Cutting-edge Medical Technology & Equipment',
-    description: 'We use the latest medical advancements to ensure accurate diagnosis and effective treatment.'
+    icon: <CheckCircle className="w-10 h-10 text-green-500" />,
+    title: 'Advanced Diagnostic & Treatment Technology',
+    description: 'Equipped with the latest innovations for precise assessment and faster recovery.'
   },
   {
-    icon: <CheckCircle className="w-8 h-8 text-dark-green" />,
-    title: 'State-of-the-Art Rehab & Fitness Center',
-    description: 'Our world-class facilities are designed to help you recover faster and perform better.'
+    icon: <CheckCircle className="w-10 h-10 text-green-500" />,
+    title: 'World-Class Rehab & Performance Center',
+    description: 'A state-of-the-art facility designed for rehabilitation, fitness, and peak performance.'
   },
   {
-    icon: <CheckCircle className="w-8 h-8 text-dark-green" />,
-    title: '100+ Successful Injury Recovery Cases',
-    description: 'Proven track record of helping athletes return to peak performance after injuries.'
+    icon: <CheckCircle className="w-10 h-10 text-green-500" />,
+    title: 'Proven Recovery Success',
+    description: 'Over 100+ athletes successfully rehabilitated and returned to peak condition.'
   }
 ];
 
 export default function WhyChooseUs() {
   return (
-    <section className="section-class">
+    <section className="relative py-20 bg-gradient-to-b from-black to-gray-900 sticky top-0 fixed text-white">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <motion.div
@@ -42,33 +42,36 @@ export default function WhyChooseUs() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Choose Us?</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Discover what makes us the leading sports medicine and rehabilitation center in India.
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-green-400">Why Choose Us?</h2>
+          <p className="text-gray-300 max-w-2xl mx-auto">
+            Discover what makes us the **#1 Sports Medicine & Rehabilitation Center** in India.
           </p>
         </motion.div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8"
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.15, type: "spring", stiffness: 120 }}
+              className="relative group bg-white/10 backdrop-blur-md border border-gray-700 rounded-2xl shadow-lg p-8 transition-all duration-300 hover:shadow-green-500/50"
             >
               {/* Icon */}
-              <div className="mb-6">
+              <div className="mb-6 flex items-center justify-center w-16 h-16 bg-green-800/50 rounded-full group-hover:scale-110 transition-transform">
                 {feature.icon}
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
+              <h3 className="text-2xl font-semibold mb-3 text-green-300">{feature.title}</h3>
 
               {/* Description */}
-              <p className="text-gray-600">{feature.description}</p>
+              <p className="text-gray-300">{feature.description}</p>
+
+              {/* Hover Glow Effect */}
+              <div className="absolute inset-0 bg-green-500 opacity-0 group-hover:opacity-10 transition-opacity rounded-2xl"></div>
             </motion.div>
           ))}
         </div>
