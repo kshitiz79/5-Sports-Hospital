@@ -60,7 +60,7 @@ export default function Header() {
             className={`hidden md:block px-5 py-2  font-archivo rounded-md font-bold transition ${
               darkMode
                 ? 'bg-green-500 hover:bg-green-600 text-white'
-                : 'bg-blue-500 hover:bg-blue-600 text-white'
+                : 'bg-green-800 hover:bg-green-600 text-white'
             }`}
           >
           Call Us
