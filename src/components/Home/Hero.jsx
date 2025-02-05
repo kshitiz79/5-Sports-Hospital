@@ -11,24 +11,23 @@ export default function Hero() {
     <>
       <section
         className={`h-[100vh] flex items-center justify-center overflow-hidden sticky top-0 transition-colors duration-500 ${
-          darkMode ? 'bg-black text-white' : 'bg-gray-100 text-gray-900'
+          darkMode ? 'bg-black text-white' : ' text-gray-900'
         }`}
       >
         {/* Video Background */}
         <div className="absolute inset-0 z-0">
           {/* Video Background */}
-          {/* <video
-            autoPlay
-            muted
-            loop
-            className="w-full h-full object-cover"
-            poster="/banner.avif"
-          >
-            <source src="/hero-video.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video> */}
+          <div className="relative w-full h-screen overflow-hidden">
+  <video autoPlay muted loop playsInline className="absolute top-0 left-0 w-full h-full object-cover z-0">
+    <source src="/video.webm" type="video/webm" />
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+
+
           {/* Overlay */}
-          <div className={`absolute inset-0 ${darkMode ? 'bg-black bg-opacity-60' : 'bg-gray-200 bg-opacity-70'}`}></div>
+          <div className={`absolute inset-0 ${darkMode ? 'bg-black bg-opacity-60' : 'bg-gray-200 bg-opacity-10'}`}></div>
         </div>
 
         {/* Content */}
@@ -51,11 +50,22 @@ export default function Hero() {
           </h2>
 
           {/* Subheading */}
-          <p className={`text-lg md:text-2xl font-montserrat mt-6 max-w-3xl mx-auto ${
-            darkMode ? 'text-gray-200' : 'text-gray-700'
-          }`}>
-            India's first integrated sports medicine and rehab facility offering cutting-edge treatment and world-class rehabilitation.
-          </p>
+          <p
+  className={`text-lg md:text-2xl inline-block px-6 py-3 font-montserrat mt-6 max-w-3xl mx-auto relative text-center ${
+    darkMode ? 'text-gray-200' : 'text-gray-700'
+  }`}
+>
+  <span
+    className="absolute inset-0 bg-green-700 rounded-full w-full h-full"
+    style={{
+      clipPath: 'ellipse(100% 60% at 50% 50%)',
+    }}
+  ></span>
+  <span className="relative font-extrabold">
+    India's first integrated sports medicine and rehab facility offering cutting-edge treatment and world-class rehabilitation.
+  </span>
+</p>
+
 
           {/* Buttons */}
           <div className="flex items-center justify-center flex-col md:flex-row gap-4 animate-fade-in-up mt-14">
