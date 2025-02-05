@@ -25,11 +25,21 @@ const SuccessStories = () => {
     { name: 'Alice Johnson', review: 'Highly recommend for any sports injury!' },
     { name: 'Michael Brown', review: 'Amazing doctors and treatment plans.' },
     { name: 'Sarah Wilson', review: 'Rehabilitation here was a game-changer!' },
+    { name: 'David Lee', review: 'Truly world-class sports rehab.' },
+    { name: 'Emma Davis', review: 'I regained my full mobility quickly!' },
+    { name: 'Chris Evans', review: 'The best sports hospital I’ve ever been to!' },
   ];
-
   const [startIndex, setStartIndex] = useState(0);
-  const reviewsPerPage = 4;
+  const reviewsPerPage = 4; // Adjust to show 4 reviews at a time
 
+  // Function to scroll left (Previous Reviews)
+  const prevReviews = () => {
+    setStartIndex((prevIndex) =>
+      prevIndex - reviewsPerPage >= 0 ? prevIndex - reviewsPerPage : patientReviews.length - reviewsPerPage
+    );
+  };
+
+  // Function to scroll right (Next Reviews)
   const nextReviews = () => {
     setStartIndex((prevIndex) =>
       prevIndex + reviewsPerPage < patientReviews.length ? prevIndex + reviewsPerPage : 0
@@ -123,25 +133,62 @@ const SuccessStories = () => {
         </motion.div>
 
         {/* Patient Reviews Carousel */}
-        <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-        <div className="flex justify-center">
-<h3 className={`text-2xl font-semibold px-6 py-3 shadow-lg mb-6 text-center uppercase  ${
-            darkMode ? 'bg-green-500 text-white' : 'bg-green-700 text-gray-900'
-          }`}>Patient Reviews</h3> 
-          </div>
-          <div className="flex justify-center">
-            <button onClick={nextReviews} className="bg-gray-700 px-4 py-2 rounded-l">&lt;</button>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mx-4">
-              {patientReviews.slice(startIndex, startIndex + reviewsPerPage).map((review, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-md border border-gray-700 rounded-xl shadow-lg p-6 text-center">
-                  <p className="text-lg ">"{review.review}"</p>
-                  <p className="font-semibold mt-2 text-green-600">- {review.name}</p>
-                </div>
-              ))}
-            </div>
-            <button onClick={nextReviews} className="bg-gray-700 px-4 py-2 rounded-r">&gt;</button>
-          </div>
+        <motion.div 
+  initial={{ opacity: 0, y: 50 }} 
+  whileInView={{ opacity: 1, y: 0 }} 
+  viewport={{ once: true }}
+  transition={{ duration: 0.6, ease: "easeOut" }}
+>
+  {/* Section Title */}
+  <div className="flex justify-center">
+    <h3 className={`text-2xl sm:text-3xl font-semibold px-6 py-3 shadow-lg mb-6 text-center uppercase rounded-md ${
+      darkMode ? 'bg-green-500 text-white' : 'bg-green-700 text-gray-900'
+    }`}>
+      Patient Reviews
+    </h3>
+  </div>
+
+  {/* Reviews Container with Auto & Manual Scroll */}
+  <div className="flex flex-col items-center space-y-6 sm:space-y-0 sm:flex-row justify-center">
+    
+    {/* Left Scroll Button */}
+    <button 
+      onClick={prevReviews} 
+      className="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-full text-white transition"
+    >
+      &lt;
+    </button>
+
+    {/* Reviews Grid (Mobile: 1, Tablet: 2, Desktop: 3-4) */}
+    <div className="grid  lg:grid-cols-4 gap-6 mx-4 overflow-hidden w-full px-4">
+      {patientReviews.slice(startIndex, startIndex + reviewsPerPage).map((review, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: index * 0.1, duration: 0.4 }}
+          className={`rounded-xl shadow-lg p-6 text-center border ${
+            darkMode ? 'bg-gray-800 text-gray-200 border-gray-600' : 'bg-white text-gray-900 border-gray-300'
+          }`}
+        >
+          <p className="text-lg italic">"{review.review}"</p>
+          <p className="font-semibold mt-2 text-green-500">- {review.name}</p>
         </motion.div>
+      ))}
+    </div>
+
+    {/* Right Scroll Button */}
+    <button 
+      onClick={nextReviews} 
+      className="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-full text-white transition"
+    >
+      &gt;
+    </button>
+
+  </div>
+</motion.div>
+
 
       </div>
     </section>

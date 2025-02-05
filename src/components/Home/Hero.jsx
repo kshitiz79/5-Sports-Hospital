@@ -32,10 +32,10 @@ export default function Hero() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 text-center px-4 uppercase">
+        <div className="relative z-10  mb-20  md:mb-0 text-center px-4 uppercase">
           {/* Top Tagline */}
           <div
-            className={`inline-block px-4 py-2 text-lg md:text-2xl font-bold tracking-wide ${
+            className={`inline-block px-4 py-2 text-xs md:text-2xl   mb-3 font-bold tracking-wide ${
               darkMode ? 'bg-green-700 text-white' : 'bg-green-600 text-gray-100'
             }`}
           >
@@ -43,7 +43,7 @@ export default function Hero() {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-5xl md:text-[11rem] font-bebas leading-tight tracking-[-0.04em]">
+          <h1 className="text-7xl md:text-[11rem] font-bebas leading-tight tracking-[-0.04em]">
             <strong className={`${darkMode ? 'text-white' : 'text-black'} font-extrablack`}>SUCCESS</strong>
           </h1>
           <h2 className={`text-4xl md:text-6xl font-bebas ${darkMode ? 'text-white' : 'text-gray-900'}`}>

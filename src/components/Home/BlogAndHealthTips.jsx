@@ -64,7 +64,7 @@ const BlogAndHealthTips = () => {
             }`}></span>
             
             {/* Text with Shadow */}
-            <h2 className="text-4xl md:text-6xl font-extrabold uppercase drop-shadow-lg relative">
+            <h2 className="text-2xl md:text-6xl font-extrabold uppercase drop-shadow-lg relative">
               <strong>Blog & Health Tips</strong>
             </h2>
           </div>

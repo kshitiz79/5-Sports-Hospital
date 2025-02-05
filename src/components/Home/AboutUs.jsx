@@ -8,7 +8,7 @@ export default function AboutUs() {
   const { darkMode } = useTheme(); // Get Dark Mode State
 
   return (
-    <section className={`relative sticky top-0 transition-colors duration-500 rounded-3xl overflow-hidden py-10 ${
+    <section className={`relative sticky top-0 transition-colors duration-500  overflow-hidden py-10 ${
       darkMode ? 'bg-gradient-to-b from-gray-800 via-gray-900 to-gray-800 text-white' : 'bg-gray-100 text-gray-900'
     }`}>
       <div className="container mx-auto px-6">
@@ -27,7 +27,7 @@ export default function AboutUs() {
             }`}></span>
             
             {/* Text with Shadow */}
-            <h2 className="text-4xl md:text-6xl font-extrabold uppercase drop-shadow-lg relative">
+            <h2 className="text-2xl md:text-6xl font-extrabold uppercase drop-shadow-lg relative">
               <strong>About Us</strong>
             </h2>
           </div>

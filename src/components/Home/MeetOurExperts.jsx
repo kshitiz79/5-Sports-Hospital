@@ -63,7 +63,7 @@ const MeetOurExperts = () => {
             }`}></span>
             
             {/* Text with Shadow */}
-            <h2 className="text-4xl md:text-6xl font-extrabold uppercase drop-shadow-lg relative">
+            <h2 className="text-2xl md:text-6xl font-extrabold uppercase drop-shadow-lg relative">
               <strong>  Meet Our Experts</strong>
             </h2>
           </div>

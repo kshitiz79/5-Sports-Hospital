@@ -37,9 +37,12 @@ const PartneredTeams = () => {
   ];
 
   return (
-    <section className={`py-24 transition-colors duration-500 ${darkMode ? 'bg-gradient-to-b from-black via-black   to-gray-800 text-white' : 'bg-gray-100 text-gray-900'} relative clip-path-custom`}>
-
-      <div className="container mx-auto px-6">
+    <section
+      className={`py-24 transition-colors duration-500 ${
+        darkMode ? 'bg-gradient-to-b from-black via-black to-gray-800 text-white' : 'bg-gray-100 text-gray-900'
+      } relative clip-path-custom`}
+    >
+      <div className="container mx-auto px-6 mt-20 md:mt-0">
         
         {/* Section Title */}
         <motion.div
@@ -48,28 +51,36 @@ const PartneredTeams = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <div className="relative inline-block px-4 py-3">
+          <div className="relative inline-block md:px-4 md:py-3 px-2 py-1">
             {/* Brushstroke Background */}
-            <span className={`absolute inset-0 ${darkMode ? 'bg-green-600' : 'bg-green-700'} w-full h-full rounded-lg skew-y-1`}></span>
+            <span
+              className={`absolute inset-0 ${
+                darkMode ? 'bg-green-600' : 'bg-green-700'
+              } w-full h-full rounded-lg skew-y-1`}
+            ></span>
             
             {/* Text with Shadow */}
-            <h2 className="text-4xl md:text-6xl font-extrabold uppercase drop-shadow-lg relative">
-              <strong>Our Partnered Teams</strong> 
+            <h2 className="text-2xl md:text-5xl font-extrabold uppercase drop-shadow-lg relative">
+              <strong>Our Partnered Teams</strong>
             </h2>
           </div>
 
-          <p className={`max-w-2xl mx-auto mt-5 uppercase font-extrabold ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+          <p
+            className={`max-w-2xl mx-auto mt-5 uppercase font-extrabold ${
+              darkMode ? 'text-gray-300' : 'text-gray-700'
+            } text-sm sm:text-base`}
+          >
             Collaborating with elite sports organizations to revolutionize athlete healthcare & performance.
           </p>
         </motion.div>
 
         {/* Partner Logos Grid */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-16"
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 mb-16"
         >
           {partners.map((partner, index) => (
             <motion.div
@@ -78,11 +89,11 @@ const PartneredTeams = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.4 }}
-              className={`backdrop-blur-md border rounded-xl shadow-lg flex items-center justify-center p-6 hover:scale-105 transition-transform duration-300 ${
+              className={`backdrop-blur-md border rounded-xl shadow-lg flex items-center justify-center p-4 sm:p-6 hover:scale-105 transition-transform duration-300 ${
                 darkMode ? 'bg-white/10 border-gray-700' : 'bg-white border-gray-300'
               }`}
             >
-              <img src={partner.logo} alt={partner.name} className="w-24 h-auto mx-auto" />
+              <img src={partner.logo} alt={partner.name} className="w-16 sm:w-20 md:w-24 h-auto mx-auto" />
             </motion.div>
           ))}
         </motion.div>
@@ -95,14 +106,16 @@ const PartneredTeams = () => {
           className="mb-16"
         >
           <div className="flex justify-center">
-            <h3 className={`text-2xl font-semibold px-6 py-3 shadow-lg mb-6 text-center uppercase  ${
-              darkMode ? 'bg-green-500 text-white' : 'bg-green-700 text-gray-900'
-            }`}>
+            <h3
+              className={`text-base sm:text-xl font-semibold px-6 py-3 shadow-lg mb-6 text-center uppercase ${
+                darkMode ? 'bg-green-500 text-white' : 'bg-green-700 text-gray-900'
+              }`}
+            >
               What Our Partnered Athletes Say
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
@@ -115,27 +128,34 @@ const PartneredTeams = () => {
                 }`}
               >
                 {/* Top Image (Athlete in Action) */}
-                <img src={testimonial.image} alt={testimonial.name} className="w-full h-56 object-cover" />
+                <img src={testimonial.image} alt={testimonial.name} className="w-full h-48 sm:h-56 object-cover" />
 
                 {/* Quote Section */}
-                <div className="p-6 text-center flex flex-col items-center relative">
+                <div className="p-4 sm:p-6 text-center flex flex-col items-center relative">
                   {/* Quote Icon with Background */}
-                  <div className="absolute -top-8 w-16 h-16 flex items-center justify-center rounded-full"
-                    style={{ backgroundColor: darkMode ? '#22C55E' : '#16A34A' }}>
-                    <span className="text-4xl text-black font-bold">“</span>
+                  <div
+                    className="absolute -top-8 w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center rounded-full"
+                    style={{ backgroundColor: darkMode ? '#22C55E' : '#16A34A' }}
+                  >
+                    <span className="text-3xl sm:text-4xl text-black font-bold">“</span>
                   </div>
 
                   {/* Quote */}
-                  <p className={`italic mt-10 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>{testimonial.quote}</p>
+                  <p className={`italic mt-8 sm:mt-10 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>{testimonial.quote}</p>
 
                   {/* Name */}
-                  <h4 className={`mt-6 text-lg font-extrabold uppercase ${darkMode ? 'text-white' : 'text-gray-900'}`}>{testimonial.name}</h4>
+                  <h4
+                    className={`mt-4 sm:mt-6 text-base sm:text-lg font-extrabold uppercase ${
+                      darkMode ? 'text-white' : 'text-gray-900'
+                    }`}
+                  >
+                    {testimonial.name}
+                  </h4>
                 </div>
               </motion.div>
             ))}
           </div>
         </motion.div>
-
       </div>
     </section>
   );

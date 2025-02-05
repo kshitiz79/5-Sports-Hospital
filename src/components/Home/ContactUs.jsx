@@ -27,7 +27,7 @@ const ContactUs = () => {
             <span className={`absolute inset-0 ${darkMode ? 'bg-green-600' : 'bg-green-700'} w-full h-full rounded-lg skew-y-1`}></span>
             
             {/* Text with Shadow */}
-            <h2 className="text-4xl md:text-6xl font-extrabold uppercase drop-shadow-lg relative">
+            <h2 className="text-2xl md:text-6xl font-extrabold uppercase drop-shadow-lg relative">
               <strong>Get in Touch</strong> 
             </h2>
           </div>

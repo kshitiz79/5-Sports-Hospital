@@ -29,6 +29,8 @@ const services = [
   { icon: <Dumbbell className="w-8 h-8" />, title: 'Physiotherapy', desc: 'Recovery programs tailored for peak performance.' },
   { icon: <Microscope className="w-8 h-8" />, title: 'Sports Science', desc: 'Research-backed strategies for performance gains.' },
   { icon: <Utensils className="w-8 h-8" />, title: 'Sports Nutrition', desc: 'Customized diet plans for athlete performance.' },
+  { icon: <Activity className="w-8 h-8" />, title: 'Exercise Physiology', desc: 'Biomechanical analysis and strength training.' },
+  { icon: <Brain className="w-8 h-8" />, title: 'Sports Psychology', desc: 'Mindset training for mental toughness.' },
 ];
 
 export default function Services() {
@@ -52,10 +54,12 @@ export default function Services() {
   const smoothX = useSpring(x, { stiffness: 100, damping: 70 });
 
   return (
-    <section ref={sectionRef} className={`relative min-h-[250vh] transition-colors duration-500 ${
-      darkMode ? 'bg-gradient-to-b from-gray-800 to-black text-white' : 'bg-gray-100 text-gray-900'
-    }`}>
-      
+    <section
+      ref={sectionRef}
+      className={`relative min-h-[250vh] transition-colors duration-500 ${
+        darkMode ? 'bg-gradient-to-b from-gray-800 to-black text-white' : 'bg-gray-100 text-gray-900'
+      }`}
+    >
       {/* Sticky Section */}
       <div className="sticky top-0 h-screen flex flex-col justify-center items-center z-10">
         <div className="px-6 w-full">
@@ -67,11 +71,11 @@ export default function Services() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <div className="relative inline-block px-4 py-3 mt-20">
+            <div className="relative inline-block px-4 py-3 mt-10">
               <span className={`absolute inset-0 w-full h-full rounded-lg skew-y-1 ${
                 darkMode ? 'bg-green-600' : 'bg-green-700'
               }`}></span>
-              <h2 className="text-4xl md:text-6xl font-extrabold uppercase drop-shadow-lg relative">
+              <h2 className="text-2xl md:text-5xl font-extrabold uppercase drop-shadow-lg relative">
                 <strong>Our Specialized Services</strong>
               </h2>
             </div>
@@ -83,41 +87,42 @@ export default function Services() {
           </motion.div>
 
           {/* Horizontal Scroll Section */}
-          <div ref={containerRef} className="relative w-full overflow-hidden">
-            <motion.div style={{ x: smoothX }} className="flex space-x-8">
+          <div ref={containerRef} className="relative w-full overflow-x-auto sm:overflow-hidden">
+            <motion.div
+              style={{ x: smoothX }}
+              className="flex space-x-4 sm:space-x-8 px-4 sm:px-0"
+            >
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className={`group relative rounded-xl shadow-lg p-8 min-w-[450px] max-w-[450px] min-h-[580px] max-h-[580px] transition-all duration-300 ease-out overflow-hidden flex flex-col items-center text-center ${
+                  className={`group relative rounded-xl shadow-lg p-6 sm:p-8 min-w-[90%] sm:min-w-[450px] max-w-[90%] sm:max-w-[450px] transition-all duration-300 ease-out overflow-hidden flex flex-col items-center text-center ${
                     darkMode ? 'bg-white/10 backdrop-blur-md border-gray-700' : 'bg-white border-gray-300'
                   }`}
                 >
                   
                   {/* Fixed Icon */}
-                  <div className={`absolute top-6 left-1/2 transform -translate-x-1/2 w-28 h-28 rounded-full shadow-md flex items-center justify-center ${
+                  <div className={`absolute top-6 left-1/2 transform -translate-x-1/2 w-20 h-20 sm:w-28 sm:h-28 rounded-full shadow-md flex items-center justify-center ${
                     darkMode ? 'bg-green-600' : 'bg-green-700'
                   }`}>
                     {service.icon}
                   </div>
 
                   {/* Content Section */}
-                  <div className="flex flex-col items-center justify-between flex-1 mt-36 px-4">
-                    <h3 className="text-5xl font-bebas font-extrabold uppercase leading-tight">
+                  <div className="flex flex-col items-center justify-between flex-1 mt-28 sm:mt-36 px-4">
+                    <h3 className="text-3xl sm:text-5xl font-bebas font-extrabold uppercase leading-tight">
                       <strong>{service.title}</strong>
                     </h3>
-                    <p className={`mt-4 mb-20 ${
+                    <p className={`mt-4 mb-10 sm:mb-20 ${
                       darkMode ? 'text-gray-300' : 'text-gray-700'
                     }`}>{service.desc}</p>
                   </div>
 
                   {/* Learn More Button */}
-                  <div className="w-full flex justify-center pb-5">
-                    <button className={`px-6 py-3 uppercase font-medium rounded-lg flex items-center justify-center gap-2 transition duration-300 ${
-                      darkMode ? 'bg-green-500 hover:bg-green-600 text-white' : 'bg-green-700 hover:bg-green-800 text-white'
-                    }`}>
-                      Learn More
-                    </button>
-                  </div>
+                  <button className={`px-4 sm:px-6 py-3 uppercase font-medium rounded-lg transition duration-300 ${
+                    darkMode ? 'bg-green-500 hover:bg-green-600 text-white' : 'bg-green-700 hover:bg-green-800 text-white'
+                  }`}>
+                    Learn More
+                  </button>
                 </div>
               ))}
             </motion.div>
@@ -125,7 +130,6 @@ export default function Services() {
 
         </div>
       </div>
-
     </section>
   );
 }

@@ -54,7 +54,7 @@ const FAQ = () => {
             }`}></span>
             
             {/* Text with Shadow */}
-            <h2 className="text-4xl md:text-6xl font-extrabold uppercase drop-shadow-lg relative">
+            <h2 className="text-xl md:text-6xl font-extrabold uppercase drop-shadow-lg relative">
               <strong> Frequently Asked Questions</strong>
             </h2>
           </div>

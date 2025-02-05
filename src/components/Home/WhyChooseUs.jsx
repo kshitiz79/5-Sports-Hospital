@@ -55,7 +55,7 @@ export default function WhyChooseUs() {
             }`}></span>
             
             {/* Text with Shadow */}
-            <h2 className="text-4xl md:text-6xl font-extrabold uppercase drop-shadow-lg relative">
+            <h2 className="text-2xl md:text-6xl font-extrabold uppercase drop-shadow-lg relative">
               <strong>Why Choose Us?</strong>
             </h2>
           </div>
@@ -74,7 +74,7 @@ export default function WhyChooseUs() {
             animate={{ x: ["0%", "-100%"] }}
             transition={{
               repeat: Infinity,
-              duration: 90,
+              duration: 50,
               ease: "linear"
             }}
           >
