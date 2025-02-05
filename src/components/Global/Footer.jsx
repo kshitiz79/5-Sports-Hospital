@@ -11,7 +11,7 @@ const Footer = () => {
 
   return (
     <footer
-    className={`transition-colors duration-500 py-10 border-t ${
+    className={`transition-colors duration-500 py-10 relative border-t ${
       darkMode 
         ? 'bg-gradient-to-b from-black via-black to-gray-800 text-white border-gray-700' 
         : 'bg-gradient-to-b from-white via-gray-200 to-gray-300 text-gray-900 border-gray-300'

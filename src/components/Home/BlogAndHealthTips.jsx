@@ -84,7 +84,7 @@ const BlogAndHealthTips = () => {
 
 
         {/* Articles Section */}
-        <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-16">
+        <motion.div initial={{ opacity: 0, y: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-16">
 
         <div className="flex justify-center">
           <h3 className={`text-2xl font-semibold  px-6 py-3 shadow-lg mb-6 text-center uppercase ${
@@ -118,7 +118,7 @@ const BlogAndHealthTips = () => {
         </motion.div>
 
         {/* Video Blogs Section */}
-        <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
+        <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
           <h3 className={`text-2xl font-semibold text-center ${
             darkMode ? 'text-green-300' : 'text-green-700'
           }`}>Video Blogs & Interviews</h3>

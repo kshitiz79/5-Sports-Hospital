@@ -17,7 +17,7 @@ import WhyChooseUs from "@/components/Home/WhyChooseUs";
 
 export default function Home() {
   return (
-    <div >
+    <>
       <Hero />
       <PartneredTeams />
       <AboutUs />
@@ -26,9 +26,9 @@ export default function Home() {
       <SuccessStories />
       <MeetOurExperts />
       <BlogAndHealthTips />
-   
+ 
       <FAQ />
       <ContactUs />
-    </div>
+    </>
   );
 }
