@@ -27,7 +27,7 @@ export default function Hero() {
 
 
           {/* Overlay */}
-          <div className={`absolute inset-0 ${darkMode ? 'bg-black bg-opacity-60' : 'bg-gray-200 bg-opacity-10'}`}></div>
+          <div className={`absolute inset-0 ${darkMode ? 'bg-black bg-opacity-60' : 'bg-gray-600 bg-opacity-70'}`}></div>
         </div>
 
         {/* Content */}
@@ -50,22 +50,11 @@ export default function Hero() {
           </h2>
 
           {/* Subheading */}
-          <p
-  className={`text-lg md:text-2xl inline-block px-1 py-1 font-montserrat mt-6 max-w-3xl mx-auto relative text-center ${
-    darkMode ? 'text-gray-200' : 'text-black'
-  }`}
->
-  <span
-    className="absolute inset-0 bg-green-500  w-full h-full"
-    style={{
-      clipPath: 'ellipse(100% 60% at 50% 50%)',
-    }}
-  ></span>
-  <span className="relative text-[0.7rem]   md:text-lg font-extrabold leading-tight">
-    India's first integrated sports medicine and rehab facility offering cutting-edge treatment and world-class rehabilitation.
-  </span>
-</p>
-
+          <p className={`text-lg md:text-2xl font-montserrat mt-6 max-w-3xl mx-auto ${
+            darkMode ? 'text-gray-200' : 'text-gray-950'
+          }`}>
+            India's first integrated sports medicine and rehab facility offering cutting-edge treatment and world-class rehabilitation.
+          </p>
 
           {/* Buttons */}
           <div className="flex items-center justify-center flex-col md:flex-row gap-4 animate-fade-in-up mt-14">
@@ -74,7 +63,7 @@ export default function Hero() {
               className={`border-2 px-8 py-3 rounded-lg text-lg font-semibold transition flex items-center justify-center gap-2 ${
                 darkMode
                   ? 'bg-dark-green text-white border-white hover:text-green-800 hover:bg-white'
-                  : 'bg-green-600 text-white border-green-600 hover:bg-green-700'
+                  : 'bg-green-600 text-white border-green-950 hover:bg-green-700'
               }`}
             >
               <PlayCircle className="w-6 h-6" />
