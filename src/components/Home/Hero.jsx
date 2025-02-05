@@ -31,7 +31,7 @@ export default function Hero() {
 </div>
 
   {/* Main Heading */}
-  <h1 className="text-5xl md:text-[11rem] font-bebas text-white leading-tight tracking-[-0.1em]  ">
+  <h1 className="text-5xl md:text-[11rem] font-bebas text-white leading-tight tracking-[-0.04em]  ">
   <strong className='font-extrablack'> SUCCESS</strong> 
   </h1>
   <h2 className="text-4xl md:text-6xl  font-bebas text-white">
