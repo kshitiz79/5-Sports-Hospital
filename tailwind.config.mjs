@@ -11,6 +11,14 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        bebas: ['"Bebas Neue"', 'sans-serif'],
+        montserrat: ['"Montserrat"', 'sans-serif'], // Correctly set Bebas Neue as a sans-serif font
+      },
+      fontWeight: {
+        extrablack: '2000', // Custom font weight
+      },
+      
     },
   },
   plugins: [],

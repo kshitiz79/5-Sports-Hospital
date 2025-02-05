@@ -34,7 +34,8 @@ const PartneredTeams = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-black via-gray-900 to-gray-800 text-white relative">
+    <section className="py-20 bg-gradient-to-b from-gray-800 via-gray-900 to-black text-white relative clip-path-custom">
+
       <div className="container mx-auto px-6">
         
         {/* Section Title */}
@@ -44,8 +45,19 @@ const PartneredTeams = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold text-green-400">Our Partnered Teams & Institutions</h2>
-          <p className="text-gray-300 max-w-2xl mx-auto">
+
+
+<div className="relative inline-block px-4 py-3">
+  {/* Brushstroke Background */}
+  <span className="absolute inset-0 bg-green-700 w-full h-full rounded-lg skew-y-1 "></span>
+  
+  {/* Text with Shadow */}
+  <h2 className="text-4xl md:text-5xl font-extrabold text-white uppercase drop-shadow-[5px_5px_0px_rgba(0,0,0,0.2)]">
+   <strong>Our Partnered Teams </strong> 
+  </h2>
+</div>
+
+          <p className="text-gray-300 max-w-2xl mx-auto mt-4">
             Collaborating with **elite sports organizations** to revolutionize athlete healthcare & performance.
           </p>
         </motion.div>

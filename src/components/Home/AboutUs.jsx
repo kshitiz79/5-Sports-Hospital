@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export default function AboutUs() {
   return (
-    <section className="relative sticky top-0 bg-gradient-to-b from-black via-gray-900 to-gray-800 text-white rounded-3xl overflow-hidden py-20">
+    <section className="relative sticky top-0 bg-gradient-to-b from-black via-gray-900  to-gray-800 text-white rounded-3xl overflow-hidden py-20">
       <div className="container mx-auto px-6">
         {/* Section Title */}
         <motion.div
@@ -14,8 +14,18 @@ export default function AboutUs() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-green-400">About Us</h2>
-          <p className="text-gray-300 max-w-2xl mx-auto">
+<div className="relative inline-block px-4 py-2">
+  {/* Brushstroke Background */}
+  <span className="absolute inset-0 bg-green-700 w-full h-full rounded-lg skew-y-2 -z-10"></span>
+  
+  {/* Text with Shadow */}
+  <h2 className="text-4xl md:text-5xl font-extrabold text-white uppercase drop-shadow-[5px_5px_0px_rgba(0,0,0,0.2)]">
+   <strong>About Us</strong> 
+  </h2>
+</div>
+
+
+          <p className="text-gray-300 max-w-2xl mx-auto mt-3">
             Learn more about our mission to redefine sports medicine and athlete care.
           </p>
         </motion.div>

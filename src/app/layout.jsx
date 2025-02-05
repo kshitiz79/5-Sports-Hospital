@@ -1,9 +1,8 @@
-
 import Header from "@/components/Global/Header";
-import "../styles/globals.css";
 import Footer from "@/components/Global/Footer";
+import { ThemeProvider } from "@/contex/ThemeContext"; // Import ThemeProvider
+import "../styles/globals.css";
 import '../styles/font.css';
-;
 
 export const metadata = {
   title: "Create Next App",
@@ -13,11 +12,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      
-      <body>
-        <Header/>
-        {children}
-        <Footer/>
+      <body className="transition-colors duration-500">
+        <ThemeProvider> {/* Wrap entire app */}
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

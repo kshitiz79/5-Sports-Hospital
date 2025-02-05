@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap')
+
+
+
+
+
+
 :root {
   /* Light Mode Colors */
   --background: #FFFFFF;
@@ -11,6 +18,9 @@
   --dark-green: #006032;
   --light-green: #01a431;
   --logo-yellow: #f4c430;
+
+
+
 }
 
 @media (prefers-color-scheme: light) {
@@ -109,4 +119,15 @@ body {
   padding: 4rem 0; /* Equivalent to py-16 */
   background-color: #f9fafb; /* Equivalent to bg-gray-50 */
   animation: fade-in 0.5s ease-in-out; /* Equivalent to animate-fade-in */
+}
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+
+.clip-path-custom {
+  clip-path: polygon(0 6%, 100% 0, 100% 100%, 0% 100%);
 }

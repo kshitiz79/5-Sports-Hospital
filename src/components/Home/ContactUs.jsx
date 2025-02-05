@@ -1,14 +1,17 @@
-'use client'
+'use client';
 
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { useTheme } from '@/contex/ThemeContext'; // Import Theme Hook
 
 const ContactUs = () => {
+  const { darkMode } = useTheme();
+
   return (
-    <section className="py-20 bg-gradient-to-b from-black via-gray-900 to-gray-800 text-white relative">
+    <section className={`py-20 relative transition-colors duration-500 ${darkMode ? 'bg-black text-white' : 'bg-gray-100 text-gray-900'}`}>
       <div className="container mx-auto px-6">
-        
+
         {/* Section Title */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -16,9 +19,9 @@ const ContactUs = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold text-green-400">Get in Touch</h2>
-          <p className="text-gray-300 max-w-2xl mx-auto">
-            Have questions? Reach out to us! We're here to help you with **appointments, consultations, and inquiries.**
+          <h2 className={`text-4xl font-bold ${darkMode ? 'text-green-400' : 'text-green-700'}`}>Get in Touch</h2>
+          <p className={`max-w-2xl mx-auto ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+            Have questions? Reach out to us! We're here to help you.
           </p>
         </motion.div>
 
@@ -30,65 +33,75 @@ const ContactUs = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-white/10 backdrop-blur-md border border-gray-700 rounded-xl shadow-lg p-8"
+            className={`border rounded-xl shadow-lg p-8 transition-all duration-300 ${
+              darkMode ? 'bg-white/10 backdrop-blur-md border-gray-700' : 'bg-white border-gray-300'
+            }`}
           >
-            <h3 className="text-2xl font-semibold text-green-300 mb-4">Send us a Message</h3>
+            <h3 className={`text-2xl font-semibold mb-4 ${darkMode ? 'text-green-300' : 'text-green-700'}`}>Send us a Message</h3>
             <form className="space-y-4">
               <input
                 type="text"
                 placeholder="Your Name"
-                className="w-full bg-white/10 text-white border border-gray-600 p-3 rounded-md outline-none focus:border-green-400 transition"
+                className={`w-full border p-3 rounded-md outline-none transition ${
+                  darkMode ? 'bg-white/10 text-white border-gray-600 focus:border-green-400' : 'bg-gray-50 text-gray-900 border-gray-400 focus:border-green-500'
+                }`}
                 required
               />
               <input
                 type="email"
                 placeholder="Your Email"
-                className="w-full bg-white/10 text-white border border-gray-600 p-3 rounded-md outline-none focus:border-green-400 transition"
+                className={`w-full border p-3 rounded-md outline-none transition ${
+                  darkMode ? 'bg-white/10 text-white border-gray-600 focus:border-green-400' : 'bg-gray-50 text-gray-900 border-gray-400 focus:border-green-500'
+                }`}
                 required
               />
               <textarea
                 placeholder="Your Message"
                 rows="4"
-                className="w-full bg-white/10 text-white border border-gray-600 p-3 rounded-md outline-none focus:border-green-400 transition"
+                className={`w-full border p-3 rounded-md outline-none transition ${
+                  darkMode ? 'bg-white/10 text-white border-gray-600 focus:border-green-400' : 'bg-gray-50 text-gray-900 border-gray-400 focus:border-green-500'
+                }`}
                 required
               ></textarea>
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-white font-bold py-3 px-6 rounded-md transition-all duration-300 shadow-md"
+                className={`w-full font-bold py-3 px-6 rounded-md transition-all duration-300 shadow-md ${
+                  darkMode
+                    ? 'bg-green-500 hover:bg-green-600 text-white'
+                    : 'bg-blue-500 hover:bg-blue-600 text-white'
+                }`}
               >
                 Send Message
               </button>
             </form>
           </motion.div>
 
-          {/* Contact Details & Map */}
+          {/* Contact Details */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h3 className="text-2xl font-semibold text-green-300 mb-4">Contact Details</h3>
-            <p className="text-gray-400 mb-6">
-              Our support team is available to help you with any queries or appointments.
+            <h3 className={`text-2xl font-semibold mb-4 ${darkMode ? 'text-green-300' : 'text-green-700'}`}>Contact Details</h3>
+            <p className={`mb-6 ${darkMode ? 'text-gray-400' : 'text-gray-700'}`}>
+              Our support team is available for queries and appointments.
             </p>
             <div className="space-y-4">
               <div className="flex items-center space-x-4">
-                <Phone className="w-6 h-6 text-green-400" />
-                <p className="text-gray-300">+1 (234) 567-890</p>
+                <Phone className={`w-6 h-6 ${darkMode ? 'text-green-400' : 'text-green-600'}`} />
+                <p className={`${darkMode ? 'text-gray-300' : 'text-gray-900'}`}>+1 (234) 567-890</p>
               </div>
               <div className="flex items-center space-x-4">
-                <Mail className="w-6 h-6 text-green-400" />
-                <p className="text-gray-300">contact@sportsmed.com</p>
+                <Mail className={`w-6 h-6 ${darkMode ? 'text-green-400' : 'text-green-600'}`} />
+                <p className={`${darkMode ? 'text-gray-300' : 'text-gray-900'}`}>contact@sportsmed.com</p>
               </div>
               <div className="flex items-center space-x-4">
-                <MapPin className="w-6 h-6 text-green-400" />
-                <p className="text-gray-300">123 Sports Avenue, New York, NY</p>
+                <MapPin className={`w-6 h-6 ${darkMode ? 'text-green-400' : 'text-green-600'}`} />
+                <p className={`${darkMode ? 'text-gray-300' : 'text-gray-900'}`}>123 Sports Avenue, NY</p>
               </div>
-            </div>
 
-            {/* Google Maps Embed */}
-            <div className="mt-6">
+              <div className="mt-6">
               <iframe
                 title="Google Maps Location"
                 className="w-full h-56 rounded-xl shadow-lg"
@@ -96,6 +109,8 @@ const ContactUs = () => {
                 allowFullScreen=""
                 loading="lazy"
               ></iframe>
+            </div>
+
             </div>
           </motion.div>
 
@@ -106,3 +121,8 @@ const ContactUs = () => {
 };
 
 export default ContactUs;
+
+
+
+
+
