@@ -3,7 +3,7 @@
 
 
 
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Body font */
@@ -32,4 +32,9 @@ body {
 .font-montserrat-light {
   font-family: 'Montserrat', sans-serif;
   font-weight: 100; /* Light weight */
+}
+.bebas-neue-regular {
+  font-family: "Bebas Neue", serif;
+  font-weight: 800;
+  font-style: normal;
 }

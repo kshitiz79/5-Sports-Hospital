@@ -34,7 +34,7 @@ const PartneredTeams = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-800 via-gray-900 to-black text-white relative clip-path-custom">
+    <section className="py-24 bg-gradient-to-b from-gray-800 via-gray-900 to-black text-white relative clip-path-custom">
 
       <div className="container mx-auto px-6">
         
@@ -57,7 +57,7 @@ const PartneredTeams = () => {
   </h2>
 </div>
 
-          <p className="text-gray-300 max-w-2xl mx-auto mt-4">
+          <p className="text-gray-300 max-w-2xl mx-auto mt-5 uppercase font-extrabold">
             Collaborating with **elite sports organizations** to revolutionize athlete healthcare & performance.
           </p>
         </motion.div>
@@ -91,31 +91,42 @@ const PartneredTeams = () => {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h3 className="text-2xl font-semibold text-green-300 mb-6 text-center">
-            What Our Partnered Athletes Say
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="relative group bg-white/10 backdrop-blur-md border border-gray-700 rounded-2xl shadow-lg p-6 text-center hover:scale-105 transition-transform duration-300"
-              >
-                {/* Athlete Image */}
-                <img src={testimonial.image} alt={testimonial.name} className="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-green-400" />
-                
-                {/* Quote */}
-                <p className="text-gray-300 italic">"{testimonial.quote}"</p>
+          <div className="flex justify-center">
+  <h3 className="text-2xl font-semibold text-white bg-green-700 px-6 py-3  shadow-lg mb-6 text-center uppercase">
+    What Our Partnered Athletes Say
+  </h3>
+</div>
 
-                {/* Name & Sport */}
-                <h4 className="mt-4 text-lg font-semibold text-green-300">{testimonial.name}</h4>
-                <p className="text-gray-400">{testimonial.sport}</p>
-              </motion.div>
-            ))}
-          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+  {testimonials.map((testimonial, index) => (
+    <motion.div
+      key={index}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.1, duration: 0.5 }}
+      className="relative bg-white/10 backdrop-blur-md border border-gray-700  rounded-2xl shadow-xl overflow-hidden flex flex-col"
+    >
+      {/* Top Image (Athlete in Action) */}
+      <img src={testimonial.image} alt={testimonial.name} className="w-full h-56 object-cover" />
+
+      {/* Quote Section */}
+      <div className="p-6 text-center flex flex-col items-center relative">
+        {/* Quote Icon with Background */}
+        <div className="absolute -top-8 bg-green-500 w-16 h-16 flex items-center justify-center rounded-full">
+          <span className="text-4xl text-black font-bold">“</span>
+        </div>
+
+        {/* Quote */}
+        <p className="text-white italic mt-10">{testimonial.quote}</p>
+
+        {/* Name */}
+        <h4 className="mt-6 text-lg font-extrabold uppercase text-white">{testimonial.name}</h4>
+      </div>
+    </motion.div>
+  ))}
+</div>
+
         </motion.div>
 
       </div>

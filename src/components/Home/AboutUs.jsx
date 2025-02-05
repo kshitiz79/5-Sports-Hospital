@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export default function AboutUs() {
   return (
-    <section className="relative sticky top-0 bg-gradient-to-b from-black via-gray-900  to-gray-800 text-white rounded-3xl overflow-hidden py-20">
+    <section className="relative sticky top-0 bg-gradient-to-b from-black via-gray-900  to-gray-800 text-white rounded-3xl overflow-hidden py-10">
       <div className="container mx-auto px-6">
         {/* Section Title */}
         <motion.div
@@ -25,7 +25,7 @@ export default function AboutUs() {
 </div>
 
 
-          <p className="text-gray-300 max-w-2xl mx-auto mt-3">
+          <p className="text-gray-300 max-w-2xl mx-auto mt-4 uppercase">
             Learn more about our mission to redefine sports medicine and athlete care.
           </p>
         </motion.div>
@@ -69,8 +69,8 @@ export default function AboutUs() {
             transition={{ duration: 0.5 }}
             className="space-y-8"
           >
-            <h3 className="text-3xl font-bold text-green-400">Why Choose Us?</h3>
-            <ul className="space-y-4">
+            <h3 className="text-3xl font-bold text-green-400 uppercase">Why Choose Us?</h3>
+            <ul className="space-y-3">
               {[
                 { title: '11 Specialized Sports Medicine Departments', desc: 'Comprehensive care for all your needs.' },
                 { title: 'World-Class Rehabilitation Technology', desc: 'Cutting-edge tools for faster recovery.' },

@@ -33,7 +33,7 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="relative py-20 bg-gradient-to-b from-black to-gray-900 sticky top-0 fixed text-white">
+    <section className="relative py-20 bg-gradient-to-b from-black to-gray-900   text-white">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <motion.div
@@ -42,8 +42,16 @@ export default function WhyChooseUs() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-green-400">Why Choose Us?</h2>
-          <p className="text-gray-300 max-w-2xl mx-auto">
+                   <div className="relative inline-block px-4 py-3 mt-20">
+  {/* Brushstroke Background */}
+  <span className="absolute inset-0 bg-green-700 w-full h-full rounded-lg skew-y-1 "></span>
+  
+  {/* Text with Shadow */}
+  <h2 className="text-4xl md:text-5xl font-extrabold text-white uppercase drop-shadow-[5px_5px_0px_rgba(0,0,0,0.2)]">
+   <strong>Why To Choose Us </strong> 
+  </h2>
+</div>
+          <p className="text-gray-300 max-w-2xl mx-auto mt-4  uppercase font-extrabold">
             Discover what makes us the **#1 Sports Medicine & Rehabilitation Center** in India.
           </p>
         </motion.div>
@@ -57,7 +65,7 @@ export default function WhyChooseUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.15, type: "spring", stiffness: 120 }}
-              className="relative group bg-white/10 backdrop-blur-md border border-gray-700 rounded-2xl shadow-lg p-8 transition-all duration-300 hover:shadow-green-500/50"
+              className=" uppercase relative group bg-white/10 backdrop-blur-md border border-gray-700 rounded-2xl shadow-lg p-8 transition-all duration-300 hover:shadow-green-500/50"
             >
               {/* Icon */}
               <div className="mb-6 flex items-center justify-center w-16 h-16 bg-green-800/50 rounded-full group-hover:scale-110 transition-transform">

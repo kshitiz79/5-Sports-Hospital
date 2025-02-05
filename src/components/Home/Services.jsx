@@ -13,22 +13,32 @@ const ToothIcon = () => (
 );
 
 const services = [
-  { icon: <HeartPulse className="w-8 h-8" />, title: 'Sports & Exercise Medicine', desc: 'Comprehensive care for athletic performance and injury prevention' },
-  { icon: <Bone className="w-8 h-8" />, title: 'Orthopedics', desc: 'Advanced surgical and non-surgical bone/joint treatments' },
-  { icon: <Dumbbell className="w-8 h-8" />, title: 'Physiotherapy & Rehabilitation', desc: 'Customized recovery programs for optimal results' },
-  { icon: <Microscope className="w-8 h-8" />, title: 'Sports Science & Research', desc: 'Evidence-based performance optimization strategies' },
-  { icon: <Utensils className="w-8 h-8" />, title: 'Sports Nutrition', desc: 'Personalized diet plans for peak performance' },
-  { icon: <Activity className="w-8 h-8" />, title: 'Exercise Physiology', desc: 'Biomechanical analysis and conditioning programs' },
-  { icon: <Brain className="w-8 h-8" />, title: 'Sports Psychology', desc: 'Mental toughness training and performance coaching' },
-  { icon: <Armchair className="w-8 h-8" />, title: 'Sports Massage Therapy', desc: 'Enhanced recovery through specialized techniques' },
-  { icon: <X className="w-8 h-8" />, title: 'Sports Radiology', desc: 'Advanced imaging for accurate diagnosis' },
-  { icon: <Scissors className="w-8 h-8" />, title: 'Sports Cosmetology', desc: 'Scar management and aesthetic treatments' },
-  { icon: <ToothIcon className="w-8 h-8" />, title: 'Sports Dentistry', desc: 'Oral health solutions for athletic needs' },
-  { icon: <HeartPulse className="w-8 h-8" />, title: 'Sports & Exercise Medicine', desc: 'Comprehensive care for athletic performance and injury prevention' },
-  { icon: <Bone className="w-8 h-8" />, title: 'Orthopedics', desc: 'Advanced surgical and non-surgical bone/joint treatments' },
-  
-  
+  { icon: <HeartPulse className="w-8 h-8" />, title: 'Sports Medicine', desc: 'Expert care for athletes and injury prevention.' },
+  { icon: <Bone className="w-8 h-8" />, title: 'Orthopedic Care', desc: 'Bone and joint treatments, surgical and non-surgical.' },
+  { icon: <Dumbbell className="w-8 h-8" />, title: 'Sports Physiotherapy', desc: 'Recovery programs tailored for peak performance.' },
+  { icon: <Microscope className="w-8 h-8" />, title: 'Sports Science', desc: 'Research-backed strategies for performance gains.' },
+  { icon: <Utensils className="w-8 h-8" />, title: 'Sports Nutrition', desc: 'Customized diet plans for athlete performance.' },
+  { icon: <Activity className="w-8 h-8" />, title: 'Exercise Physiology', desc: 'Biomechanical analysis and strength training.' },
+  { icon: <Brain className="w-8 h-8" />, title: 'Sports Psychology', desc: 'Mindset training for mental toughness and may more.' },
+  { icon: <Armchair className="w-8 h-8" />, title: 'Massage Therapy', desc: 'Specialized recovery for faster healing and many more.' },
+  { icon: <X className="w-8 h-8" />, title: 'Sports Radiology', desc: 'Advanced imaging for precise diagnostics and many more.' },
+  { icon: <Scissors className="w-8 h-8" />, title: 'Sports Cosmetology', desc: 'Scar care and aesthetic treatments and many more.' },
+  { icon: <ToothIcon className="w-8 h-8" />, title: 'Sports Dentistry', desc: 'Oral health solutions for active lifestyles.' },
+  { icon: <HeartPulse className="w-8 h-8" />, title: 'Athlete Medicine', desc: 'Comprehensive care for peak condition.' },
+  { icon: <Bone className="w-8 h-8" />, title: 'Joint & Bone Care', desc: 'Orthopedic treatments to enhance mobility.' },
+  { icon: <HeartPulse className="w-8 h-8" />, title: 'Sports Medicine', desc: 'Expert care for athletes and injury prevention.' },
+  { icon: <Bone className="w-8 h-8" />, title: 'Orthopedic Care', desc: 'Bone and joint treatments, surgical and non-surgical.' },
+  { icon: <Dumbbell className="w-8 h-8" />, title: 'Physiotherapy', desc: 'Recovery programs tailored for peak performance.' },
+  { icon: <Microscope className="w-8 h-8" />, title: 'Sports Science', desc: 'Research-backed strategies for performance gains.' },
+  { icon: <Utensils className="w-8 h-8" />, title: 'Sports Nutrition', desc: 'Customized diet plans for athlete performance.' },
+  { icon: <Activity className="w-8 h-8" />, title: 'Exercise Physiology', desc: 'Biomechanical analysis and strength training.' },
+  { icon: <Brain className="w-8 h-8" />, title: 'Sports Psychology', desc: 'Mindset training for mental toughness and may more.' },
+  { icon: <Microscope className="w-8 h-8" />, title: 'Sports Science', desc: 'Research-backed strategies for performance gains.' },
+  { icon: <Utensils className="w-8 h-8" />, title: 'Sports Nutrition', desc: 'Customized diet plans for athlete performance.' },
+  { icon: <Activity className="w-8 h-8" />, title: 'Exercise Physiology', desc: 'Biomechanical analysis and strength training.' },
+  { icon: <Brain className="w-8 h-8" />, title: 'Sports Psychology', desc: 'Mindset training for mental toughness and may more.' },
 ];
+
 
 export default function Services() {
   const sectionRef = useRef(null);
@@ -50,7 +60,7 @@ export default function Services() {
   const smoothX = useSpring(x, { stiffness: 100, damping:70 });
 
   return (
-    <section ref={sectionRef} className="relative min-h-[200vh] bg-black text-white rounded-[20rem]">
+    <section ref={sectionRef} className="relative min-h-[290vh]  bg-black text-white rounded-[20rem]">
       {/* Sticky Section */}
       <div className="sticky top-0 h-screen flex flex-col justify-center items-center bg-black z-10 rounded-3xl ">
         <div className="px-6 w-full">
@@ -61,35 +71,50 @@ export default function Services() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Specialized Services</h2>
-            <p className="max-w-2xl mx-auto">Comprehensive sports medicine solutions backed by cutting-edge technology and expert care</p>
+            <div className="relative inline-block px-4 py-3 mt-20">
+  {/* Brushstroke Background */}
+  <span className="absolute inset-0 bg-green-700 w-full h-full rounded-lg skew-y-1 "></span>
+  
+  {/* Text with Shadow */}
+  <h2 className="text-4xl md:text-5xl font-extrabold text-white uppercase drop-shadow-[5px_5px_0px_rgba(0,0,0,0.2)]">
+   <strong>Our Specialized Services </strong> 
+  </h2>
+</div>
+            <p className="max-w-2xl mx-auto mt-5 uppercase font-extrabold">Comprehensive sports medicine solutions backed by cutting-edge technology and expert care</p>
           </motion.div>
 
-          {/* Horizontal Scroll Container */}
           <div ref={containerRef} className="relative w-full overflow-hidden">
-            <motion.div style={{ x: smoothX }} className="flex space-x-8">
-              {services.map((service, index) => (
-                <div
-                  key={service.title}
-                  className="group relative bg-gray-900 rounded-xl shadow-lg p-8 min-w-[300px] max-w-[300px] transition-all duration-300 ease-out overflow-hidden flex-shrink-0"
-                >
-                  <div className="mb-6">
-                    <div className="w-16 h-16 rounded-2xl bg-green-900 group-hover:bg-green-600 transition-colors duration-300 flex items-center justify-center">
-                      {service.icon}
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                  <p className="text-gray-400 mb-6">{service.desc}</p>
-                  <Link href="#" className="inline-flex items-center text-light-green hover:text-dark-green font-medium transition-colors">
-                    Learn More
-                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                </div>
-              ))}
-            </motion.div>
+      <motion.div style={{ x: smoothX }} className="flex space-x-8">
+        {services.map((service, index) => (
+          <div
+            key={service.title}
+            className="group relative bg-gray-900 rounded-xl shadow-lg p-8 min-w-[430px] max-w-[430px] min-h-[550px] max-h-[550px] transition-all duration-300 ease-out overflow-hidden flex flex-col items-center text-center"
+          >
+            {/* Fixed Icon Container */}
+            <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-28 h-28 rounded-full bg-green-900 group-hover:bg-green-600 transition-colors duration-300 flex items-center justify-center shadow-md">
+              {service.icon}
+            </div>
+
+            {/* Content Section */}
+            <div className="flex flex-col items-center justify-between flex-1 mt-36 px-4">
+               <h3 className="text-5xl font-bebas font-extrabold uppercase text-white leading-tight"><strong>{service.title}</strong> </h3>
+              <p className="text-gray-400 uppercase mt-4 mb-20">{service.desc}</p>
+            </div>
+
+            {/* Fixed "Learn More" Button for Consistency */}
+            <div className="w-full flex justify-center pb-5">
+              <button className="px-6 py-3 uppercase bg-green-700 text-white font-medium rounded-lg flex items-center justify-center gap-2 hover:bg-green-800 transition duration-300">
+                Learn More
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
           </div>
+        ))}
+      </motion.div>
+    </div>
+
         </div>
       </div>
 
