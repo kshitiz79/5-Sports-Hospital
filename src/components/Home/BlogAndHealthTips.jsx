@@ -60,7 +60,7 @@ const BlogAndHealthTips = () => {
           <div className="relative inline-block px-4 py-3">
             {/* Brushstroke Background */}
             <span className={`absolute inset-0 w-full h-full rounded-lg skew-y-1 ${
-              darkMode ? 'bg-green-600' : 'bg-green-700'
+              darkMode ? 'bg-green-600' : 'bg-green-500'
             }`}></span>
             
             {/* Text with Shadow */}
@@ -88,7 +88,7 @@ const BlogAndHealthTips = () => {
 
         <div className="flex justify-center">
           <h3 className={`text-2xl font-semibold  px-6 py-3 shadow-lg mb-6 text-center uppercase ${
-            darkMode ? 'bg-green-500 text-white' : 'bg-green-700 text-gray-900'
+            darkMode ? 'bg-green-600 text-white' : 'bg-green-500 text-gray-900'
           }`}>Articles & Tips</h3>
 
 </div>

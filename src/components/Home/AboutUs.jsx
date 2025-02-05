@@ -23,7 +23,7 @@ export default function AboutUs() {
           <div className="relative inline-block px-4 py-2">
             {/* Brushstroke Background */}
             <span className={`absolute inset-0 w-full h-full rounded-lg skew-y-2 -z-10 ${
-              darkMode ? 'bg-green-600' : 'bg-green-700'
+              darkMode ? 'bg-green-600' : 'bg-green-500'
             }`}></span>
             
             {/* Text with Shadow */}

@@ -51,7 +51,7 @@ export default function WhyChooseUs() {
           <div className="relative inline-block px-4 py-3">
             {/* Brushstroke Background */}
             <span className={`absolute inset-0 w-full h-full rounded-lg skew-y-1 ${
-              darkMode ? 'bg-green-600' : 'bg-green-700'
+              darkMode ? 'bg-green-600' : 'bg-green-500'
             }`}></span>
             
             {/* Text with Shadow */}

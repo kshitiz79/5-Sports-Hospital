@@ -73,7 +73,7 @@ export default function Services() {
           >
             <div className="relative inline-block px-4 py-3 mt-10">
               <span className={`absolute inset-0 w-full h-full rounded-lg skew-y-1 ${
-                darkMode ? 'bg-green-600' : 'bg-green-700'
+                darkMode ? 'bg-green-600' : 'bg-green-500'
               }`}></span>
               <h2 className="text-2xl md:text-5xl font-extrabold uppercase drop-shadow-lg relative">
                 <strong>Our Specialized Services</strong>

@@ -55,7 +55,7 @@ const PartneredTeams = () => {
             {/* Brushstroke Background */}
             <span
               className={`absolute inset-0 ${
-                darkMode ? 'bg-green-600' : 'bg-green-700'
+                darkMode ? 'bg-green-600' : 'bg-green-500'
               } w-full h-full rounded-lg skew-y-1`}
             ></span>
             
@@ -108,7 +108,7 @@ const PartneredTeams = () => {
           <div className="flex justify-center">
             <h3
               className={`text-base sm:text-xl font-semibold px-6 py-3 shadow-lg mb-6 text-center uppercase ${
-                darkMode ? 'bg-green-500 text-white' : 'bg-green-700 text-gray-900'
+                darkMode ? 'bg-green-600 text-white' : 'bg-green-500 text-gray-900'
               }`}
             >
               What Our Partnered Athletes Say

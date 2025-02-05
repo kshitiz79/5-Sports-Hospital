@@ -59,7 +59,7 @@ const MeetOurExperts = () => {
           <div className="relative inline-block px-4 py-3">
             {/* Brushstroke Background */}
             <span className={`absolute inset-0 w-full h-full rounded-lg skew-y-1 ${
-              darkMode ? 'bg-green-600' : 'bg-green-700'
+              darkMode ? 'bg-green-600' : 'bg-green-500'
             }`}></span>
             
             {/* Text with Shadow */}
@@ -110,7 +110,7 @@ const MeetOurExperts = () => {
               {/* Expert Details */}
               <h3
                 className={`text-xl font-semibold ${
-                  darkMode ? 'text-green-300' : 'text-green-700'
+                  darkMode ? 'text-green-300' : 'text-green-500'
                 }`}
               >
                 {expert.name}

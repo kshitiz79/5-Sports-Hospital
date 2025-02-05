@@ -24,7 +24,7 @@ const ContactUs = () => {
         >
           <div className="relative inline-block px-4 py-3">
             {/* Brushstroke Background */}
-            <span className={`absolute inset-0 ${darkMode ? 'bg-green-600' : 'bg-green-700'} w-full h-full rounded-lg skew-y-1`}></span>
+            <span className={`absolute inset-0 ${darkMode ? 'bg-green-600' : 'bg-green-500'} w-full h-full rounded-lg skew-y-1`}></span>
             
             {/* Text with Shadow */}
             <h2 className="text-2xl md:text-6xl font-extrabold uppercase drop-shadow-lg relative">

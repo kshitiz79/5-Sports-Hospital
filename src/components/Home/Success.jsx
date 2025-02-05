@@ -62,7 +62,7 @@ const SuccessStories = () => {
           <div className="relative inline-block px-4 py-3">
             {/* Brushstroke Background */}
             <span className={`absolute inset-0 w-full h-full rounded-lg skew-y-1 ${
-              darkMode ? 'bg-green-600' : 'bg-green-700'
+              darkMode ? 'bg-green-600' : 'bg-green-500'
             }`}></span>
             
             {/* Text with Shadow */}
@@ -88,7 +88,7 @@ const SuccessStories = () => {
 
 <div className="flex justify-center">
 <h3 className={`text-2xl font-semibold px-6 py-3 shadow-lg mb-6 text-center uppercase  ${
-            darkMode ? 'bg-green-500 text-white' : 'bg-green-700 text-gray-900'
+            darkMode ? 'bg-green-500 text-white' : 'bg-green-500 text-gray-900'
           }`}>Athlete Testimonials</h3> 
           </div>
 
@@ -116,7 +116,7 @@ const SuccessStories = () => {
         <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-16">
         <div className="flex justify-center">
 <h3 className={`text-2xl font-semibold px-6 py-3 shadow-lg mb-6 text-center uppercase  ${
-            darkMode ? 'bg-green-500 text-white' : 'bg-green-700 text-gray-900'
+            darkMode ? 'bg-green-600 text-white' : 'bg-green-500 text-gray-900'
           }`}>Recovery Stories</h3> 
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -142,7 +142,7 @@ const SuccessStories = () => {
   {/* Section Title */}
   <div className="flex justify-center">
     <h3 className={`text-2xl sm:text-3xl font-semibold px-6 py-3 shadow-lg mb-6 text-center uppercase rounded-md ${
-      darkMode ? 'bg-green-500 text-white' : 'bg-green-700 text-gray-900'
+      darkMode ? 'bg-green-600 text-white' : 'bg-green-500 text-gray-900'
     }`}>
       Patient Reviews
     </h3>
