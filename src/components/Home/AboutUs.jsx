@@ -3,7 +3,7 @@
 import { Play } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useTheme } from '@/contex/ThemeContext'; // Import Theme Hook
-
+import { FaCheckCircle, FaPhone } from 'react-icons/fa';
 export default function AboutUs() {
   const { darkMode } = useTheme(); // Get Dark Mode State
 
@@ -39,107 +39,92 @@ export default function AboutUs() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-start mx-auto">
-          
-          {/* Left Column: Story and Video */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="space-y-8"
-          >
-            {/* Story */}
-            <p className={`text-lg leading-relaxed text-justify ${
-              darkMode ? 'text-gray-300' : 'text-gray-800'
-            }`}>
-              At <span className={`font-semibold ${
-                darkMode ? 'text-green-400' : 'text-green-700'
-              }`}>5 Sports Hospital</span>, we are dedicated to revolutionizing sports medicine and rehabilitation. 
-              Founded with a vision to provide **world-class care**, we have treated **500+ elite athletes** with a **20-year legacy** of excellence.
-            </p>
+        
 
-            {/* Explainer Video */}
-            <div className="relative group">
-              <video
-                className={`w-full rounded-lg shadow-lg border ${
-                  darkMode ? 'border-gray-700' : 'border-gray-300'
-                }`}
-                poster="/about-video-poster.jpg" // Fallback image
-                controls
-              >
-                <source src="/about-video.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-              <button className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 rounded-lg transition group-hover:bg-opacity-20">
-                <Play className="w-14 h-14 text-white group-hover:scale-110 transition-transform" />
-              </button>
-            </div>
-          </motion.div>
 
-          {/* Right Column: Why Choose Us */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="space-y-8"
-          >
-            <h3 className={`text-3xl font-bold uppercase ${
-              darkMode ? 'text-green-400' : 'text-green-700'
-            }`}>
-              Why Choose Us?
-            </h3>
-            <ul className="space-y-3">
-              {[
-                { title: '11 Specialized Sports Medicine Departments', desc: 'Comprehensive care for all your needs.' },
-                { title: 'World-Class Rehabilitation Technology', desc: 'Cutting-edge tools for faster recovery.' },
-                { title: 'Personalized Care for Every Athlete', desc: 'Tailored treatment plans to meet your goals.' },
-                { title: '500+ Successful Injury Recoveries', desc: 'Proven track record of athlete recovery.' }
-              ].map((item, index) => (
-                <motion.li
-                  key={index}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1, duration: 0.3 }}
-                  className="flex items-start space-x-3"
-                >
-                  <span className={`text-2xl ${
-                    darkMode ? 'text-green-400' : 'text-green-700'
-                  }`}>✔️</span>
-                  <span className={`${darkMode ? 'text-gray-300' : 'text-gray-900'}`}>
-                    <strong>{item.title}</strong> - {item.desc}
-                  </span>
-                </motion.li>
-              ))}
-            </ul>
 
-            {/* Animated Counters */}
-            <div className="grid grid-cols-2 gap-6 mt-8">
-              {[
-                { count: "500+", label: "Athletes Treated" },
-                { count: "20+", label: "Years of Expertise" }
-              ].map((stat, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.2 }}
-                  className={`text-center p-6 rounded-lg shadow-md transition ${
-                    darkMode ? 'bg-white/10 backdrop-blur-md border-gray-700' : 'bg-white border-gray-300'
-                  }`}
-                >
-                  <h4 className={`text-4xl font-bold ${
-                    darkMode ? 'text-green-300' : 'text-green-700'
-                  }`}>{stat.count}</h4>
-                  <p className={`${darkMode ? 'text-gray-300' : 'text-gray-900'} mt-2`}>{stat.label}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+
+
+
+
+
+
+
+
+
+       
+      <div className="container mx-auto flex flex-col md:flex-row items-center gap-10">
+        {/* Image Section */}
+        <div className="relative w-full md:w-1/2">
+      <div className="bg-black h-[600px] flex items-center justify-center">
+        <img
+          src="/3.png"
+          alt="jdj"
+          className=""
+        />
+      </div>
+      <div className="absolute top-4 left-4 bg-green-500 text-black px-6 py-2 font-bold text-lg">
+        <span className="text-3xl">20+</span>
+        <p className="text-sm">Training Programs</p>
+      </div>
+      <div className="absolute bottom-0 left-0 bg-green-500 w-full p-4 flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <FaPhone className="text-black text-2xl" />
+          <div>
+            <p className="text-black font-bold">CALL US ANYTIME</p>
+            <p className="font-bold italic text-black">9353555755</p>
+          </div>
         </div>
+      </div>
+    </div>
+
+        {/* Text Section */}
+        <div className="w-full md:w-1/2">
+          <p className="text-green-500 font-bold">ABOUT US</p>
+          <h2 className="text-5xl font-black leading-tight">
+            PIONEERING SPORTS MEDICINE <br /> FOR ATHLETES 
+          </h2>
+          <p className="text-gray-400 mt-4">
+            Founded in 2024, 5 Sports Hospital has become a beacon of excellence in sports medicine and orthopedic care. Our visionary founder, DR POOJA JHADE and DR NATARAJ H M established a center that combines cutting-edge medical technology with personalized care, dedicated to helping athletes achieve peak performance.
+          </p>
+          <ul className="mt-6 space-y-3">
+            <li className="flex items-center gap-2">
+              <FaCheckCircle className="text-green-500" />
+              <span>Comprehensive care from expert physicians, surgeons, and specialists.</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <FaCheckCircle className="text-green-500" />
+              <span>State-of-the-art facilities and advanced diagnostic imaging.</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <FaCheckCircle className="text-green-500" />
+              <span>Personalized treatment plans designed for athletes at all levels.</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <FaCheckCircle className="text-green-500" />
+              <span>A multidisciplinary team committed to your recovery and performance.</span>
+            </li>
+          </ul>
+          <button className="mt-6 bg-green-500 text-black font-bold py-3 px-6 text-lg">
+            LEARN MORE
+          </button>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       </div>
     </section>
   );

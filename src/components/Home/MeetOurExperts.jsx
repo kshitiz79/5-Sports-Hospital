@@ -2,41 +2,51 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useTheme } from '@/contex/ThemeContext'; // Import the Theme Hook
+import { useTheme } from '@/contex/ThemeContext';
+import Image from 'next/image';
 
 const MeetOurExperts = () => {
-  const { darkMode } = useTheme(); // Retrieve the current theme mode
+  const { darkMode } = useTheme();
 
-  const experts = [
+  const teamMembers = [
     {
-      image: '/images/doctor1.jpg', // Replace with actual image paths
-      name: 'Dr. John Doe',
-      specialties: 'Sports Medicine, Orthopedics',
-      consultationLink: '/book-consultation/dr-john-doe', // Link to booking page
+      name: "Dr Pooja Jhade",
+      role: "Certified Posture Expert",
+      image: "/doctor.png",
+      expertise: [
+        "Posture Reformation",
+        "Anti-Gravity Rehabilitation",
+        "Sports Injury Prevention",
+        "Musculoskeletal Collapse Prevention",
+      ],
+      collaborations: [
+        "Indian Premier League (IPL)",
+        "International Tennis Federation (ITF)",
+        "Corporate Wellness Programs",
+      ],
     },
     {
-      image: '/images/doctor2.jpg',
-      name: 'Dr. Jane Smith',
-      specialties: 'Physiotherapy, Rehabilitation',
-      consultationLink: '/book-consultation/dr-jane-smith',
-    },
-    {
-      image: '/images/doctor3.jpg',
-      name: 'Dr. Alex Johnson',
-      specialties: 'Sports Nutrition, Performance Coaching',
-      consultationLink: '/book-consultation/dr-alex-johnson',
-    },
-    {
-      image: '/images/doctor4.jpg',
-      name: 'Dr. Emily White',
-      specialties: 'Exercise Physiology, Injury Prevention',
-      consultationLink: '/book-consultation/dr-emily-white',
+      name: "Dr Nataraj H M",
+      role: "Knee & Shoulder Specialist HOD-Orthopaedics",
+      image: "/doctor2.png",
+      expertise: [
+        "Robotic Knee Replacement",
+        "Robotic Partial Knee Replacement",
+        "Computer Assisted Surgeries",
+        "Shoulder Dislocation Surgeries",
+        "Arthroscopy",
+        "ACL Reconstruction",
+        "Meniscus Repair",
+        "Rotator Cuff Repair",
+        "Fracture Surgeries",
+      ],
+      collaborations: [],
     },
   ];
 
   return (
     <section
-      className={`py-20 transition-colors  relative duration-500 ${
+      className={`py-20 transition-colors relative duration-500 ${
         darkMode
           ? 'bg-gradient-to-b from-black via-gray-900 to-gray-800 text-white'
           : 'bg-gray-100 text-gray-900'
@@ -44,12 +54,6 @@ const MeetOurExperts = () => {
     >
       <div className="container mx-auto px-6">
         {/* Section Title */}
-       
-
-
-
-
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -58,72 +62,109 @@ const MeetOurExperts = () => {
         >
           <div className="relative inline-block px-4 py-3">
             {/* Brushstroke Background */}
-            <span className={`absolute inset-0 w-full h-full rounded-lg skew-y-1 ${
-              darkMode ? 'bg-green-600' : 'bg-green-500'
-            }`}></span>
-            
+            <span
+              className={`absolute inset-0 w-full h-full rounded-lg skew-y-1 ${
+                darkMode ? 'bg-green-600' : 'bg-green-500'
+              }`}
+            ></span>
+
             {/* Text with Shadow */}
             <h2 className="text-2xl md:text-6xl font-extrabold uppercase drop-shadow-lg relative">
-              <strong>  Meet Our Experts</strong>
+              <strong>Meet Our Experts</strong>
             </h2>
           </div>
 
-          <p className={`w-full mx-auto mt-6 uppercase font-extrabold ${
-            darkMode ? 'text-gray-300' : 'text-gray-700'
-          }`}>
-             Our highly skilled specialists are here to help you achieve peak
-             performance and recovery.
+          <p
+            className={`w-full mx-auto mt-6 uppercase font-extrabold ${
+              darkMode ? 'text-gray-300' : 'text-gray-700'
+            }`}
+          >
+            Our highly skilled specialists are here to help you achieve peak
+            performance and recovery.
           </p>
         </motion.div>
 
-
-
-
-
-
-
-        {/* Experts Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {experts.map((expert, index) => (
+        {/* Experts Grid: 2 columns on medium+ screens */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {teamMembers.map((member, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
+              // Example of a simple fade-in animation
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-              className={`relative group transition-transform duration-300 hover:scale-105 rounded-2xl shadow-lg p-6 text-center ${
-                darkMode
-                  ? 'bg-white/10 backdrop-blur-md border border-gray-700'
-                  : 'bg-white border border-gray-300'
+              className={`flex flex-col sm:flex-row rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl ${
+                darkMode ? 'bg-gray-800' : 'bg-white'
               }`}
             >
-              {/* Profile Image */}
-              <div className="relative">
-                <img
-                  src={expert.image}
-                  alt={expert.name}
-                  className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-green-400"
+              {/* Image on the left */}
+              <div className="w-full sm:w-1/2 h-[250px] sm:h-auto">
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  width={400}
+                  height={300}
+                  className="w-full h-full object-cover"
+                  unoptimized
                 />
-                <div className="absolute inset-0 bg-green-400 opacity-0 group-hover:opacity-10 transition-opacity rounded-full"></div>
               </div>
 
-              {/* Expert Details */}
-              <h3
-                className={`text-xl font-semibold ${
-                  darkMode ? 'text-green-300' : 'text-green-500'
-                }`}
-              >
-                {expert.name}
-              </h3>
-              <p className="text-gray-400 text-sm mb-4">{expert.specialties}</p>
+              {/* Text on the right */}
+              <div className="p-6 w-full sm:w-1/2 text-left">
+                <h4
+                  className={`font-bold text-lg md:text-xl ${
+                    darkMode ? 'text-white' : 'text-gray-900'
+                  }`}
+                >
+                  {member.name.toUpperCase()}
+                </h4>
+                <p className="text-lime-500 text-sm md:text-base mb-4">
+                  {member.role}
+                </p>
 
-              {/* Booking Button */}
-              <a
-                href={expert.consultationLink}
-                className="bg-gradient-to-r from-green-500 to-green-700 transition-all duration-300 text-white font-bold py-2 px-6 rounded-full shadow-md hover:shadow-lg"
-              >
-                Book Consultation
-              </a>
+                {/* Expertise */}
+                <div className="mb-4">
+                  <h5
+                    className={`font-bold text-sm md:text-base ${
+                      darkMode ? 'text-white' : 'text-gray-800'
+                    }`}
+                  >
+                    Expertise:
+                  </h5>
+                  <ul
+                    className={`list-disc pl-5 text-xs md:text-sm space-y-1 ${
+                      darkMode ? 'text-white' : 'text-gray-700'
+                    }`}
+                  >
+                    {member.expertise.map((item, idx) => (
+                      <li key={idx}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Collaborations */}
+                {member.collaborations.length > 0 && (
+                  <div>
+                    <h5
+                      className={`font-bold text-sm md:text-base ${
+                        darkMode ? 'text-white' : 'text-gray-800'
+                      }`}
+                    >
+                      Collaborations:
+                    </h5>
+                    <ul
+                      className={`list-disc pl-5 text-xs md:text-sm space-y-1 ${
+                        darkMode ? 'text-white' : 'text-gray-700'
+                      }`}
+                    >
+                      {member.collaborations.map((item, idx) => (
+                        <li key={idx}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
             </motion.div>
           ))}
         </div>

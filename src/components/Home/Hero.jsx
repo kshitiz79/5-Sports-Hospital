@@ -33,31 +33,49 @@ export default function Hero() {
         {/* Content */}
         <div className="relative z-10  mb-20  md:mb-0 text-center px-4 uppercase">
           {/* Top Tagline */}
-          <div
-            className={`inline-block px-4 py-2 text-xs md:text-2xl   mb-3 font-bold tracking-wide ${
-              darkMode ? 'bg-green-700 text-white' : 'bg-green-600 text-gray-100'
-            }`}
-          >
-            India’s Premier Sports Medicine & Rehab Center
-          </div>
+          <>
+  <div
+    className={`inline-block px-4 py-2 text-xs md:text-xl mb-3 font-bold tracking-wide ${
+      darkMode ? 'bg-green-700 text-white' : 'bg-green-600 text-gray-100'
+    }`}
+  >
+    Athlete Recovery & Sports Performance Enhancement
+  </div>
+  <br />
+  <div
+    className={`inline-block px-4 py-2 text-xs md:text-4xl mb-3 font-bold tracking-wide ${
+      darkMode ? 'bg-gray-700 text-white' : 'bg-gray-600 text-gray-100'
+    }`}
+  >
+    UNLOCK A NEW LEVEL OF
+  </div>
+</>
+
+
+
+
+
+
 
           {/* Main Heading */}
-          <h1 className="text-7xl md:text-[11rem] font-bebas leading-tight tracking-[-0.04em]">
-            <strong className={`${darkMode ? 'text-white' : 'text-black'} font-extrablack`}>SUCCESS</strong>
+          <h1 className="text-7xl md:text-[9rem] font-bebas leading-tight tracking-[-0.04em]">
+            <strong className={`${darkMode ? 'text-white' : 'text-black'} font-extrablack`}> PERFORMANCE</strong>
           </h1>
-          <h2 className={`text-4xl md:text-6xl font-bebas ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+          {/* <h2 className={`text-4xl md:text-6xl font-bebas ${darkMode ? 'text-white' : 'text-gray-900'}`}>
             <strong>IS A TEAM SPORT <span className="text-light-green">™</span></strong>
-          </h2>
+          </h2> */}
 
           {/* Subheading */}
-          <p className={`text-lg md:text-2xl font-montserrat mt-6 max-w-3xl mx-auto ${
+          <p className={`text-lg md:text-2xl font-montserrat mt-4 max-w-3xl mx-auto ${
             darkMode ? 'text-gray-200' : 'text-gray-950'
           }`}>
-            India's first integrated sports medicine and rehab facility offering cutting-edge treatment and world-class rehabilitation.
+India’s first integrated sports medicine & rehab center — enhancing performance, speeding recovery, and preventing injuries.
+
+
           </p>
 
           {/* Buttons */}
-          <div className="flex items-center justify-center flex-col md:flex-row gap-4 animate-fade-in-up mt-14">
+          <div className="flex items-center justify-center flex-col md:flex-row gap-4 animate-fade-in-up mt-10">
             <Link
               href="/book-appointment"
               className={`border-2 px-8 py-3 rounded-lg text-lg font-semibold transition flex items-center justify-center gap-2 ${

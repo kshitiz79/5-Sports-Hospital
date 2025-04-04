@@ -102,15 +102,15 @@ const ContactUs = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Phone className={`w-5 h-5 ${darkMode ? 'text-green-400' : 'text-green-600'}`} />
-                <p className={`${darkMode ? 'text-gray-300' : 'text-gray-900'}`}>+1 (234) 567-890</p>
+                <p className={`${darkMode ? 'text-gray-300' : 'text-gray-900'}`}>9353555855</p>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className={`w-5 h-5 ${darkMode ? 'text-green-400' : 'text-green-600'}`} />
-                <p className={`${darkMode ? 'text-gray-300' : 'text-gray-900'}`}>contact@sportsmed.com</p>
+                <p className={`${darkMode ? 'text-gray-300' : 'text-gray-900'}`}>fivesportshospital@gmail.com</p>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className={`w-5 h-5 ${darkMode ? 'text-green-400' : 'text-green-600'}`} />
-                <p className={`${darkMode ? 'text-gray-300' : 'text-gray-900'}`}>123 Sports Avenue, NY</p>
+                <p className={`${darkMode ? 'text-gray-300' : 'text-gray-900'}`}>Site No 40 & 41, 1st floor MPS Building, Ambedkar Nagar Mullur Sarjapur Road, Carmelram Bangalore, Karnataka - 560035 IN</p>
               </div>
 
               {/* Google Maps */}

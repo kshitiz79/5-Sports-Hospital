@@ -7,35 +7,17 @@ const ThemeContext = createContext();
 
 // Theme Provider Component
 export const ThemeProvider = ({ children }) => {
-  // Check local storage for user's preferred theme
-  const [darkMode, setDarkMode] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return localStorage.getItem('theme') === 'dark';
-    }
-    return true; // Default to dark mode
-  });
-
-  // Toggle theme and save it in local storage
-  const toggleTheme = () => {
-    setDarkMode((prevMode) => {
-      const newMode = !prevMode;
-      localStorage.setItem('theme', newMode ? 'dark' : 'light');
-      return newMode;
-    });
-  };
+  // Always use dark mode
+  const [darkMode] = useState(true); // Always set dark mode to true
 
   // Set HTML class for global dark mode support
   useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [darkMode]);
+    document.documentElement.classList.add('dark');
+  }, []);
 
   return (
-    <ThemeContext.Provider value={{ darkMode, toggleTheme }}>
-      <div className={darkMode ? 'dark' : ''}>{children}</div>
+    <ThemeContext.Provider value={{ darkMode }}>
+      <div className="dark">{children}</div> {/* Force dark mode */}
     </ThemeContext.Provider>
   );
 };
