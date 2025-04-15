@@ -31,8 +31,13 @@ const navItems = [
     name: 'ORTHOPEDIC & SURGERY',
     href: '/what-we-offer',
     submenu: [
-      { name: 'Treatments', href: '/what-we-offer#treatments' },
-      { name: 'Surgery Types', href: '/what-we-offer#surgeries' },
+      { name: 'Orthobiologicals & regenerative therapies', href: '/what-we-offer#treatments' },
+      { name: 'Arthritis & joint preservation techniques', href: '/what-we-offer#surgeries' },
+      { name: 'Robotic knee replacement ', href: '/what-we-offer#surgeries' },
+      { name: 'Sports injuries and ligament surgery', href: '/what-we-offer#surgeries' },
+      { name: 'Arthroscopy', href: '/what-we-offer#surgeries' },
+      { name: 'Fracture management ', href: '/what-we-offer#surgeries' },
+      { name: 'Surgical second opinion', href: '/what-we-offer#surgeries' },
     ],
   },
   {

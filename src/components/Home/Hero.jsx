@@ -96,9 +96,9 @@ export default function Hero() {
           </h2> */}
 
           {/* Subheading */}
-          <p className={`text-lg md:text-2xl mt-4 max-w-3xl mx-auto ${darkMode ? 'text-gray-200' : 'text-gray-950'
+          <p className={`text-lg md:text-2xl mt-4 max-w-2xl mx-auto ${darkMode ? 'text-gray-200' : 'text-gray-950'
             }`}>
-            India’s first integrated sports medicine & rehab center — enhancing performance, speeding recovery, and preventing injuries.
+            India’s first integrated sports medicine & rehab center— enhancing performance, speeding recovery, and preventing injuries.
 
 
           </p>

@@ -37,8 +37,8 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-green-500 font-bold text-lg">QUICK LINKS</h3>
-          <div className="h-1 w-16 bg-green-500 mt-2 mb-4 mx-auto md:mx-0"></div>
+          <h3 className="text-green-700 font-bold text-lg">QUICK LINKS</h3>
+          <div className="h-1 w-16 bg-green-800 mt-2 mb-4 mx-auto md:mx-0"></div>
           <ul className="space-y-2 text-black">
             <FooterLink href="/" label="Home" />
             <FooterLink href="/about" label="About Us" />
@@ -50,9 +50,9 @@ const Footer = () => {
         </div>
 
         {/* Programs */}
-        <div>
-          <h3 className="text-green-500 font-bold text-lg">PROGRAMS</h3>
-          <div className="h-1 w-16 bg-green-500 mt-2 mb-4 mx-auto md:mx-0"></div>
+        <div className='text-bold'>
+          <h3 className="text-green-700 font-bold text-lg">PROGRAMS</h3>
+          <div className="h-1 w-16 bg-green-800 mt-2 mb-4 mx-auto md:mx-0"></div>
           <ul className="space-y-2 text-black">
             <FooterLink href="#" label="Basic Exercise" />
             <FooterLink href="#" label="Advanced Exercises" />
@@ -65,8 +65,8 @@ const Footer = () => {
 
         {/* Contact Us */}
         <div className="flex flex-col items-center md:items-start">
-          <h3 className="text-green-500 font-bold text-lg">CONTACT US</h3>
-          <div className="h-1 w-16 bg-green-500 mt-2 mb-4 mx-auto md:mx-0"></div>
+          <h3 className="text-green-700 font-bold text-lg">CONTACT US</h3>
+          <div className="h-1 w-16 bg-green-800 mt-2 mb-4 mx-auto md:mx-0"></div>
           <ul className="space-y-4 max-w-md text-black">
             <ContactItem
               icon={<MdLocationOn />}
@@ -94,7 +94,7 @@ const Footer = () => {
 
       {/* Copyright */}
       <div className="text-center text-black-500 mt-12 border-t border-gray-800 pt-4 flex justify-between">
-        <h2 className='text-left ml-6 text-green-500'>Copyright © 2025 5Sports Hospital. All Rights Reserved.</h2>
+        <h2 className='text-left ml-6 text-green-800'>Copyright © 2025 5Sports Hospital. All Rights Reserved.</h2>
 
         <a href="https://rbshstudio.com/" target="_blank" rel="noopener noreferrer">
           <h2 className="text-right mr-6 text-black">
@@ -134,18 +134,18 @@ const ContactItem = ({ icon, text, type }) => {
 
   // Check type and render accordingly
   if (type === "email") {
-    content = <a href={`mailto:${text}`} className="text-black hover:text-green-400">{text}</a>;
+    content = <a href={`mailto:${text}`} className="text-black hover:text-green-600">{text}</a>;
   } else if (type === "phone") {
-    content = <a href={`tel:${text}`} className="text-black hover:text-green-400">{text}</a>;
+    content = <a href={`tel:${text}`} className="text-black hover:text-green-600">{text}</a>;
   } else if (type === "location") {
-    content = <a href={`https://www.google.com/maps/search/?q=${encodeURIComponent(text)}`} target="_blank" rel="noopener noreferrer" className="text-black hover:text-green-400">{text}</a>;
+    content = <a href={`https://www.google.com/maps/search/?q=${encodeURIComponent(text)}`} target="_blank" rel="noopener noreferrer" className="text-black hover:text-green-600">{text}</a>;
   } else {
     content = <span>{text}</span>;
   }
 
   return (
     <li className="flex items-center justify-center md:justify-start space-x-2">
-      <span className="text-green-500 text-xl hoven:text-yellow-500">{icon}</span>
+      <span className="text-green-800 text-xl hoven:text-yellow-500">{icon}</span>
       <span>{content}</span>
     </li>
   );
