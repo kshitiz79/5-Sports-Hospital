@@ -8,8 +8,8 @@ export default function AboutUs() {
   const { darkMode } = useTheme(); // Get Dark Mode State
 
   return (
-    <section className={`relative sticky top-0 transition-colors duration-500  overflow-hidden py-10 ${
-      darkMode ? 'bg-gradient-to-b from-gray-800 via-gray-900 to-gray-800 text-white' : 'bg-gray-100 text-gray-900'
+    <section className={`relative sticky top-0 transition-colors duration-500  overflow-hidden py-10 mb-10 ${
+      darkMode ? 'bg-gradient-to-b from-gray-900 via-gray-900 to-gray-800 text-white' : 'bg-gray-100 text-gray-900'
     }`}>
       <div className="container mx-auto px-6">
         
@@ -23,7 +23,7 @@ export default function AboutUs() {
           <div className="relative inline-block px-4 py-2">
             {/* Brushstroke Background */}
             <span className={`absolute inset-0 w-full h-full rounded-lg skew-y-2 -z-10 ${
-              darkMode ? 'bg-green-600' : 'bg-green-500'
+              darkMode ? '' : 'bg-yellow-500'
             }`}></span>
             
             {/* Text with Shadow */}
@@ -32,25 +32,13 @@ export default function AboutUs() {
             </h2>
           </div>
 
-          <p className={`max-w-2xl mx-auto mt-4 uppercase font-semibold ${
+          <p className={`text-3xl md:text-1.5rem mx-auto mt-4 font-1.5rem ${
             darkMode ? 'text-gray-300' : 'text-gray-700'
           }`}>
-            Learn more about our mission to redefine sports medicine and athlete care.
+            Learn more about our mission
+            <br /> to redefine <span className='text-green-500'>sports medicine</span> and <span className='text-green-500'>athlete care</span>.
           </p>
         </motion.div>
-
-        
-
-
-
-
-
-
-
-
-
-
-
 
        
       <div className="container mx-auto flex flex-col md:flex-row items-center gap-10">
@@ -63,7 +51,7 @@ export default function AboutUs() {
           className=""
         />
       </div>
-      <div className="absolute top-4 left-4 bg-green-500 text-black px-6 py-2 font-bold text-lg">
+      <div className="absolute top-4 left-4 bg-yellow-500 text-black px-6 py-2 font-bold text-lg">
         <span className="text-3xl">20+</span>
         <p className="text-sm">Training Programs</p>
       </div>
@@ -110,21 +98,6 @@ export default function AboutUs() {
           </button>
         </div>
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       </div>
     </section>
   );

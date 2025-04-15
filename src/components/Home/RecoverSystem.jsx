@@ -9,10 +9,9 @@ export default function RecoverySystem() {
 
   return (
     <section
-    
-      className={`relative  transition-colors duration-500 py-16 ${
-        darkMode ? 'bg-gradient-to-b from-gray-800 to-black text-white' : 'bg-gray-100 text-gray-900'
-      }`}
+
+      className={`relative  transition-colors duration-500 py-16 ${darkMode ? 'bg-gradient-to-b from-gray-800 to-black text-white' : 'bg-gray-100 text-gray-900'
+        }`}
     >
       {/* Sticky Section */}
       <div className="sticky top-0 flex flex-col justify-center items-center z-10 px-6 w-full space-y-10  container mx-auto">
@@ -22,7 +21,7 @@ export default function RecoverySystem() {
 
 
 
-      <motion.div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -30,29 +29,21 @@ export default function RecoverySystem() {
         >
           <div className="relative inline-block px-4 py-2">
             {/* Brushstroke Background */}
-            <span className={`absolute inset-0 w-full h-full rounded-lg skew-y-1 -z-10 ${
-              darkMode ? 'bg-green-600' : 'bg-green-500'
-            }`}></span>
-            
+            <span className={`absolute inset-0 w-full h-full rounded-lg skew-y-1 -z-10 ${darkMode ? '' : 'bg-green-500'
+              }`}></span>
+
             {/* Text with Shadow */}
             <h2 className="text-2xl md:text-6xl font-extrabold uppercase drop-shadow-lg relative">
               <strong>Healing Being Transformed</strong>
             </h2>
           </div>
 
-          <p className={`max-w-2xl mx-auto mt-5 uppercase font-semibold ${
-            darkMode ? 'text-gray-300' : 'text-gray-700'
-          }`}>
-Elite recovery methods are being made accessible to all—enabling faster healing and peak performance.
+          <p className={`text-3xl md:font-size1.5rem mx-auto mt-5 ${darkMode ? 'text-gray-300' : 'text-gray-700'
+            }`}>
+            Elite recovery methods are being made accessible to
+            <br />all—<span className='text-green-500'> enabling faster healing </span>and <span className='text-green-500'>peak performance</span>.
           </p>
         </motion.div>
-
-
-
-
-
-
-
 
 
 
@@ -71,7 +62,7 @@ Elite recovery methods are being made accessible to all—enabling faster healin
             transition={{ duration: 0.5 }}
             className="w-full md:w-1/2"
           >
-            <h2 className="text-3xl md:text-4xl uppercase font-extrabold mb-6">
+            <h2 className="text-3xl md:text-4xl uppercase font-extrabold mb-6 text-yellow-500">
               The Game-Changing Recovery System That Brings Athletes Back Stronger Than Ever
             </h2>
             <p className="mb-4">
@@ -100,17 +91,21 @@ Elite recovery methods are being made accessible to all—enabling faster healin
             transition={{ duration: 0.5 }}
             className="w-full md:w-1/2"
           >
-            <h3 className="text-2xl md:text-3xl font-bold mb-4 uppercase">Here’s the Real Problem with Recovery Today:</h3>
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 uppercase text-yellow-500">Here’s the Real Problem with Recovery Today:</h3>
             <p className="mb-3">
               Standard recovery methods don’t work for everyone. Generic programs, trendy techniques, and lack of
               personalized care result in re-injury and poor performance.
             </p>
-            <h4 className="text-xl font-semibold mb-2">Why Does This Matter?</h4>
+            <h4 className="text-xl font-semibold mb-2">
+            <span className="text-yellow-500">➔</span>
+              Why Does This Matter?</h4>
             <p className="mb-3">
               Unless you're part of an elite system, you're often left guessing. That guesswork leads to missed
               opportunities and chronic injury.
             </p>
-            <h4 className="text-xl font-semibold mb-2">The Solution</h4>
+            <h4 className="text-xl font-semibold mb-2">
+            <span className="text-yellow-500">➔</span>
+              The Solution</h4>
             <p>
               5 Sports Hospital’s integrated system blends modern medical tech with personal rehab strategies—giving you
               the pro-level edge to return better than ever.

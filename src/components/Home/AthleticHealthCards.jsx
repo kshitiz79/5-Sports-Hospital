@@ -64,7 +64,7 @@ const AthleticHealthCards = () => {
     <section
       className={`py-24 transition-colors duration-500 ${
         darkMode
-          ? "bg-gradient-to-b from-black via-gray-900 to-gray-800 text-white"
+          ? "bg-gradient-to-b from-gray-600 via-gray-900 to-gray-800 text-white"
           : "bg-gradient-to-b from-black via-gray-900 to-gray-800 text-white"
       } relative overflow-hidden`}
     >
@@ -80,7 +80,7 @@ const AthleticHealthCards = () => {
         <div className="relative inline-block px-6 py-4 mb-6 bg-opacity-20 backdrop-blur-sm rounded-lg">
           <span
             className={`absolute inset-0 w-full h-full rounded-lg ${
-              darkMode ? "bg-green-600" : "bg-green-500"
+              darkMode ? "" : "bg-green-500"
             }`}
           ></span>
           <h2 className="text-2xl md:text-5xl font-extrabold uppercase tracking-tight drop-shadow-md relative">
@@ -88,11 +88,13 @@ const AthleticHealthCards = () => {
           </h2>
         </div>
         <p
-          className={`max-w-3xl mx-auto text-sm md:text-lg font-semibold uppercase tracking-wider ${
+          className={`max-w-3xl mx-auto text-3xl md:text-1.5rem font-semibold tracking-wider ${
             darkMode ? "text-gray-300" : "text-gray-600"
           }`}
         >
-          Unlock your potential with expert insights and cutting-edge testing
+          <span className="text-green-500">
+          Unlock your potential </span> with expert
+          insights<br /> and <span className="text-green-500">  cutting-edge testing </span>
         </p>
       </motion.div>
 
@@ -138,7 +140,7 @@ const AthleticHealthCards = () => {
               ) : (
                 <button
                   onClick={() => toggleExpand(card.id)}
-                  className="mt-8     ml-24 px-4 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors duration-300 w-2/5"
+                  className="mt-8     ml-24 px-4 py-2 bg-green-500 text-white rounded-full hover:bg-yellow-600 transition-colors duration-300 w-2/5"
                 >
                   Read More
                 </button>

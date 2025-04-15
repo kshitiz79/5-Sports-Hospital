@@ -51,47 +51,50 @@ const contentData = {
   ],
 };
 
+
+
 export default function RecoveryProgram() {
   const { darkMode } = useTheme();
 
   return (
     <section
-      className={`py-20 transition-colors relative duration-500 ${
+      className={`py-24 transition-colors duration-500 relative ${
         darkMode
           ? 'bg-gradient-to-b from-black via-gray-900 to-gray-800 text-white'
           : 'bg-gray-100 text-gray-900'
       }`}
     >
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 md:px-12">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-20"
         >
-          <div className="relative inline-block px-4 py-3">
+          <div className="relative inline-block px-6 py-4">
             <span
-              className={`absolute inset-0 w-full h-full rounded-lg skew-y-1 ${
-                darkMode ? 'bg-green-600' : 'bg-green-500'
+              className={`absolute inset-0 w-full h-full rounded-xl skew-y-1 opacity-40 ${
+                darkMode ? '' : ''
               }`}
             ></span>
-            <h2 className="text-2xl md:text-6xl font-extrabold uppercase drop-shadow-lg relative">
-              <strong>Athletes Recovery Program</strong>
+            <h2 className="text-4xl md:text-6xl font-black uppercase tracking-wide relative">
+              Athletes Recovery Program
             </h2>
           </div>
 
           <p
-            className={`w-full mx-auto mt-6 uppercase font-extrabold ${
+            className={`mt-6 text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed ${
               darkMode ? 'text-gray-300' : 'text-gray-700'
             }`}
           >
-            5 Sports Hospital | Your Personal Recovery Specialist, Tailoring Your Path to Full Recovery Each Week
+            <span className='text-green-500'>
+            5 Sports Hospital </span> | Your Personal Recovery Specialist, Tailoring Your Path to Full Recovery Each Week
           </p>
         </motion.div>
 
-        {/* Content Sections */}
-        <div className="space-y-16 justify-between">
+        {/* Sections */}
+        <div className="space-y-28">
           {contentData.sections.map((item, index) => {
             const isEven = index % 2 === 0;
 
@@ -101,31 +104,33 @@ export default function RecoveryProgram() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-                className={`flex flex-col md:flex-row items-center gap-8 ${
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className={`flex flex-col md:flex-row items-center gap-10 ${
                   isEven ? 'md:flex-row-reverse' : ''
                 }`}
               >
                 {/* Image */}
-                <div className="w-full md:w-1/3">
+                <div className="w-full md:w-1/2 relative group">
                   <img
                     src={item.image}
-                    alt={item.title}
-                    className="w-96 h-auto rounded-lg shadow-md"
+                    alt={`Illustration for ${item.title}`}
+                    className="w-full h-auto rounded-full shadow-2xl transform transition duration-500 group-hover:scale-105"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
 
                 {/* Text */}
                 <div
-                  className={`w-full md:w-2/3 ${
-                    isEven ? 'text-right' : 'text-left'
+                  className={`w-full md:w-1/2 ${
+                    isEven ? 'text-left' : 'text-left'
                   }`}
                 >
-                  <h3 className="text-xl md:text-2xl lg:text-4xl font-extrabold mb-4 uppercase">
-                    <span className="text-green-500">{item.id}</span> {item.title}
+                  <h3 className="text-2xl md:text-3xl lg:text-5xl font-bold mb-6 uppercase leading-tight">
+                    <span className="text-yellow-400">{item.id}</span>{' '}
+                    <span className="text-green-500">{item.title}</span>
                   </h3>
                   <p
-                    className={`text-xl ${
+                    className={`text-lg md:text-xl leading-relaxed ${
                       darkMode ? 'text-gray-300' : 'text-gray-700'
                     }`}
                   >

@@ -54,7 +54,7 @@ export default function WhyChooseUs() {
           <div className="relative inline-block px-4 py-2 mb-4">
             <span
               className={`absolute inset-0 w-full h-full rounded-lg skew-y-1 ${
-                darkMode ? 'bg-green-600' : 'bg-green-500'
+                darkMode ? '' : 'bg-green-500'
               }`}
             ></span>
             <h2 className="text-2xl md:text-5xl font-extrabold uppercase drop-shadow-lg relative tracking-wide">
@@ -63,7 +63,7 @@ export default function WhyChooseUs() {
           </div>
 
           <p
-            className={`max-w-2xl mx-auto mt-4 text-base md:text-lg font-semibold tracking-wide ${
+            className={`text-3xl md:font-size-1.5rem mx-auto mt-4 ${
               darkMode ? 'text-gray-300' : 'text-gray-700'
             }`}
           >

@@ -21,12 +21,14 @@ const ContactUs = () => {
           className="text-center mb-10"
         >
           <div className="relative inline-block px-3 py-2">
-            <span className={`absolute inset-0 ${darkMode ? 'bg-green-600' : 'bg-green-500'} w-full h-full rounded-lg skew-y-1`}></span>
+            <span className={`absolute inset-0 ${darkMode ? '' : 'bg-green-500'} w-full h-full rounded-lg skew-y-1`}></span>
             <h2 className="text-2xl md:text-4xl font-extrabold uppercase drop-shadow-lg relative">
               <strong>Get in Touch</strong> 
             </h2>
           </div>
-          <p className={`max-w-lg mx-auto mt-3 text-sm md:text-base uppercase font-semibold ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+          <p  className={`text-3xl md:font-size-1.5rem mx-auto mt-4 ${
+              darkMode ? 'text-gray-300' : 'text-gray-700'
+            }`}>
             Have questions? Reach out to us! We're here to help you.
           </p>
         </motion.div>
@@ -44,7 +46,7 @@ const ContactUs = () => {
               darkMode ? 'bg-white/10 backdrop-blur-md border-gray-700' : 'bg-white border-gray-300'
             }`}
           >
-            <h3 className={`text-xl font-semibold mb-4 ${darkMode ? 'text-green-300' : 'text-green-700'}`}>
+            <h3 className={`text-xl font-semibold mb-4 ${darkMode ? 'text-green-500' : 'text-green-700'}`}>
               Send us a Message
             </h3>
             <form className="space-y-4">
@@ -93,7 +95,7 @@ const ContactUs = () => {
             transition={{ duration: 0.5 }}
             className="w-full"
           >
-            <h3 className={`text-xl font-semibold mb-4 ${darkMode ? 'text-green-300' : 'text-green-700'}`}>
+            <h3 className={`text-xl font-semibold mb-4 ${darkMode ? 'text-green-500' : 'text-green-700'}`}>
               Contact Details
             </h3>
             <p className={`mb-6 text-sm ${darkMode ? 'text-gray-400' : 'text-gray-700'}`}>
@@ -108,8 +110,8 @@ const ContactUs = () => {
                 <Mail className={`w-5 h-5 ${darkMode ? 'text-green-400' : 'text-green-600'}`} />
                 <p className={`${darkMode ? 'text-gray-300' : 'text-gray-900'}`}>fivesportshospital@gmail.com</p>
               </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className={`w-5 h-5 ${darkMode ? 'text-green-400' : 'text-green-600'}`} />
+              <div className="flex items-start space-x-3">
+                <MapPin className={`w-12 h-12 ${darkMode ? 'text-green-400' : 'text-green-600'}`} />
                 <p className={`${darkMode ? 'text-gray-300' : 'text-gray-900'}`}>Site No 40 & 41, 1st floor MPS Building, Ambedkar Nagar Mullur Sarjapur Road, Carmelram Bangalore, Karnataka - 560035 IN</p>
               </div>
 

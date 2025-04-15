@@ -15,10 +15,24 @@ function ContactUsPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[500px] bg-gradient-to-b from-gray-500 to-black flex flex-col items-center justify-center text-white text-center">
-        <h1 className="text-6xl font-extrabold uppercase">    Get In Touch With Us</h1>
-       
-      </section>
+      <section className="relative h-[500px] flex items-center justify-center text-white text-center overflow-hidden">
+  {/* Background Image */}
+  <img
+    src="/pain.png"
+    alt="Background"
+    className="absolute inset-0 w-full h-full object-cover object-center opacity-80"
+  />
+
+  {/* Overlay (optional) */}
+  <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+
+  {/* Heading Content */}
+  <div className="relative z-10 px-4">
+    <h1 className="text-4xl md:text-6xl font-extrabold uppercase">
+      Get In Touch With Us
+    </h1>
+  </div>
+</section>
 
       {/* Contact Info Section */}
       <section className="bg-black text-white py-20">
@@ -50,7 +64,7 @@ function ContactUsPage() {
               </div>
               <div>
                 <h4 className="uppercase text-sm font-bold tracking-wide">Phone</h4>
-                <p className="text-gray-200">9353555755</p>
+                <p className="text-gray-200">9353555755 9353555855</p>
               </div>
             </div>
 
