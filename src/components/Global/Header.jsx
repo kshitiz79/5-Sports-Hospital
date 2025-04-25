@@ -29,7 +29,7 @@ const navItems = [
   },
   {
     name: 'ORTHOPEDIC & SURGERY',
-    href: '/what-we-offer',
+    href: '/Orthopedicss',
     submenu: [
       { name: 'Orthobiologicals & regenerative therapies', href: '/what-we-offer#treatments' },
       { name: 'Arthritis & joint preservation techniques', href: '/what-we-offer#surgeries' },
@@ -51,7 +51,17 @@ const navItems = [
     ],
   },
   {
-    name: 'Beyond Sports',
+    name: 'Testing',
+    href: '/Testing',
+    submenu: [
+      { name: 'VO₂ MAX & LACTATE THRESHOLD', href: '/Vo2MaxTestSection' },
+      { name: 'RESTING METABOLIC RATE & BODY COMPOSITION', href: '/Testing#Metabolic' },
+      { name: 'MUSCLE OXYGEN MONITORING', href: '/programs#strength' },
+    ,
+    ],
+  },
+  {
+    name: 'Cosmo Dental',
     href: '/contact-us',
     submenu: [
       { name: 'Cosmo Dental', href: '/beyond-sports#education' },

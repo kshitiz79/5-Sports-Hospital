@@ -78,7 +78,7 @@ export default function AboutUs() {
           <ul className="mt-6 space-y-3">
             <li className="flex items-center gap-2">
               <FaCheckCircle className="text-green-500" />
-              <span>Comprehensive care from expert physicians, surgeons, and specialists.</span>
+              <span>360 degree care for orthopedics and sports Atheletes all under one roof.</span>
             </li>
             <li className="flex items-center gap-2">
               <FaCheckCircle className="text-green-500" />
@@ -86,11 +86,11 @@ export default function AboutUs() {
             </li>
             <li className="flex items-center gap-2">
               <FaCheckCircle className="text-green-500" />
-              <span>Personalized treatment plans designed for athletes at all levels.</span>
+              <span>Personalized treatment plans designed for athletes at all levels (beginners,semipro-atheletes and pro-atheletes).</span>
             </li>
             <li className="flex items-center gap-2">
               <FaCheckCircle className="text-green-500" />
-              <span>A multidisciplinary team committed to your recovery and performance.</span>
+              <span>Age-specific treatment plans from childhood (5+) to peak performance years.</span>
             </li>
           </ul>
           <button className="mt-6 bg-green-500 text-black font-bold py-3 px-6 text-lg">

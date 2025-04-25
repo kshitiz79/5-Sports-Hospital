@@ -9,7 +9,7 @@ const cardData = [
   {
     id: "cardiac",
     title: "Cardiac Health",
-    highlight: "Heart + Both Lungs  = Your Endurance Power",
+    highlight: "Heart + Lungs  = Your Endurance Power",
     test: "Comprehensive Health Assessment",
     why: "Efficient heart and lung function = Better endurance, recovery, and overall stamina for peak performance.",
     who: "Endurance athletes, long-distance runners, cyclists, and those focused on improving stamina and aerobic capacity.",
@@ -19,7 +19,7 @@ const cardData = [
     id: "muscle",
     title: "Muscle Health",
     highlight: "Muscles + Strength Training = Explosive Power",
-    test: "Comprehensive Health Assessment",
+    test: "Biomechanics Assesments",
     why: "Strong muscles = Increased sprinting speed, higher jumps, and more explosive movements to maximize athletic.",
     who: "Sprinters, weightlifters, power athletes, and anyone looking to improve their raw strength and explosiveness.",
     extra: `Maximize your strength with targeted assessments. We help you build explosive power, recover quickly, and stay ahead of the competition. Ready to dominate? Contact us now!`,

@@ -9,21 +9,21 @@ const testingData = [
     description:
       'Receive an accurate measure of your cardiorespiratory fitness and assess your body’s lactate response to exercise. These insights help you understand and optimize your physiological capacity for training and performance.',
     image: '/images/vo2max.jpg', // You can replace this with a combined or representative image
-    link: '#',
+    link: 'Vo2MaxTestSection',
   },
   {
     title: 'RESTING METABOLIC RATE & BODY COMPOSITION',
     description:
       'Understand your resting calorie requirement and assess your body composition to support your weight loss or muscle gain goals.',
     image: '/images/bodycomp.jpg',
-    link: '#',
+    link: 'Vo2MaxTestSection',
   },
   {
     title: 'MUSCLE OXYGEN MONITORING',
     description:
       'Track muscle oxygen levels in real time to identify fatigue thresholds and optimize strength and conditioning workouts.',
     image: '/images/muscle-oxygen.jpg', // Replace with your image
-    link: '#',
+    link: 'Vo2MaxTestSection',
   },
 ];
 
