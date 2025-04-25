@@ -13,13 +13,14 @@ const MeetOurExperts = () => {
   const teamMembers = [
     {
       name: 'Dr Pooja Jhade',
-      role: 'Certified Posture Expert',
+      role: 'Founder and PHD Posture',
       image: '/doctor.png',
       expertise: [
-        'Posture Reformation',
-        'Anti-Gravity Rehabilitation',
-        'Sports Injury Prevention',
-        'Musculoskeletal Collapse Prevention',
+        'PhD in POSTURE (USA)',
+        'PhD in Portural Neurology (USA-pursuing)',
+        'Masters in Pilates(Canada)',
+        'Fellowship in Clinical Pilates (Australia)',
+        'B.P.T (India)',
       ],
       collaborations: [
         'Indian Premier League (IPL)',

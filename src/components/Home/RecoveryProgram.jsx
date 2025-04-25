@@ -41,13 +41,7 @@ const contentData = {
         "When it comes to sports, speed can be the ultimate game-changer. Through our specialized recovery and conditioning program, we focus on improving your agility and overall speed—giving you that advantage in every sprint and play.",
       image: "/apple5.png",
     },
-    {
-      id: "06",
-      title: "Bounce Back Faster, Feel Great in Less Time",
-      paragraph:
-        "We know that fatigue doesn’t just impact your performance; it also makes you more prone to injury. Our recovery system is designed to minimize downtime, so you can feel great and recover quickly, keeping you at the top of your game week after week.",
-      image: "/apple6.png",
-    },
+
   ],
 };
 

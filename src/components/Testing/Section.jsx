@@ -23,7 +23,7 @@ const testingData = [
     description:
       'Track muscle oxygen levels in real time to identify fatigue thresholds and optimize strength and conditioning workouts.',
     image: '/images/muscle-oxygen.jpg', // Replace with your image
-    link: 'Vo2MaxTestSection',
+    link: 'test-page',
   },
 ];
 
