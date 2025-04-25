@@ -22,11 +22,7 @@ const MeetOurExperts = () => {
         'Fellowship in Clinical Pilates (Australia)',
         'B.P.T (India)',
       ],
-      collaborations: [
-        'Indian Premier League (IPL)',
-        'International Tennis Federation (ITF)',
-        'Corporate Wellness Programs',
-      ],
+    
       bio: 'Dr. Pooja Jhade brings over 15 years of experience in posture correction and sports rehabilitation, helping athletes achieve peak performance.',
     },
     {
@@ -200,26 +196,7 @@ const MeetOurExperts = () => {
                             )}
                           </ul>
                         </div>
-                        {member.collaborations.length > 0 && (
-                          <div>
-                            <h5
-                              className={`font-semibold text-base ${
-                                darkMode ? 'text-white' : 'text-gray-800'
-                              }`}
-                            >
-                              Collaborations:
-                            </h5>
-                            <ul
-                              className={`list-disc pl-5 text-sm space-y-1 ${
-                                darkMode ? 'text-gray-300' : 'text-gray-700'
-                              }`}
-                            >
-                              {member.collaborations.map((item, idx) => (
-                                <li key={idx}>{item}</li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
+                     
                         <motion.button
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}

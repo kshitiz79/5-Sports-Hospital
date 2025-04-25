@@ -39,21 +39,21 @@ export default function RecoverySystem() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-16">
           {/* TECAR Therapy */}
           <div className="text-center">
-            <img src="/tecar-therapy.jpg" alt="TECAR Therapy" className="w-full rounded-xl shadow-lg mb-4" />
+            <img src="/therapy1.png" alt="TECAR Therapy" className="w-full rounded-xl shadow-lg mb-4" />
             <h3 className="text-2xl font-extrabold text-yellow-500">TECAR THERAPY</h3>
             <p className="mt-2 text-lg">A revolutionary treatment that enhances tissue repair, reducing pain and accelerating healing through deep heat energy.</p>
           </div>
 
           {/* Laser Therapy */}
           <div className="text-center">
-            <img src="/laser-therapy.jpg" alt="Laser Therapy" className="w-full rounded-xl shadow-lg mb-4" />
+            <img src="/therapy2.png" alt="Laser Therapy" className="w-full rounded-xl shadow-lg mb-4" />
             <h3 className="text-2xl font-extrabold text-yellow-500">LASER THERAPY</h3>
             <p className="mt-2 text-lg">A non-invasive technique that promotes tissue regeneration, reduces inflammation, and speeds up recovery from injuries.</p>
           </div>
 
           {/* Shockwave Therapy */}
           <div className="text-center">
-            <img src="/shockwave-therapy.jpg" alt="Shockwave Therapy" className="w-full rounded-xl shadow-lg mb-4" />
+            <img src="/therapy3.png" alt="Shockwave Therapy" className="w-full rounded-xl shadow-lg mb-4" />
             <h3 className="text-2xl font-extrabold text-yellow-500">SHOCKWAVE THERAPY</h3>
             <p className="mt-2 text-lg">Uses high-energy sound waves to treat musculoskeletal pain, improve blood flow, and stimulate healing in damaged tissues.</p>
           </div>
@@ -71,7 +71,7 @@ export default function RecoverySystem() {
             <p className="text-lg mb-4">
               At 5 Sports Hospital, we use advanced testing technologies from Vald Test, ensuring precise diagnostics and optimized treatment plans for every athlete.
             </p>
-            <img src="/vald-test-logo.png" alt="Vald Test" className="mx-auto my-6" />
+            <img src="/test2.png" alt="Vald Test" className="mx-auto my-6" />
             <h3 className="text-xl font-semibold text-yellow-500">Advanced Machines for Testing</h3>
             <p className="text-lg mt-2">
               Our state-of-the-art testing equipment helps us assess performance, strength, and recovery in real-time, allowing us to deliver the most effective rehab solutions.
@@ -91,7 +91,7 @@ export default function RecoverySystem() {
             <p className="text-lg mb-4">
               5 Sports Hospital proudly uses machines and recovery technology from a renowned US-based firm, ensuring world-class treatment for all athletes.
             </p>
-            <img src="/firm-logo.jpg" alt="Firm Logo" className="mx-auto my-6" />
+            <img src="/test1.png" alt="Firm Logo" className="mx-auto my-6" />
             <p className="text-lg mt-2">
               By combining cutting-edge technology with expert care, we empower athletes to reach their fullest potential in record time.
             </p>

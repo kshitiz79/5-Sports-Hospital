@@ -6,6 +6,7 @@ import "../styles/globals.css";
 import Head from 'next/head';
 // e.g., in layout.tsx or any top-level file
 import { Space_Grotesk } from 'next/font/google';
+import CustomCursor from "@/components/CustomCursor";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -36,6 +37,7 @@ export default function RootLayout({ children }) {
     
       <body className="transition-colors duration-500" style={{ fontFamily: 'Space Grotesk' }}>
         <ThemeProvider> {/* Wrap entire app */}
+          <CustomCursor/>
           <Header />
           {children}
           <Footer />

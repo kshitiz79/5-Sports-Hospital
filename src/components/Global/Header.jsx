@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { Menu, Volleyball, X } from 'lucide-react';
-import { useTheme } from '@/contex/ThemeContext'; // Import Theme Hook
+import { useTheme } from '@/contex/ThemeContext';
 import { FaBasketballBall } from 'react-icons/fa';
 
 const navItems = [
@@ -57,7 +57,6 @@ const navItems = [
       { name: 'VO₂ MAX & LACTATE THRESHOLD', href: '/Vo2MaxTestSection' },
       { name: 'RESTING METABOLIC RATE & BODY COMPOSITION', href: '/Testing#Metabolic' },
       { name: 'MUSCLE OXYGEN MONITORING', href: '/programs#strength' },
-    ,
     ],
   },
   {
@@ -66,12 +65,7 @@ const navItems = [
     submenu: [
       { name: 'Cosmo Dental', href: '/beyond-sports#education' },
       { name: 'Sports', href: '/beyond-sports#careers' },
-     
     ],
-    submenuitems:[
-      {name:FaBasketballBall},
-      {name:Volleyball},
-    ]
   },
 ];
 
@@ -81,39 +75,39 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full h-full transition-colors duration-500 py-2 ${
+      className={`sticky top-0 z-50 w-full py-3 transition-colors duration-500 ${
         darkMode
-          ? 'bg-white backdrop-blur-md border-b border-gray-700'
-          : 'bg-white shadow-md'
+          ? 'bg-white border-b border-gray-300 shadow-md'
+          : 'bg-white shadow-lg'
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
-        <Link href="/" className="flex-shrink-0">
-          <img src="/nav.png" alt="Logo" className="h-16 m-2" />
+        <Link href="/" className="flex items-center gap-2">
+          <img src="/nav.png" alt="Logo" className="h-14" />
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex gap-6 flex-grow justify-center text-xl font-bold uppercase tracking-tighter leading-none text-black relative">
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex gap-8 items-center font-semibold text-gray-800 uppercase text-base relative">
           {navItems.map((item, index) => (
             <div key={index} className="group relative">
-              <div className="flex items-center gap-1 cursor-pointer transition hover:text-green-600 text-xl">
-                <Link href={item.href}>{item.name}</Link>
+              <Link
+                href={item.href}
+                className="hover:text-green-600 transition-colors duration-200 flex items-center gap-1"
+              >
+                {item.name}
                 {item.submenu && (
-                  <span className="transition-transform transform group-hover:rotate-180 text-sm">
-                    ▼
-                  </span>
+                  <span className="text-sm group-hover:rotate-180 transition-transform">▼</span>
                 )}
-              </div>
+              </Link>
 
-              {/* Dropdown */}
               {item.submenu && (
-                <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 hidden group-hover:block bg-white text-black shadow-md rounded-md w-48 z-50 text-xl">
-                  {item.submenu.map((sub, subIndex) => (
+                <div className="absolute left-1/2 -translate-x-1/2 mt-2 hidden group-hover:flex flex-col bg-white shadow-xl rounded-lg w-64 py-2 z-50 transition-all duration-300">
+                  {item.submenu.map((sub, subIdx) => (
                     <Link
-                      key={subIndex}
+                      key={subIdx}
                       href={sub.href}
-                      className="block px-4 py-2 text-lg hover:bg-gray-100"
+                      className="px-4 py-2 hover:bg-green-100 text-sm transition-colors"
                     >
                       {sub.name}
                     </Link>
@@ -124,56 +118,61 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Contact Button & Mobile Menu Toggle */}
-        <div className="flex items-center space-x-4">
+        {/* Contact + Mobile Toggle */}
+        <div className="flex items-center gap-4">
           <Link
             href="/contact-us"
-            className={`hidden md:block px-5 py-2 uppercase text-2xl font-archivo rounded-md font-bold transition ${
+            className={`hidden md:inline-block px-6 py-2 text-sm font-semibold rounded-md shadow-md uppercase transition ${
               darkMode
                 ? 'bg-green-500 hover:bg-green-600 text-white'
-                : 'bg-green-800 hover:bg-green-600 text-white'
+                : 'bg-green-700 hover:bg-green-800 text-white'
             }`}
           >
             Call Us
           </Link>
-
-          <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
-            {menuOpen ? (
-              <X className="h-6 w-6 text-gray-300 align-item-left" />
-            ) : (
-              <Menu className="h-6 w-6 text-gray-800" />
-            )}
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="md:hidden text-gray-700"
+          >
+            {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <nav
-          className={`md:hidden p-4 transition-all duration-300 ${
-            darkMode ? 'bg-black/90 text-gray-300' : 'bg-white text-gray-800'
+        <div
+          className={`md:hidden px-4 pt-4 pb-6 transition-all duration-300 space-y-4 ${
+            darkMode ? 'bg-black text-white' : 'bg-white text-gray-900'
           }`}
         >
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="block py-2 text-center transition hover:text-green-400"
-            >
-              {item.name}
-            </Link>
+          {navItems.map((item, i) => (
+            <div key={i}>
+              <Link href={item.href} className="block py-2 font-medium">
+                {item.name}
+              </Link>
+              {item.submenu && (
+                <div className="ml-4 text-sm space-y-1">
+                  {item.submenu.map((sub, subIndex) => (
+                    <Link
+                      key={subIndex}
+                      href={sub.href}
+                      className="block hover:text-green-500 transition"
+                    >
+                      • {sub.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
           <Link
             href="/contact-us"
-            className="block mt-4 px-4 py-2 text-center uppercase font-bold rounded-md transition shadow-md hover:shadow-lg"
-            style={{
-              backgroundColor: darkMode ? '#22C55E' : '#2563EB',
-              color: '#FFFFFF',
-            }}
+            className="block mt-4 bg-green-600 text-white text-center px-4 py-2 rounded-md uppercase font-bold"
           >
             Call Us
           </Link>
-        </nav>
+        </div>
       )}
     </header>
   );
