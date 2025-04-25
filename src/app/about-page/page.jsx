@@ -8,6 +8,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
+import { Card, CardContent } from '@/components/ui/card';
+
+
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
   variable: '--font-space-grotesk',
@@ -27,6 +30,50 @@ const SectionWrapper = ({ children, className }) => (
   </motion.section>
 );
 
+
+
+const teamMembers = [
+  {
+    name: 'Dr. Pooja Jhade',
+    title: 'Founder | Director',
+    phone: '+91 9353 555 755 | +91 9353 555 855',
+    email: 'dr.pooja@5sportshealth.com',
+    address: 'No 40 & 41, Ambedkar Nagar, Mullur, Sarjapur Road, Bangalore 560003',
+    website: '5sportshealth.com',
+  },
+  {
+    name: 'Dr. Nataraj H M',
+    title: 'HOD - ORTHOPAEDICS, Specialist in Sports Surgery',
+    phone: '+91 9353 555 755 | +91 9353 555 855',
+    email: 'dr.nataraj@5sportshealth.com',
+    address: 'No 40 & 41, Ambedkar Nagar, Mullur, Sarjapur Road, Bangalore 560003',
+    website: '5sportshealth.com',
+  },
+  {
+    name: 'Dr. Radhesh R Menon',
+    title: 'Consultant Orthopaedic Hand & Upperlimb Surgeon',
+    phone: '+91 9353 555 755 | +91 9353 555 855',
+    email: 'dr.radhesh@5sportshealth.com',
+    address: 'No 40 & 41, Ambedkar Nagar, Mullur, Sarjapur Road, Bangalore 560003',
+    website: '5sportshealth.com',
+  },
+  {
+    name: 'Dr. Sidharth Vijayan',
+    title: 'Musculoskeletal & Sports Physiotherapist',
+    phone: '+91 9353 555 755 | +91 9353 555 855',
+    email: 'dr.sidharth@5sportshealth.com',
+    address: 'No 40 & 41, Ambedkar Nagar, Mullur, Sarjapur Road, Bangalore 560003',
+    website: '5sportshealth.com',
+  },
+  {
+    name: '5 Sports Health',
+    title: 'Founder | Director',
+    phone: '+91 9353 555 755 | +91 9353 555 855',
+    email: 'care@5sportshealth.com',
+    address: 'No 40 & 41, Ambedkar Nagar, Mullur, Sarjapur Road, Bangalore 560003',
+    website: '5sportshealth.com',
+  },
+];
 export default function AboutUs() {
   const { darkMode } = useTheme();
 
@@ -208,6 +255,48 @@ export default function AboutUs() {
           </motion.div>
         </div>
       </SectionWrapper>
+
+
+
+    
+
+
+
+    <section className="py-10 px-4 md:px-12 lg:px-24 bg-gray-50 dark:bg-gray-900">
+      <h2 className="text-3xl font-bold mb-6 text-center text-gray-100 dark:text-white">Meet Our Team</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 bg-black text-white">
+        {teamMembers.map((member, index) => (
+          <Card key={index} className="rounded-2xl shadow-md hover:shadow-xl transition bg-black">
+            <CardContent className="p-5 space-y-2">
+              <h3 className="text-xl font-semibold text-gray-800 dark:text-white">{member.name}</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">{member.title}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                📞 {member.phone}
+              </p>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                📧 <a href={`mailto:${member.email}`} className="text-blue-600 dark:text-blue-400">{member.email}</a>
+              </p>
+              <p className="text-sm text-gray-600 dark:text-gray-300">📍 {member.address}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                🌐 <a href={`https://${member.website}`} target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400">{member.website}</a>
+              </p>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </section>
+ 
+
+
+
+
+
+
+
+
+
+
+
 
       {/* Contact Section */}
       <SectionWrapper className="bg-transparent">
