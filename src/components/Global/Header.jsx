@@ -81,7 +81,7 @@ export default function Header() {
           : 'bg-white shadow-lg'
       }`}
     >
-      <div className="container mx-auto px-6 flex justify-between items-center">
+      <div className=" px-6 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <img src="/nav.png" alt="Logo" className="h-14" />
@@ -102,7 +102,7 @@ export default function Header() {
               </Link>
 
               {item.submenu && (
-                <div className="absolute left-1/2 -translate-x-1/2 mt-2 hidden group-hover:flex flex-col bg-white shadow-xl rounded-lg w-64 py-2 z-50 transition-all duration-300">
+                <div className="absolute left-1/2 -translate-x-1/2  hidden group-hover:flex flex-col bg-white shadow-xl rounded-lg w-64 py-2 z-50 transition-all duration-300">
                   {item.submenu.map((sub, subIdx) => (
                     <Link
                       key={subIdx}

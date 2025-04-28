@@ -54,7 +54,7 @@ export default function RecoveryProgram() {
     <section
       className={`py-24 transition-colors duration-500 relative ${
         darkMode
-          ? 'bg-gradient-to-b from-black via-gray-900 to-gray-800 text-white'
+          ? 'bg-gradient-to-b from-gray-900 via-gray-900 to-gray-800 text-white'
           : 'bg-gray-100 text-gray-900'
       }`}
     >

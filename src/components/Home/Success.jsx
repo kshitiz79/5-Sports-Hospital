@@ -72,7 +72,7 @@ export default function SuccessStories() {
         }}
       />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className=" mx-auto px-6 relative z-10">
         {/* Section Title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

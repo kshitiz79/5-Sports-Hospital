@@ -64,7 +64,7 @@ const AthleticHealthCards = () => {
     <section
       className={`py-24 transition-colors duration-500 ${
         darkMode
-          ? "bg-gradient-to-b from-gray-600 via-gray-900 to-gray-800 text-white"
+          ? "bg-gradient-to-b from-black via-gray-900 to-gray-800 text-white"
           : "bg-gradient-to-b from-black via-gray-900 to-gray-800 text-white"
       } relative overflow-hidden`}
     >

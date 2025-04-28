@@ -9,7 +9,7 @@ export default function AboutUs() {
 
   return (
     <section className={`relative sticky top-0 transition-colors duration-500  overflow-hidden py-10 mb-10 ${
-      darkMode ? 'bg-gradient-to-b from-gray-900 via-gray-900 to-gray-800 text-white' : 'bg-gray-100 text-gray-900'
+      darkMode ? 'bg-gradient-to-b from-gray-800 via-gray-900 to-gray-800 text-white' : 'bg-gray-100 text-gray-900'
     }`}>
       <div className="container mx-auto px-6">
         
