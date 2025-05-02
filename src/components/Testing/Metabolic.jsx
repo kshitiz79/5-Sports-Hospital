@@ -62,7 +62,7 @@ const MetabolicServicesSection = () => {
               <h3 className="text-lg font-bold text-gray-900 mb-2">{service.title}</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <p><span className="text-green-600 font-semibold">PRICE</span> <br />{service.price}</p>
+                  {/* <p><span className="text-green-600 font-semibold">PRICE</span> <br />{service.price}</p> */}
                   <p className="mt-4"><span className="text-green-600 font-semibold">DURATION</span> <br />{service.duration}</p>
                   <p className="mt-4 text-green-600 font-semibold">DETAILS</p>
                   <ul className="mt-1 text-gray-700 list-disc list-inside space-y-1">

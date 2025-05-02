@@ -18,7 +18,7 @@ const navItems = [
   },
   {
     name: 'Athletes',
-    href: '/',
+    href: '/Atheletes',
     submenu: [
       { name: 'Injury', href: '/athletes/1' },
       { name: 'Performance Lab', href: '/athletes/2' },
@@ -84,7 +84,7 @@ export default function Header() {
       <div className=" px-6 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <img src="/nav.png" alt="Logo" className="h-14" />
+          <img src="/logo5.png" alt="Logo" className="h-14" />
         </Link>
 
         {/* Desktop Nav */}

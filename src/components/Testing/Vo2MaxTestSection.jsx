@@ -20,10 +20,10 @@ export default function VO2MaxTestSection() {
 
         {/* Right Column */}
         <div className="md:w-1/2 space-y-4">
-          <div>
+          {/* <div>
             <p className="font-bold text-green-600">PRICE</p>
             <p className="font-extrabold">£95</p>
-          </div>
+          </div> */}
 
           <div>
             <p className="font-bold text-green-600">DURATION</p>
