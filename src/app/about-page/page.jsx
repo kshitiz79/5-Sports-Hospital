@@ -175,7 +175,7 @@ export default function AboutUs() {
               </div>
               <div className="mt-6 text-center">
                 <h3 className="text-2xl sm:text-3xl font-bold mb-1">Dr. Pooja Jhade</h3>
-                <p className="text-gray-300 text-base">Founder, CEO & Certified Posture Expert</p>
+                <p className="text-gray-300 text-base">Founder and PHD Posture</p>
                 <p className="mt-4 text-base leading-relaxed max-w-2xl mx-auto">
                   Dr. Pooja Jhade is India’s first Certified Posture Expert from the American Posture Institute, holding a dual PhD in Posture and Postural Neurology. With 13+ years of experience, she has treated thousands of patients and developed groundbreaking research on musculoskeletal collapse prevention.
                 </p>
