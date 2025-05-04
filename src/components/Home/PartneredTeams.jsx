@@ -12,7 +12,7 @@ const AthleteTruthSection = () => {
       icon: './mango1.png',
       hoverIcon: './mango1-hover.png',
       title: 'It’s Not Just About Skills',
-      desc: 'Modern sports are demanding. Without building strength, speed, and resilience, you risk falling behind.',
+      desc: 'Without building strength , speed & you fall behind.',
     },
     {
       icon: './mango2.png',
@@ -23,8 +23,8 @@ const AthleteTruthSection = () => {
     {
       icon: './mango3.png',
       hoverIcon: './mango3-hover.png',
-      title: 'Generic Workouts Can Hurt You',
-      desc: 'Following random workout plans can do more harm than good. You need expert-guided training systems.',
+      title: 'Test your Performance Regularly',
+      desc: 'Regularly texting your Heart & Lung performance like Vo2Max, Blood & Muscle Endurance helps you stay on top.',
     },
   ];
 

@@ -46,7 +46,7 @@ export default function RecoverySystem() {
 
           {/* Laser Therapy */}
           <div className="text-center">
-            <img src="/therapy2.png" alt="Laser Therapy" className="w-full rounded-xl shadow-lg mb-4" />
+            <img src="/laser.jpg" alt="Laser Therapy" className="w-full rounded-xl shadow-lg mb-4" />
             <h3 className="text-2xl font-extrabold text-yellow-500">LASER THERAPY</h3>
             <p className="mt-2 text-lg">A non-invasive technique that promotes tissue regeneration, reduces inflammation, and speeds up recovery from injuries.</p>
           </div>
@@ -71,7 +71,7 @@ export default function RecoverySystem() {
             <p className="text-lg mb-4">
               At 5 Sports Hospital, we use advanced testing technologies from Vald Test, ensuring precise diagnostics and optimized treatment plans for every athlete.
             </p>
-            <img src="/test2.png" alt="Vald Test" className="mx-auto my-6" />
+            <img src="/vald.jpg" alt="Vald Test" className="mx-auto my-6 h-80 w-96" />
             <h3 className="text-xl font-semibold text-yellow-500">Advanced Machines for Testing</h3>
             <p className="text-lg mt-2">
               Our state-of-the-art testing equipment helps us assess performance, strength, and recovery in real-time, allowing us to deliver the most effective rehab solutions.

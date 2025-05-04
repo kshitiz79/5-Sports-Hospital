@@ -21,7 +21,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 py-10 text-center md:text-left">
         {/* Logo & Description */}
         <div className="flex flex-col items-center md:items-start">
-          <img src="/nav.png" alt="Logo" className="h-20 w-40" />
+          <img src="/logo5.png" alt="Logo" className="h-20 w-40" />
           <p className="mt-4 text-gray-400 max-w-md">
             A peak multidisciplinary excellence center for sports medicine, orthopedics,
             posture correction, and injury rehabilitation, including 11

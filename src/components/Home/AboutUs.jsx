@@ -69,20 +69,21 @@ export default function AboutUs() {
         {/* Text Section */}
         <div className="w-full md:w-1/2">
           <p className="text-green-500 font-bold">ABOUT US</p>
-          <h2 className="text-5xl font-black leading-tight">
-            PIONEERING SPORTS MEDICINE <br /> FOR ATHLETES 
+          <h2 className="text-4xl font-black leading-tight">
+            PIONEERING SPORTS MEDICINE, ORTHOPEADICS & SUB SPECIALITIES ALL UNDER ONE ROOF 
           </h2>
           <p className="text-gray-400 mt-4">
-            Founded in 2024, 5 Sports Hospital has become a beacon of excellence in sports medicine and orthopedic care. Our visionary founder, DR POOJA JHADE and DR NATARAJ H M established a center that combines cutting-edge medical technology with personalized care, dedicated to helping athletes achieve peak performance.
+            Founded in 2024, 5 Sports Health has become a beacon of excellence for all atheletes & Non atheletes today. <br />
+             Our visionary founder, DR POOJA JHADE and DR NATARAJ H M established the center where we provide hight performance active health for gerenal population & sport Atheletes .
           </p>
           <ul className="mt-6 space-y-3">
             <li className="flex items-center gap-2">
               <FaCheckCircle className="text-green-500" />
-              <span>360 degree care for orthopedics and sports Atheletes all under one roof.</span>
+              <span>360 facilities of orthopedics & physiotherapy covered under one roof.</span>
             </li>
             <li className="flex items-center gap-2">
               <FaCheckCircle className="text-green-500" />
-              <span>State-of-the-art facilities and advanced diagnostic imaging.</span>
+              <span>State-of-the-art performance lab & diagnostics.</span>
             </li>
             <li className="flex items-center gap-2">
               <FaCheckCircle className="text-green-500" />
@@ -90,12 +91,14 @@ export default function AboutUs() {
             </li>
             <li className="flex items-center gap-2">
               <FaCheckCircle className="text-green-500" />
-              <span>Age-specific treatment plans from childhood (5+) to peak performance years.</span>
+              <span>Performance enhancement for agr group ranging from 5 to 80.</span>
             </li>
           </ul>
+          <a href="/about-page">
           <button className="mt-6 bg-green-500 text-black font-bold py-3 px-6 text-lg">
             LEARN MORE
           </button>
+          </a>
         </div>
       </div>
       </div>

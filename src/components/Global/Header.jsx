@@ -2,9 +2,8 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { Menu, Volleyball, X } from 'lucide-react';
+import { Menu, X, ChevronDown, ChevronUp } from 'lucide-react';
 import { useTheme } from '@/contex/ThemeContext';
-import { FaBasketballBall } from 'react-icons/fa';
 
 const navItems = [
   {
@@ -18,7 +17,7 @@ const navItems = [
   },
   {
     name: 'Athletes',
-    href: '/Atheletes',
+    href: '',
     submenu: [
       { name: 'Injury', href: '/Atheletes/injury' },
       { name: 'Performance Lab', href: '/Atheletes/performance-lab' },
@@ -31,13 +30,13 @@ const navItems = [
     name: 'ORTHOPEDIC & SURGERY',
     href: '/Orthopedicss',
     submenu: [
-      { name: 'Orthobiologicals & regenerative therapies', href: '/what-we-offer#treatments' },
-      { name: 'Arthritis & joint preservation techniques', href: '/what-we-offer#surgeries' },
-      { name: 'Robotic knee replacement ', href: '/what-we-offer#surgeries' },
-      { name: 'Sports injuries and ligament surgery', href: '/what-we-offer#surgeries' },
-      { name: 'Arthroscopy', href: '/what-we-offer#surgeries' },
-      { name: 'Fracture management ', href: '/what-we-offer#surgeries' },
-      { name: 'Surgical second opinion', href: '/what-we-offer#surgeries' },
+      { name: 'Orthobiologicals & regenerative therapies', href: '/Orthopedicss/orthobiological' },
+      { name: 'Arthritis & joint preservation techniques', href: '/Orthopedicss/arthritis' },
+      { name: 'Robotic knee replacement ', href: '/Orthopedicss/robotic' },
+      { name: 'Sports injuries and ligament surgery', href: '/Orthopedicss/sports' },
+      { name: 'Arthroscopy', href: '/Orthopedicss/arthroscopy' },
+      { name: 'Fracture management ', href: '/Orthopedicss/fracture' },
+      { name: 'Surgical second opinion', href: '/Orthopedicss/surgical' },
     ],
   },
   {
@@ -47,7 +46,7 @@ const navItems = [
       { name: 'Sports Physio Program', href: '/programs#rehab' },
       { name: 'Surgical Prehab & Rehab', href: '/programs#strength' },
       { name: 'Emerging  Athelete Program', href: '/programs#strength' },
-      { name: 'Athew', href: '/programs#strength' },
+      { name: 'Athelete Development Program', href: '/programs#strength' },
     ],
   },
   {
@@ -72,6 +71,11 @@ const navItems = [
 export default function Header() {
   const { darkMode } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [expandedMenu, setExpandedMenu] = useState(null);
+
+  const toggleSubMenu = (index) => {
+    setExpandedMenu(expandedMenu === index ? null : index);
+  };
 
   return (
     <header
@@ -81,8 +85,7 @@ export default function Header() {
           : 'bg-white shadow-lg'
       }`}
     >
-      <div className=" px-6 flex justify-between items-center">
-        {/* Logo */}
+      <div className="px-6 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2">
           <img src="/logo5.png" alt="Logo" className="h-14" />
         </Link>
@@ -102,7 +105,7 @@ export default function Header() {
               </Link>
 
               {item.submenu && (
-                <div className="absolute left-1/2 -translate-x-1/2  hidden group-hover:flex flex-col bg-white shadow-xl rounded-lg w-64 py-2 z-50 transition-all duration-300">
+                <div className="absolute left-1/2 -translate-x-1/2 hidden group-hover:flex flex-col bg-white shadow-xl rounded-lg w-64 py-2 z-50 transition-all duration-300">
                   {item.submenu.map((sub, subIdx) => (
                     <Link
                       key={subIdx}
@@ -118,21 +121,11 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Contact + Mobile Toggle */}
-        <div className="flex items-center gap-4">
-          <Link
-            href="/contact-us"
-            className={`hidden md:inline-block px-6 py-2 text-sm font-semibold rounded-md shadow-md uppercase transition ${
-              darkMode
-                ? 'bg-green-500 hover:bg-green-600 text-white'
-                : 'bg-green-700 hover:bg-green-800 text-white'
-            }`}
-          >
-            Call Us
-          </Link>
+        {/* Mobile Toggle */}
+        <div className="md:hidden">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden text-gray-700"
+            className="text-gray-700"
           >
             {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -148,10 +141,20 @@ export default function Header() {
         >
           {navItems.map((item, i) => (
             <div key={i}>
-              <Link href={item.href} className="block py-2 font-medium">
+              <button
+                onClick={() => toggleSubMenu(i)}
+                className="w-full flex justify-between items-center py-2 font-medium"
+              >
                 {item.name}
-              </Link>
-              {item.submenu && (
+                {item.submenu && (
+                  expandedMenu === i ? (
+                    <ChevronUp className="w-4 h-4" />
+                  ) : (
+                    <ChevronDown className="w-4 h-4" />
+                  )
+                )}
+              </button>
+              {item.submenu && expandedMenu === i && (
                 <div className="ml-4 text-sm space-y-1">
                   {item.submenu.map((sub, subIndex) => (
                     <Link

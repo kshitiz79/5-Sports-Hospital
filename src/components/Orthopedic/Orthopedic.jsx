@@ -74,7 +74,7 @@ const Orthobiologicals = () => {
             variants={itemVariants}
             className="text-5xl sm:text-5xl font-bold tracking-tight mb-8 bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-green-400 dark:from-green-400 dark:to-green-200"
           >
-            PROGRAMS
+            Orthopedics & Surgery
           </motion.h2>
 
           {/* Description */}
@@ -82,7 +82,7 @@ const Orthobiologicals = () => {
             variants={itemVariants}
             className="text-4xl sm:text-3xl leading-relaxed mb-10 text-gray-700 dark:text-gray-300"
           >
-            We go beyond conventional treatment. With the power of modern medicine, robotics, and regenerative therapies, we help athletes and active individuals bounce back stronger, faster, and smarter.
+            At the forefront of movement and recovery, our Orthopedics & Surgery department delivers expert care for bone, joint, and muscle conditions—restoring mobility, alleviating pain, and improving quality of life.
             <span className="text-green-500">*</span>.
           </motion.p>
 

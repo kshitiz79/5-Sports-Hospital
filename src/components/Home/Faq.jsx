@@ -108,9 +108,7 @@ const FAQ = () => {
   return (
     <section
     className={`py-24 relative overflow-hidden transition-colors duration-500 ${
-      darkMode
-        ? 'bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white'
-        : 'bg-gradient-to-br from-gray-50 via-white to-gray-100 text-gray-900'
+      darkMode ? 'bg-black text-white' : 'bg-white text-gray-900'
     }`}
   >
     {/* Background Decorative Element */}

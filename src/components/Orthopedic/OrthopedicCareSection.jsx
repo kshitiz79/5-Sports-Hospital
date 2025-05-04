@@ -7,11 +7,7 @@ export default function OrthopedicCareSection() {
 
       {/* Section Wrapper */}
       {[
-        {
-          title: "// ORTHOPEDIC & REGENERATIVE CARE",
-          subtitle: "Healing Beyond the Ordinary",
-          content: `We go beyond conventional treatment. With the power of modern medicine, robotics, and regenerative therapies, we help athletes and active individuals bounce back stronger, faster, and smarter.`
-        },
+      
         {
           title: "// ORTHOBIOLOGICS & REGENERATIVE THERAPIES",
           subtitle: "Heal Naturally. Train Continuously.",
