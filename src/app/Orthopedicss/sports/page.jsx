@@ -1,6 +1,8 @@
 'use client';
 
 import React from 'react';
+
+import { CheckCircle } from "lucide-react";
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Space_Grotesk } from 'next/font/google';
@@ -55,6 +57,11 @@ const keyBenefits = [
 ];
 
 export default function SportsPsychologyPage() {
+  const treatments = [
+    "ACL, PCL, and meniscus surgeries",
+    "Rotator cuff and shoulder dislocations",
+    "Achilles and ankle ligament repairs",
+  ];
   return (
     <div className={`min-h-screen ${spaceGrotesk.variable}`}>
       {/* Sports Psychology Section */}
@@ -177,6 +184,31 @@ export default function SportsPsychologyPage() {
             </div>
           </motion.div>
         </motion.div>
+
+        <div className="max-w-5xl mx-auto text-center py-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-2">
+          Sports Injuries & Ligament Surgery
+        </h2>
+        <p className="text-xl text-blue-600 font-semibold mb-4">
+          From ACL Tears to Muscle Repairs – We’ve Got You
+        </p>
+        <p className="text-gray-200 text-lg mb-8">
+          Specialized care tailored for athletes—our experts ensure you don’t just heal, you come back stronger.
+        </p>
+
+        <div className="grid gap-4 md:grid-cols-2 text-left mb-8">
+          {treatments.map((item, index) => (
+            <div key={index} className="flex items-start gap-3">
+              <CheckCircle className="text-green-600 mt-1" size={22} />
+              <p className="text-gray-200 text-base">{item}</p>
+            </div>
+          ))}
+        </div>
+
+        <p className="text-lg font-medium text-gray-100">
+          Every plan is personalized for your sport, timeline, and performance goals.
+        </p>
+      </div>
       </section>
     </div>
   );

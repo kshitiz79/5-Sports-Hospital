@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { CheckCircle } from "lucide-react";
 import Link from 'next/link';
 import { Space_Grotesk } from 'next/font/google';
 import Image from 'next/image';
@@ -54,6 +55,11 @@ const keyBenefits = [
   
 
 export default function SportsPsychologyPage() {
+  const procedures = [
+    "Knee and shoulder injuries",
+    "Loose cartilage or bone fragments",
+    "Ligament reconstructions",
+  ];
   return (
     <div className={`min-h-screen ${spaceGrotesk.variable}`}>
       {/* Sports Psychology Section */}
@@ -176,6 +182,33 @@ export default function SportsPsychologyPage() {
             </div>
           </motion.div>
         </motion.div>
+
+        <section className="bg-black py-12 px-6 md:px-16 lg:px-24">
+      <div className="max-w-5xl mx-auto text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-2">
+          Arthroscopy
+        </h2>
+        <p className="text-xl text-blue-600 font-semibold mb-4">
+          Small Incisions. Big Impact.
+        </p>
+        <p className="text-gray-100 text-lg mb-8">
+          Arthroscopy allows us to diagnose and treat joint issues using a camera and tiny instruments.
+        </p>
+
+        <div className="grid gap-4 md:grid-cols-2 text-left mb-8">
+          {procedures.map((item, index) => (
+            <div key={index} className="flex items-start gap-3">
+              <CheckCircle className="text-green-600 mt-1" size={22} />
+              <p className="text-gray-200 text-base">{item}</p>
+            </div>
+          ))}
+        </div>
+
+        <p className="text-lg font-medium text-gray-100">
+          Why opt for open surgery when a keyhole could do the trick?
+        </p>
+      </div>
+    </section>
       </section>
     </div>
   );

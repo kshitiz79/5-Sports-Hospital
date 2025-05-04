@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { CheckCircle } from "lucide-react";
 import Link from 'next/link';
 import { Space_Grotesk } from 'next/font/google';
 import Image from 'next/image';
@@ -53,6 +54,13 @@ const keyBenefits = [
 
 
 export default function SportsPsychologyPage() {
+  const services = [
+    "On-site X-rays and imaging",
+    "Emergency stabilization",
+    "Surgical or non-surgical repair",
+    "Custom splints and casts",
+    "Post-fracture rehabilitation",
+  ];
   return (
     <div className={`min-h-screen ${spaceGrotesk.variable}`}>
       {/* Sports Psychology Section */}
@@ -175,6 +183,33 @@ export default function SportsPsychologyPage() {
             </div>
           </motion.div>
         </motion.div>
+
+        <section className="bg-black py-12 px-6 md:px-16 lg:px-24">
+      <div className="max-w-5xl mx-auto text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-2">
+          Fracture Management
+        </h2>
+        <p className="text-xl text-blue-600 font-semibold mb-4">
+          Immediate Care. Expert Hands. Faster Healing.
+        </p>
+        <p className="text-gray-100 text-lg mb-8">
+          Our approach ensures that fractures receive swift, expert attention—from diagnosis to recovery—minimizing complications and maximizing long-term outcomes.
+        </p>
+
+        <div className="grid gap-4 md:grid-cols-2 text-left mb-8">
+          {services.map((item, index) => (
+            <div key={index} className="flex items-start gap-3">
+              <CheckCircle className="text-green-600 mt-1" size={22} />
+              <p className="text-gray-100 text-base">{item}</p>
+            </div>
+          ))}
+        </div>
+
+        <p className="text-lg font-medium text-gray-100">
+          Immediate care = optimal healing. Delay can mean lifelong pain or imbalance.
+        </p>
+      </div>
+    </section>
       </section>
     </div>
   );

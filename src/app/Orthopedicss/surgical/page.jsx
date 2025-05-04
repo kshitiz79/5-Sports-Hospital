@@ -178,7 +178,7 @@ export default function SportsPsychologyPage() {
 
 
 
-        <div className="bg-gray-800 text-white py-16 px-6 md:px-20">
+        <div className="bg-gray-800 text-white py-16 px-6 md:px-20 mt-12">
       {/* Section Title */}
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold text-green-500 mb-4">Surgical Second Opinion</h2>
@@ -231,6 +231,23 @@ export default function SportsPsychologyPage() {
         </p>
       </div>
     </div>
+{/* 
+    <section className="bg-black py-12 px-6 md:px-16 lg:px-24">
+      <div className="max-w-4xl mx-auto text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-2">
+          Surgical Second Opinion
+        </h2>
+        <p className="text-xl text-blue-600 font-semibold mb-4">
+          Not Sure What to Do Next? We’ll Help You Decide.
+        </p>
+        <p className="text-gray-100 text-lg mb-6">
+          Surgery is a big decision—make it an informed one. Our experts provide honest, independent reviews of your case to explore all options.
+        </p>
+        <p className="text-lg font-medium text-gray-100">
+          We’re not here to sell surgery—we’re here to guide you toward your best outcome.
+        </p>
+      </div>
+    </section> */}
 
       </section>
     </div>

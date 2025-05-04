@@ -55,7 +55,7 @@ export default function Hero() {
             darkMode ? "bg-green-700 text-white" : "bg-green-600 text-gray-100"
           }`}
         >
-          Athlete Recovery & Sports Performance Enhancement
+          Athelete Recovery & Sports Performance Enhancement
         </div>
         <br />
         <div
@@ -66,17 +66,17 @@ export default function Hero() {
           }`}
           style={{ fontFamily: "Space Grotesk" }}
         >
-          UNLOCK A NEW LEVEL OF
+       First time in india 360 Deg Care All under one roof.
         </div>
 
         {/* Main Heading */}
-        <h1 className="text-7xl md:text-[9rem] font-bebas leading-tight tracking-[-0.04em]">
+        <h1 className="text-5xl md:text-[4rem] font-bebas leading-tight tracking-[-0.04em]">
           <strong
             className={`${
               darkMode ? "text-white" : "text-black"
             } font-extrablack`}
           >
-            PERFORMANCE
+            Diagnose , Test , Elevate
           </strong>
         </h1>
 

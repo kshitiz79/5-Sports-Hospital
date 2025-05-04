@@ -28,7 +28,7 @@ export default function Home() {
     <>
       <Hero />
       <AthleteTruthSection/>
-      <PerformanceQnA/>
+      {/* <PerformanceQnA/> */}
       <AthleticHealthCards/>
       <AboutUs />
       <RecoverySystem/>
