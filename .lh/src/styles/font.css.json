@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/styles/font.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1746290888608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1746298479236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,3 @@\n /* styles/fonts.css */\n \n \n-.space-grotesk-variable {\n-  font-family: \"Space Grotesk\", \"sans-serif\";\n-  font-optical-sizing: auto;\n-  font-weight: 300;\n-  font-style: normal;\n-}\n"
+                },
+                {
+                    "date": 1746298525139,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,9 @@\n /* styles/fonts.css */\n \n \n+.space-grotesk-variable {\n+  font-family: \"Space Grotesk\", \"sans-serif\";\n+  font-optical-sizing: auto;\n+  font-weight: 300;\n+  font-style: normal;\n+}\n"
+                }
+            ],
+            "date": 1746290888608,
+            "name": "Commit-0",
+            "content": "/* styles/fonts.css */\n\n\n.space-grotesk-variable {\n  font-family: \"Space Grotesk\", \"sans-serif\";\n  font-optical-sizing: auto;\n  font-weight: 300;\n  font-style: normal;\n}\n"
+        }
+    ]
+}

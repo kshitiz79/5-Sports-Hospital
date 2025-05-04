@@ -4,8 +4,12 @@ import path from 'path';
 const nextConfig = {
   output: "export",
   images: {
-    // Disables the built-in image optimization for static export
     unoptimized: true,
+  },
+  webpack(config) {
+    // Enable source maps for CSS
+    config.devtool = 'source-map';
+    return config;
   },
 };
 

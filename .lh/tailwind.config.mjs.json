@@ -1,0 +1,18 @@
+{
+    "sourceFile": "tailwind.config.mjs",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1746298963228,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1746298963228,
+            "name": "Commit-0",
+            "content": "/** @type {import('tailwindcss').Config} */\nexport default {\n\tdarkMode: [\"class\"], // Enables dark mode based on a class toggle\n\tcontent: [\n\t  \"./src/pages/**/*.{js,ts,jsx,tsx,mdx}\",\n\t  \"./src/components/**/*.{js,ts,jsx,tsx,mdx}\",\n\t  \"./src/app/**/*.{js,ts,jsx,tsx,mdx}\",\n\t],\n\ttheme: {\n\t  extend: {\n\t\tcolors: {\n\t\t  background: 'hsl(var(--background))',\n\t\t  foreground: 'hsl(var(--foreground))',\n\t\t  card: {\n\t\t\tDEFAULT: 'hsl(var(--card))',\n\t\t\tforeground: 'hsl(var(--card-foreground))',\n\t\t  },\n\t\t  popover: {\n\t\t\tDEFAULT: 'hsl(var(--popover))',\n\t\t\tforeground: 'hsl(var(--popover-foreground))',\n\t\t  },\n\t\t  primary: {\n\t\t\tDEFAULT: 'hsl(var(--primary))',\n\t\t\tforeground: 'hsl(var(--primary-foreground))',\n\t\t  },\n\t\t  secondary: {\n\t\t\tDEFAULT: 'hsl(var(--secondary))',\n\t\t\tforeground: 'hsl(var(--secondary-foreground))',\n\t\t  },\n\t\t  muted: {\n\t\t\tDEFAULT: 'hsl(var(--muted))',\n\t\t\tforeground: 'hsl(var(--muted-foreground))',\n\t\t  },\n\t\t  accent: {\n\t\t\tDEFAULT: 'hsl(var(--accent))',\n\t\t\tforeground: 'hsl(var(--accent-foreground))',\n\t\t  },\n\t\t  destructive: {\n\t\t\tDEFAULT: 'hsl(var(--destructive))',\n\t\t\tforeground: 'hsl(var(--destructive-foreground))',\n\t\t  },\n\t\t  border: 'hsl(var(--border))',\n\t\t  input: 'hsl(var(--input))',\n\t\t  ring: 'hsl(var(--ring))',\n\t\t  chart: {\n\t\t\t'1': 'hsl(var(--chart-1))',\n\t\t\t'2': 'hsl(var(--chart-2))',\n\t\t\t'3': 'hsl(var(--chart-3))',\n\t\t\t'4': 'hsl(var(--chart-4))',\n\t\t\t'5': 'hsl(var(--chart-5))',\n\t\t  },\n\t\t},\n\t\tfontFamily: {\n\t\t  bebas: [\n\t\t\t'Bebas Neue', // Fixed quote issue here\n\t\t\t'sans-serif',\n\t\t  ],\n\t\t  montserrat: [\n\t\t\t'Montserrat', // Fixed quote issue here\n\t\t\t'sans-serif',\n\t\t  ],\n\t\t},\n\t\tfontWeight: {\n\t\t  extrablack: '2000',\n\t\t},\n\t\tborderRadius: {\n\t\t  lg: 'var(--radius)',\n\t\t  md: 'calc(var(--radius) - 2px)',\n\t\t  sm: 'calc(var(--radius) - 4px)',\n\t\t},\n\t  },\n\t},\n\tplugins: [require(\"tailwindcss-animate\")],\n  };\n  "
+        }
+    ]
+}

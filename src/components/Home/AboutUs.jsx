@@ -8,7 +8,7 @@ export default function AboutUs() {
   const { darkMode } = useTheme(); // Get Dark Mode State
 
   return (
-    <section className={`relative sticky top-0 transition-colors duration-500  overflow-hidden py-10 mb-10 ${
+    <section className={`relative sticky -top-32 transition-colors duration-500  overflow-hidden py-10 mb-10 ${
       darkMode ? 'bg-gradient-to-b from-gray-800 via-gray-900 to-gray-800 text-white' : 'bg-gray-100 text-gray-900'
     }`}>
       <div className="container mx-auto px-6">

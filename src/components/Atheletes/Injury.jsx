@@ -7,7 +7,7 @@ const consultationOptions = [
     price: "£85 / £110 (Clinical Director Luke Anthony)",
     duration: "50 minutes",
     details:
-      "Includes a comprehensive injury assessment with a rehabilitation plan.",
+      "Includes a comprehensive injury assessment with a rehabilitation plan",
     idealFor:
       "Anyone with an injury needing assessment and a comprehensive rehabilitation plan",
     bookings: ["BOOK ONLINE", "BOOK ONLINE (Luke Anthony)"],

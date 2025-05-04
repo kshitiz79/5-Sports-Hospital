@@ -1,0 +1,18 @@
+{
+    "sourceFile": "package.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1746290710617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1746290710617,
+            "name": "Commit-0",
+            "content": "{\n  \"name\": \"my-next-app\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"dev\": \"next dev\",\n    \"build\": \"next build\",\n    \"start\": \"next start\",\n    \"lint\": \"next lint\"\n  },\n  \"dependencies\": {\n    \"@heroicons/react\": \"^2.2.0\",\n    \"@radix-ui/react-separator\": \"^1.1.4\",\n    \"@react-google-maps/api\": \"^2.20.5\",\n    \"class-variance-authority\": \"^0.7.1\",\n    \"clsx\": \"^2.1.1\",\n    \"framer-motion\": \"^12.0.11\",\n    \"leaflet\": \"^1.9.4\",\n    \"lucide-react\": \"^0.474.0\",\n    \"next\": \"^15.2.4\",\n    \"react\": \"^19.0.0\",\n    \"react-dom\": \"^19.0.0\",\n    \"react-icons\": \"^5.5.0\",\n    \"swiper\": \"^11.2.6\",\n    \"tailwind-merge\": \"^3.2.0\",\n    \"tailwindcss-animate\": \"^1.0.7\"\n  },\n  \"devDependencies\": {\n    \"@eslint/eslintrc\": \"^3\",\n    \"eslint\": \"^9\",\n    \"eslint-config-next\": \"latest\",\n    \"postcss\": \"^8\",\n    \"stylelint\": \"^16.19.1\",\n    \"stylelint-config-standard\": \"^38.0.0\",\n    \"stylelint-config-standard-scss\": \"^14.0.0\",\n    \"tailwindcss\": \"^3.4.1\"\n  }\n}\n"
+        }
+    ]
+}
