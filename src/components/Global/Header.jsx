@@ -20,11 +20,11 @@ const navItems = [
     name: 'Athletes',
     href: '/Atheletes',
     submenu: [
-      { name: 'Injury', href: '/athletes/1' },
-      { name: 'Performance Lab', href: '/athletes/2' },
-      { name: 'Programmes', href: '/athletes/2' },
-      { name: 'Sports Psychology', href: '/athletes/2' },
-      { name: 'Sports Nutrition', href: '/athletes/2' },
+      { name: 'Injury', href: '/Atheletes/injury' },
+      { name: 'Performance Lab', href: '/Atheletes/performance-lab' },
+      { name: 'Programmes', href: '/Atheletes/programmes' },
+      { name: 'Sports Psychology', href: '/Atheletes/sports-pychology' },
+      { name: 'Sports Nutrition', href: '/Atheletes/sports-nutrients' },
     ],
   },
   {
@@ -44,10 +44,10 @@ const navItems = [
     name: 'Programs',
     href: '/programs',
     submenu: [
-      { name: 'Rehab Program', href: '/programs#rehab' },
-      { name: 'Pain Management Program', href: '/programs#strength' },
-      { name: 'Strength Enhancement Program', href: '/programs#strength' },
-      { name: 'Athelete Development Program', href: '/programs#strength' },
+      { name: 'Sports Physio Program', href: '/programs#rehab' },
+      { name: 'Surgical Prehab & Rehab', href: '/programs#strength' },
+      { name: 'Emerging  Athelete Program', href: '/programs#strength' },
+      { name: 'Athew', href: '/programs#strength' },
     ],
   },
   {

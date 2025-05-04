@@ -1,0 +1,17 @@
+[
+    {
+      "title": "Physiotherapy",
+      "description": "Personalized treatment plans to restore movement, reduce pain, and improve function.",
+         "image": "/programmes3.png"
+    },
+    {
+      "title": "Sports Injuries",
+      "description": "Specialized care for athletes to recover from injuries and return to peak performance.",
+          "image": "/programmes2.png"
+    },
+    {
+      "title": "Rehabilitation",
+      "description": "Comprehensive programs to support recovery post-injury or surgery, enhancing strength and mobility.",
+      "image": "/programmes1.png"
+    }
+  ]

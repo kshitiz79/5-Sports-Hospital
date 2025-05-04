@@ -1,0 +1,17 @@
+[
+    {
+      "title": "Emerging Athlete Development",
+      "description": "Custom programs for young athletes, focusing on skill mastery, nutrition, and injury prevention.",
+      "image": "/programmes1.png"
+    },
+    {
+      "title": "Elevate: Pro Athlete Development",
+      "description": "Elite training for top athletes, pushing performance with advanced techniques and mental conditioning.",
+      "image": "/programmes2.png"
+    },
+    {
+      "title": "VO2 Max Enhancement",
+      "description": "Skyrocket your endurance with programs designed to boost cardiovascular efficiency and stamina.",
+      "image": "/programmes3.png"
+    }
+  ]

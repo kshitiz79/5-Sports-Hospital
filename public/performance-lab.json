@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Injury Testing",
+    "description": "Our comprehensive injury testing uses advanced diagnostics to pinpoint the root cause of pain or dysfunction. Tailored assessments guide personalized treatment plans, ensuring athletes recover swiftly and safely return to peak performance with reduced risk of re-injury.",
+    "image": "/programmeslab1.png"
+  },
+  {
+    "title": "Performance Testing",
+    "description": "Unlock your full potential with our performance testing, evaluating strength, agility, and endurance. Detailed analytics help optimize training regimens, enhance athletic output, and set measurable goals to elevate your competitive edge in any sport.",
+    "image": "/programmeslab2.png"
+  },
+  {
+    "title": "VO2 Max",
+    "description": "Measure your aerobic capacity with our VO2 Max testing to boost endurance and cardiovascular health. This precise assessment informs customized training plans, helping athletes improve stamina and perform at their best during high-intensity competitions.",
+    "image": "/programmeslab3.png"
+  },
+  {
+    "title": "Lactate Threshold",
+    "description": "Identify your lactate threshold to fine-tune training intensity and maximize performance. Our specialized testing provides insights into your body’s response to exercise, enabling targeted strategies to enhance endurance and delay fatigue during critical moments.",
+    "image": "/programmeslab4.png"
+  },
+  {
+    "title": "Fitness Blood Test",
+    "description": "Our fitness blood tests analyze key biomarkers like hormone levels and nutrient status to optimize your health. Results guide personalized nutrition and training plans, ensuring your body is primed for peak performance and long-term wellness.",
+    "image": "/programmeslab7.png"
+  },
+  {
+    "title": "Radiology",
+    "description": "Utilizing state-of-the-art imaging technologies, our radiology services diagnose musculoskeletal issues with precision. From X-rays to MRIs, we provide detailed insights to support accurate treatment plans and monitor recovery progress for optimal outcomes.",
+    "image": "/programmeslab5.png"
+  },
+  {
+    "title": "3D Posture Lab",
+    "description": "Our cutting-edge 3D Posture Lab analyzes movement and alignment to enhance efficiency and prevent injuries. Advanced technology identifies imbalances, enabling customized corrective exercises that improve posture, stability, and overall athletic performance.",
+    "image": "/programmeslab6.png"
+  }
+]
