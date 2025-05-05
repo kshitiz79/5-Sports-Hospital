@@ -25,15 +25,15 @@ export default function GalleryLayout() {
 
   const images = [
     { id: 1, src: '/game1.png', alt: 'Kevin JZ Prodigy', description: 'BADMINTON' },
-    { id: 2, src: '/game2.png', alt: 'Ballroom Performance', description: 'BALLROOM PERFORMANCE' },
+    { id: 2, src: '/cricket.png', alt: 'Ballroom Performance', description: 'BALLROOM PERFORMANCE' },
     { id: 3, src: '/game3.png', alt: 'Speaker and audience', description: 'SPEAKER AND AUDIENCE' },
     { id: 4, src: '/game4.png', alt: 'Jazmine Miyake-Mugler', description: 'WHERE SPORTS MEET HEALTH EXCELLENCE' },
     { id: 5, src: '/game5.png', alt: 'Performer 1', description: 'RUNNING' },
     { id: 6, src: '/game6.png', alt: 'Performer 2', description: 'PERFORMER 2' },
     { id: 7, src: '/game7.png', alt: 'Crowd Shot', description: 'CROWD SHOT' },
     { id: 8, src: '/game8.png', alt: 'Backstage', description: 'SWIMMING' },
-    { id: 9, src: '/game9.png', alt: 'Judge Panel', description: 'DRUMMER' },
-    { id: 10, src: '/game10.png', alt: 'Voguing Moment', description: 'GOLF' },
+    { id: 9, src: '/drummer.png', alt: 'Judge Panel', description: 'DRUMMER' },
+    { id: 10, src: '/golf.png', alt: 'Voguing Moment', description: 'GOLF' },
   ];
 
   const handleImageClick = (image) => setSelectedImage(image);
