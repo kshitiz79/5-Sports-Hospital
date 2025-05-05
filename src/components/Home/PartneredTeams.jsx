@@ -12,21 +12,48 @@ const AthleteTruthSection = () => {
       icon: './mango1.png',
       hoverIcon: './mango1-hover.png',
       title: 'It’s Not Just About Skills',
-      desc: 'Without building strength , speed & you fall behind.',
+      desc: 'Without building strength, speed & you fall behind.',
+      userImages: [
+        '/1.png', 
+        '/2.png', 
+        '/3.png', 
+      ],
     },
     {
       icon: './mango2.png',
       hoverIcon: './mango2-hover.png',
       title: 'Neglecting Recovery Makes You Slower',
       desc: 'Skipping recovery today leads to weakness, injuries, and reduced performance tomorrow.',
+      userImages: [
+        '/1.png',
+        '/2.png',
+        '/3.png',
+      ],
     },
     {
       icon: './mango3.png',
       hoverIcon: './mango3-hover.png',
       title: 'Test your Performance Regularly',
       desc: 'Regularly texting your Heart & Lung performance like Vo2Max, Blood & Muscle Endurance helps you stay on top.',
+      userImages: [
+        '/1.png',
+        '/2.png',
+        '/3.png',
+      ],
     },
   ];
+
+  // Define animation directions for the three user images
+  const userImageVariants = {
+    hidden: { opacity: 0, scale: 0 },
+    visible: (direction) => ({
+      opacity: 1,
+      scale: 1,
+      x: direction === 'left' ? -170 : direction === 'right' ? 100 : -50,
+      y: direction === 'up' ? -120 : -70   ,
+      transition: { duration: 0.2, ease: 'easeOut' },
+    }),
+  };
 
   return (
     <section
@@ -56,11 +83,11 @@ const AthleteTruthSection = () => {
           </div>
 
           <p
-            className={`mt-5 font-extrabold  ${
+            className={`mt-5 font-extrabold ${
               darkMode ? 'text-gray-300' : 'text-gray-700'
             } text-3xl sm:front-size:1.5rem`}
           >
-            Why are <span className='text-green-600'> athletes </span> not told these facts?
+            Why are <span className='text-green-600'>athletes</span> not told these facts?
           </p>
         </motion.div>
 
@@ -86,16 +113,33 @@ const AthleteTruthSection = () => {
                   darkMode
                     ? 'bg-white/10 border-gray-100'
                     : 'bg-white border-gray-300'
-                }`}
+                } relative`}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
               >
-                {/* Image that changes on hover */}
-                <img
-                  src={isHovered ? truth.hoverIcon : truth.icon}
-                  alt={truth.title}
-                  className="w-20 h-20 mx-auto mb-4 object-contain transition-all duration-300 transform hover:scale-90"
-                />
+                {/* Static Icon (does not move or change) */}
+                <div className="relative w-20 h-20 mx-auto mb-4">
+                  <img
+                    src={isHovered ? truth.hoverIcon : truth.icon}
+                    alt={truth.title}
+                    className="w-20 h-20 object-contain transition-all duration-300"
+                  />
+                  {/* User Images that pop out on hover */}
+                  {truth.userImages.map((userImage, idx) => (
+                    <motion.img
+                      key={idx}
+                      src={userImage}
+                      alt={`User ${idx + 1}`}
+                      className="absolute top-0 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full object-cover"
+                      initial="hidden"
+                      animate={isHovered ? 'visible' : 'hidden'}
+                      variants={userImageVariants}
+                      custom={
+                        idx === 0 ? 'left' : idx === 1 ? 'right' : 'up'
+                      }
+                    />
+                  ))}
+                </div>
                 <h3
                   className={`text-lg font-bold mb-2 uppercase ${
                     darkMode ? 'text-white' : 'text-gray-900'

@@ -38,7 +38,7 @@ Why It Matters: A healthy body recovers faster and performs longer. Let’s buil
   },
 ];
 
-const AthleticHealthCards = () => {
+const AthleticHealthCards  = () => {
   const [expanded, setExpanded] = useState({});
   const { darkMode } = useTheme();
 
@@ -62,13 +62,13 @@ const AthleticHealthCards = () => {
 
   return (
     <section
-      className={`py-24 transition-colors duration-500 ${
+      className={`py-20 transition-colors duration-500 ${
         darkMode
           ? "bg-gradient-to-b from-black via-gray-900 to-gray-800 text-white"
           : "bg-gradient-to-b from-black via-gray-900 to-gray-800 text-white"
-      } relative overflow-hidden`}
+      } relative `}
     >
-      <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-10"></div>
+
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}

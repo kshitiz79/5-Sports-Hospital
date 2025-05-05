@@ -9,8 +9,12 @@ const ContactUs = () => {
   const { darkMode } = useTheme();
 
   return (
-    <section 
-      className={`py-16 px-4 md:px-8 relative transition-colors duration-500 ${darkMode ? 'bg-black text-white' : 'bg-gray-100 text-gray-900'}`}
+    <section
+      className={`py-20 transition-colors duration-500 ${
+        darkMode
+          ? 'bg-gradient-to-b from-black via-black to-gray-800 text-white'
+          : 'bg-gray-100 text-gray-900'
+      } relative`}
     >
       <div className="container mx-auto max-w-4xl"> 
         {/* Section Header */}

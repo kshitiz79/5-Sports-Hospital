@@ -107,7 +107,7 @@ const FAQ = () => {
   };
   return (
     <section
-    className={`py-24 relative overflow-hidden transition-colors duration-500 ${
+    className={`py-16 relative overflow-hidden transition-colors duration-500 ${
       darkMode ? 'bg-black text-white' : 'bg-white text-gray-900'
     }`}
   >
