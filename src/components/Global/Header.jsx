@@ -53,6 +53,7 @@ const navItems = [
     name: 'Testing',
     href: '/Testing',
     submenu: [
+      { name: 'Sports Testing', href: '/Testing/gallery' },
       { name: 'VO₂ MAX & LACTATE THRESHOLD', href: '/Vo2MaxTestSection' },
       { name: 'RESTING METABOLIC RATE & BODY COMPOSITION', href: '/Testing#Metabolic' },
       { name: 'MUSCLE OXYGEN MONITORING', href: '/programs#strength' },
