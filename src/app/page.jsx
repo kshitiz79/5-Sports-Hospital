@@ -27,8 +27,10 @@ export default function Home() {
   return (
     <>
       <Hero />
+
+
       <AthleteTruthSection/>
-      {/* <PerformanceQnA/> */}
+   
       <AthleticHealthCards/>
       <AboutUs />
       <RecoverySystem/>

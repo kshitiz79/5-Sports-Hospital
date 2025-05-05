@@ -46,7 +46,7 @@ const navItems = [
       { name: 'Sports Physio Program', href: '/programs/sports' },
       { name: 'Surgical Prehab & Rehab', href: '/programs/surgical' },
       { name: 'Emerging  Athelete Program', href: '/programs/emerging' },
-      { name: 'Athelete Development Program', href: '/programs/athelete' },
+      { name: 'Athelete Development Program', href: '/programs/atheletedevelopment' },
     ],
   },
   {

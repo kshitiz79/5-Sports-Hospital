@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AthleteDevelopmentProgram() {
   return (
-    <section className="bg-gray-800 py-16 px-4 md:px-16">
+    <section className="bg-gray-950 py-16 px-4 md:px-16">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         <div className="space-y-6">
           <h2 className="text-4xl font-bold text-gray-100">Building Champions from the Ground Up</h2>

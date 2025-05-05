@@ -33,18 +33,9 @@ const TestingSection = () => {
 
   return (
     <section
-      className={`relative overflow-hidden py-24 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-black text-gray-900 dark:text-white ${spaceGrotesk.variable}`}
+      className={"bg-gradient-to-b from-gray-900 to-black text-gray-900 dark:text-white py-20 px-4 md:px-10 "}
     >
-      {/* Background Decorative Elements */}
-      <div className="absolute inset-0 opacity-5">
-        <div
-          className="w-full h-full"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30v4h-2V4h-4V2h4V-2h2v2h4v2h-4z' fill='%239CA3AF' fill-opacity='0.4'/%3E%3C/g%3E%3C/svg%3E")`,
-          }}
-        />
-      </div>
-
+ 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           variants={containerVariants}

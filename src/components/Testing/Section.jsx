@@ -29,7 +29,7 @@ const testingData = [
 
 const Section = () => {
   return (
-    <section className="bg-gray-900 text-white py-20 px-4 md:px-10">
+<section className="bg-gradient-to-b from-black to-gray-900 text-gray-900 dark:text-white py-20 px-4 md:px-10">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="mb-16 text-center">
