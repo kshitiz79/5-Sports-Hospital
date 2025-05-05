@@ -27,7 +27,17 @@ export default function Home() {
   return (
     <>
       <Hero />
-
+      <AthleteTruthSection/>
+      {/* <PerformanceQnA/> */}
+      <AthleticHealthCards/>
+      <AboutUs />
+      <RecoverySystem/>
+      <WhyChooseUs />
+      <RecoveryProgram/>
+      <SuccessStories />
+      <MeetOurExperts />
+      <FAQ />
+      <ContactUs />
     </>
   );
 }
