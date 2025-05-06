@@ -2,7 +2,8 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { Menu, X, ChevronDown, ChevronUp } from 'lucide-react';
+import { Menu, X, ChevronDown, ChevronUp, ChevronRight } from 'lucide-react';
+
 import { useTheme } from '@/contex/ThemeContext';
 
 const navItems = [
@@ -36,7 +37,7 @@ const navItems = [
       { name: 'Sports injuries and ligament surgery', href: '/Orthopedicss/sports' },
       { name: 'Arthroscopy', href: '/Orthopedicss/arthroscopy' },
       { name: 'Fracture management ', href: '/Orthopedicss/fracture' },
-      { name: 'Surgical second opinion', href: '/Orthopedicss/surgical' },
+      { name: 'Surgical second opinion', href: '/Orthopedicss/surgical' },
     ],
   },
   {
@@ -45,7 +46,7 @@ const navItems = [
     submenu: [
       { name: 'Sports Physio Program', href: '/programs/sports' },
       { name: 'Surgical Prehab & Rehab', href: '/programs/surgical' },
-      { name: 'Emerging  Athelete Program', href: '/programs/emerging' },
+      { name: 'Emerging Athelete Program', href: '/programs/emerging' },
       { name: 'Athelete Development Program', href: '/programs/atheletedevelopment' },
     ],
   },
@@ -61,10 +62,24 @@ const navItems = [
   },
   {
     name: 'Cosmo Dental',
-    href: '/contact-us',
+    href: '/',
     submenu: [
-      { name: 'Cosmo Dental', href: '/beyond-sports#education' },
-      { name: 'Sports', href: '/beyond-sports#careers' },
+      {
+        name: 'Dental Services',
+        href: '/cosmo-dental/dentalservice',
+        submenu: [
+          { name: 'Root Canal', href: '/cosmo-dental/dentalservice' },
+          { name: 'Braces', href: '/cosmo-dental/braces' },
+        ],
+      },
+      {
+        name: 'Cosmetic',
+        href: '/cosmo-dental/cosmetic',
+        submenu: [
+          { name: 'Teeth Whitening', href: '/cosmo-dental/cosmetic#whitening' },
+          { name: 'Veneers', href: '/cosmo-dental/cosmetic#veneers' },
+        ],
+      },
     ],
   },
 ];
@@ -73,9 +88,15 @@ export default function Header() {
   const { darkMode } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
   const [expandedMenu, setExpandedMenu] = useState(null);
+  const [expandedSubMenu, setExpandedSubMenu] = useState(null);
 
   const toggleSubMenu = (index) => {
     setExpandedMenu(expandedMenu === index ? null : index);
+    setExpandedSubMenu(null); // Reset inner submenu
+  };
+
+  const toggleSubSubMenu = (subIndex) => {
+    setExpandedSubMenu(expandedSubMenu === subIndex ? null : subIndex);
   };
 
   return (
@@ -86,6 +107,18 @@ export default function Header() {
           : 'bg-white shadow-lg'
       }`}
     >
+      <style jsx>{`
+        .submenu-slide {
+          transform: translateX(100%);
+          transition: transform 0.3s ease-in-out;
+        }
+        .submenu-slide.open {
+          transform: translateX(0);
+        }
+        .submenu-container {
+          overflow: hidden;
+        }
+      `}</style>
       <div className="px-6 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2">
           <img src="/logo5.png" alt="Logo" className="h-14" />
@@ -105,16 +138,34 @@ export default function Header() {
                 )}
               </Link>
 
+              {/* Level 1 submenu */}
               {item.submenu && (
-                <div className="absolute left-1/2 -translate-x-1/2 hidden group-hover:flex flex-col bg-white shadow-xl rounded-lg w-64 py-2 z-50 transition-all duration-300">
+                <div className="absolute left-1/2 -translate-x-1/2 hidden group-hover:flex flex-col bg-white shadow-xl rounded-lg w-64 py-2 z-50">
                   {item.submenu.map((sub, subIdx) => (
-                    <Link
-                      key={subIdx}
-                      href={sub.href}
-                      className="px-4 py-2 hover:bg-green-100 text-sm transition-colors"
-                    >
-                      {sub.name}
-                    </Link>
+                    <div key={subIdx} className="relative group/sub">
+                      <Link
+                        href={sub.href}
+                        className="px-4 py-2 hover:bg-green-100 text-sm flex justify-between items-center"
+                      >
+                        {sub.name}
+                        {sub.submenu && <ChevronRight className="w-4 h-4" />}
+                      </Link>
+
+                      {/* Level 2 submenu */}
+                      {sub.submenu && (
+                        <div className="absolute left-full top-0 hidden group-hover/sub:flex flex-col bg-white shadow-xl rounded-lg w-56 py-2 z-50">
+                          {sub.submenu.map((subsub, subsubIdx) => (
+                            <Link
+                              key={subsubIdx}
+                              href={subsub.href}
+                              className="px-4 py-2 hover:bg-green-100 text-sm"
+                            >
+                              {subsub.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   ))}
                 </div>
               )}
@@ -124,10 +175,7 @@ export default function Header() {
 
         {/* Mobile Toggle */}
         <div className="md:hidden">
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="text-gray-700"
-          >
+          <button onClick={() => setMenuOpen(!menuOpen)} className="text-gray-700">
             {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
@@ -156,15 +204,48 @@ export default function Header() {
                 )}
               </button>
               {item.submenu && expandedMenu === i && (
-                <div className="ml-4 text-sm space-y-1">
+                <div className="ml-4 text-sm space-y-2 submenu-container">
                   {item.submenu.map((sub, subIndex) => (
-                    <Link
-                      key={subIndex}
-                      href={sub.href}
-                      className="block hover:text-green-500 transition"
-                    >
-                      • {sub.name}
-                    </Link>
+                    <div key={subIndex}>
+                      <button
+                        onClick={() => toggleSubSubMenu(subIndex)}
+                        className="w-full text-left flex justify-between items-center py-1"
+                      >
+                        {sub.name}
+                        {sub.submenu && (
+                          expandedSubMenu === subIndex ? (
+                            <ChevronUp className="w академия-4 h-4" />
+                          ) : (
+                            <ChevronDown className="w-4 h-4" />
+                          )
+                        )}
+                      </button>
+                      {sub.submenu && (
+                        <div
+                          className={`submenu-slide ${
+                            expandedSubMenu === subIndex ? 'open' : ''
+                          }`}
+                        >
+                          {sub.submenu.map((subsub, subsubIdx) => (
+                            <Link
+                              key={subsubIdx}
+                              href={subsub.href}
+                              className="block hover:text-green-500 ml-2 py-1"
+                            >
+                              • {subsub.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                      {!sub.submenu && (
+                        <Link
+                          href={sub.href}
+                          className="block hover:text-green-500 ml-2 py-1"
+                        >
+                          • {sub.name}
+                        </Link>
+                      )}
+                    </div>
                   ))}
                 </div>
               )}

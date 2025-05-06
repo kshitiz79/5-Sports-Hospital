@@ -32,17 +32,59 @@ const SectionWrapper = ({ children, className }) => {
 const foundersData = [
   {
     name: 'Dr. Pooja',
-    imageSrc: '/doctor.png',
-    heading: 'Dr. Pooja’s Expertise',
-    description: 'Dr. Pooja has over 20 years of experience in sports medicine...',
+    imageSrc: '/doctor1.png',
+    heading: 'Dr. Pooja -Consultant Physiotherapist & Sports Medicine',
+    subheading: 'Founder & Director, Sports Medicine Specialist',
+    description: `BPT, MPT in Orthopaedics, Certified Sports Physiotherapist
+Dr. Pooja is a distinguished Consultant Physiotherapist at 5 Sports Hospital, specializing in sports rehabilitation, orthopaedic physiotherapy, and musculoskeletal disorders. With a remarkable academic background and extensive clinical expertise, Dr. Pooja has earned a reputation as one of the most sought-after physiotherapists in the field.
+Educational Excellence & Advanced Training:
+Dr. Pooja holds a Bachelor of Physiotherapy (BPT) and a Master of Physiotherapy (MPT) in Orthopaedics, which laid the foundation for her deep understanding of musculoskeletal function and rehabilitation. She is also a certified sports physiotherapist, with specialized training in treating sports injuries and enhancing athletic performance through rehabilitation.
+Her commitment to ongoing learning and clinical innovation has set her apart as a leader in her field. Dr. Pooja continually updates her skills with advanced training, ensuring she provides the highest standard of care to her patients.
+Areas of Expertise:
+Sports Rehabilitation: Dr. Pooja is known for her advanced techniques in sports injury recovery, helping athletes at all levels recover quickly and effectively. She excels in treating sprains, strains, fractures, and ligament injuries, tailoring each treatment to the individual’s specific needs.
+
+
+Orthopaedic Physiotherapy: With a specialization in orthopaedic rehabilitation, Dr. Pooja is expert in managing joint replacement recovery, post-surgical rehabilitation, and chronic pain management, using evidence-based physiotherapy techniques to restore function and mobility.
+
+
+Manual Therapy: Dr. Pooja employs hands-on techniques such as joint mobilizations, soft tissue manipulation, and myofascial release to relieve pain, improve range of motion, and promote faster recovery.
+
+
+Prevention & Performance Enhancement: She is a leader in injury prevention, focusing on muscle imbalances, postural corrections, and strengthening programs to prevent re-injury and optimize athletic performance.
+
+
+Sports Taping and Modalities: Dr. Pooja is highly skilled in Kinesiology Taping, Electrotherapy, and other physical modalities that support healing, reduce pain, and enhance recovery.
+Approach to Patient Care:
+Dr. Pooja combines her exceptional technical knowledge with a patient-centered approach, ensuring each patient receives a personalized rehabilitation plan. Known for her compassionate care and dedication, Dr. Pooja has earned the trust of her patients, from elite athletes to individuals recovering from injuries or surgery. Her ability to empower patients to take control of their recovery is what sets her apart as a leading physiotherapist in the region.
+With a focus on achieving lasting results, Dr. Pooja emphasizes holistic care, educating her patients on self-management techniques and providing them with the tools needed to avoid future injuries and maintain long-term physical health.
+
+`,
+    position: 'left',
   },
   {
     name: 'Dr. Nataraj',
     imageSrc: '/doctor2.png',
-    heading: 'Dr. Nataraj’s Specialization',
-    description: 'Dr. Nataraj is known for his advanced treatments in orthopedic surgeries...',
+    heading: 'Dr. Nataraj HM',
+    subheading: 'Dr. Nataraj HM - Head of Department Orthopaedics & Sports Surgery',
+    description: `MBBS, MS Orthopaedics, MCh Orthopaedics (USAIM)
+  Fellowship in Knee and Shoulder Surgery (Italy)
+  Fellowship in Arthroscopy and Sports Medicine (ISAKOS)
+  Fellowship in Joint Replacement (ISHKS)
+  
+  Dr. Nataraj HM is a renowned Senior Consultant and Head of the Orthopaedic Department at 5 Sports Hospital. He is a highly skilled and experienced surgeon, widely recognized for his contributions to orthopaedics and sports medicine. Dr. Nataraj’s journey began with a MBBS from KIMS, Bangalore, followed by an MS in Orthopaedics from KSHEMA, Mangalore, and an MCh in Orthopaedics from the University of Seychelles. His passion for the field drove him to pursue advanced fellowships in Knee and Shoulder Surgery in Italy and Arthroscopy & Sports Medicine with the International Society of Arthroscopy (ISAKOS).
+  
+  Key Achievements:
+  - First surgeon in Southeast Asia to perform knee arthroscopic meniscal repair using the Zimmer-Biomet meniscal repair device.
+  - First in India to perform computer navigated total shoulder replacement and arthroscopic ACL reconstruction with ‘button fix’ adjustable loop anchors.
+  - Recognized for groundbreaking surgeries in rotator cuff repair, shoulder dislocation surgeries, and minimally invasive joint replacements.
+  - Specializes in robotic knee replacements, PRP injections, and stem cell therapies.
+  
+  Dr. Nataraj is a member of ISAKOS, the Indian Arthroscopy Society, and other prestigious bodies. His focus on precision, innovation, and patient care makes him a leader in Indian orthopaedics.`,
+    position: 'right',
   },
+  
 ];
+
 
 const teamMembers = [
   {
@@ -170,7 +212,7 @@ export default function AboutUs() {
         <div className='flex flex-row justify-center gap-4'>
           {foundersData.map((founder, index) => (
             <div key={index} className='w-full sm:w-1/2 text-center'>
-              <h1 className='text-2xl text-bold'>{founder.name}</h1>
+              <h1 className='text-3xl text-bold p-4 uppercase'>{founder.name}</h1>
               <img
                 src={founder.imageSrc}
                 alt={founder.name}
@@ -180,26 +222,91 @@ export default function AboutUs() {
             </div>
           ))}
         </div>
-
         {isPopupVisible && (
   <div className='fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 p-4'>
-    <div className='bg-white rounded-lg shadow-lg max-w-md w-full p-6 relative'>
+    <motion.div
+      initial={{ x: popupContent.position === 'left' ? '-100%' : '100%', opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ type: 'spring', stiffness: 100, damping: 15 }}
+      className='bg-white dark:bg-gray-800 rounded-lg shadow-lg max-w-7xl w-full max-h-[90vh] overflow-y-auto p-8 relative'
+
+    >
       <button
         onClick={closePopup}
-        className='absolute top-2 right-2 text-gray-500 hover:text-gray-700'
+        className='absolute top-2 right-2 text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-white'
       >
         ✕
       </button>
       <img
         src={popupContent.imageSrc}
         alt={popupContent.name}
-        className='w-full h-auto rounded-md mb-4'
+        className='w-full max-h-80 object-contain rounded-md mb-4'
       />
-      <h2 className='text-2xl font-bold mb-2'>{popupContent.heading}</h2>
-      <p className='text-gray-700'>{popupContent.description}</p>
-    </div>
+      <h2 className='text-2xl font-bold mb-1'>{popupContent.heading}</h2>
+      <h3 className='text-lg font-medium text-green-600 dark:text-green-400 mb-4'>{popupContent.subheading}</h3>
+
+      {/* Render the description with proper formatting */}
+      <div className='text-gray-700 dark:text-gray-300 space-y-4'>
+        {popupContent.description.split('\n').map((line, index) => {
+          if (line.trim() === '') {
+            return null; // Skip empty lines
+          } else if (line.trim().endsWith(':')) {
+            // Render as subheading
+            return (
+              <h4 key={index} className='text-lg font-semibold mt-4'>
+                {line.trim()}
+              </h4>
+            );
+          } else if (line.trim().startsWith('-')) {
+            // Render as list item
+            return (
+              <ul key={index} className='list-disc list-inside'>
+                <li>{line.trim().substring(1).trim()}</li>
+              </ul>
+            );
+          } else {
+          //   <div>
+          //   <p>
+          //   MBBS, MS Orthopaedics, MCh Orthopaedics (USAIM)<br />
+          //   Fellowship in Knee and Shoulder Surgery (Italy)<br />
+          //   Fellowship in Arthroscopy and Sports Medicine (ISAKOS)<br />
+          //   Fellowship in Joint Replacement (ISHKS)
+          // </p>
+
+          // <p>
+          //   Dr. Nataraj HM is a renowned Senior Consultant and Head of the Orthopaedic Department at 5 Sports Hospital. He is a highly skilled and experienced surgeon, widely recognized for his contributions to orthopaedics and sports medicine.
+          // </p>
+
+          // <p>
+          //   Dr. Nataraj’s journey began with an MBBS from KIMS, Bangalore, followed by an MS in Orthopaedics from KSHEMA, Mangalore, and an MCh in Orthopaedics from the University of Seychelles. His passion for the field drove him to pursue advanced fellowships in Knee and Shoulder Surgery in Italy and Arthroscopy & Sports Medicine with the International Society of Arthroscopy (ISAKOS).
+          // </p>
+
+          // <h3 className="text-lg font-semibold text-gray-800 mt-4">Key Achievements:</h3>
+          // <ul className="list-disc pl-5 space-y-1">
+          //   <li>First surgeon in Southeast Asia to perform knee arthroscopic meniscal repair using the Zimmer-Biomet meniscal repair device.</li>
+          //   <li>First in India to perform computer-navigated total shoulder replacement and arthroscopic ACL reconstruction with ‘button fix’ adjustable loop anchors.</li>
+          //   <li>Recognized for groundbreaking surgeries in rotator cuff repair, shoulder dislocation surgeries, and minimally invasive joint replacements.</li>
+          //   <li>Specializes in robotic knee replacements, PRP injections, and stem cell therapies.</li>
+          // </ul>
+
+          // <p>
+          //   Dr. Nataraj is a member of ISAKOS, the Indian Arthroscopy Society, and other prestigious bodies.
+          // </p>
+
+          // <p>
+          //   His focus on precision, innovation, and patient care makes him a leader in Indian orthopaedics.
+          // </p>
+          // </div>
+            // Render as paragraph
+            return <p key={index}>{line.trim()}</p>;
+          }
+        })}
+      </div>
+    </motion.div>
   </div>
 )}
+
 
       </div>
 
